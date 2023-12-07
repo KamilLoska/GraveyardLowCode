@@ -1,0 +1,26 @@
+﻿<AddIn name        = "CSharpCode"
+       description = "${res:CSharpCodeModule}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+  <Manifest>
+    <Identity name="CSharpCode" version="@SharpDevelopCoreVersion" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":VSoft.archITekt.CSharpCode" />
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Workbench/DesignerToolBar/Standard">
+    <Condition name="WindowActive" action="Exclude" activewindow="VSoft.archITekt.CSharpCode.CSharpFunctionDesignerView">
+      <ToolbarItem id = "ViewWhiteSpaces"
+                   tooltip = "${res:ViewWhiteSpacesTooltip}"
+                   class = "VSoft.archITekt.CSharpCode.Commands.ViewWhiteSpacesCommand"
+                   icon  = "ViewWhiteSpacesIcon"
+                   type = "CheckBox" />
+    </Condition>
+  </Path>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VSoft.archITekt.CSharpCode.Commands.StartCommand" class = "VSoft.archITekt.CSharpCode.Commands.StartCommand" />
+  </Path>
+</AddIn>

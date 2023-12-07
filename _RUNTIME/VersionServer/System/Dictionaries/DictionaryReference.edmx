@@ -1,0 +1,190 @@
+﻿<Edmx xmlns:v="http://vsoft.pl" Version="3.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+	<Runtime>
+		<ConceptualModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Namespace="VSoft.BusinessPlatform.DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+				<EntityType Name="DictionaryReference" v:Prefix="R" v:IsTable="false">
+					<Documentation>
+						<Summary>Dictionary reference</Summary>
+						<LongDescription>A table containing view definitions</LongDescription>
+					</Documentation>
+					<Key>
+						<PropertyRef Name="Id" />
+					</Key>
+					<Property Name="Id" Type="Guid" Nullable="false" v:Order="0">
+						<Documentation>
+							<Summary>Id</Summary>
+							<LongDescription>Primary key</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Index" Type="Int32" Nullable="false" v:Order="6">
+						<Documentation>
+							<Summary>Index</Summary>
+							<LongDescription>Index</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ItemId" Type="Guid" Nullable="false" v:Order="0">
+						<Documentation>
+							<Summary>Item Id</Summary>
+							<LongDescription>The Id of the item that belongs to the view</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="StructureItemId" Type="Guid" Nullable="false" v:Order="5">
+						<Documentation>
+							<Summary>Structure item Id</Summary>
+							<LongDescription>The Id of the structure that contains the element belonging to the view</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="StructureViewId" Type="Guid" Nullable="false" v:Order="3">
+						<Documentation>
+							<Summary>Structure view Id</Summary>
+							<LongDescription>The Id of the structure that contains the view</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ViewId" Type="Guid" Nullable="false" v:Order="0">
+						<Documentation>
+							<Summary>View Id</Summary>
+							<LongDescription>View Id</LongDescription>
+						</Documentation>
+					</Property>
+					<NavigationProperty Name="Item" Relationship="Self.FK_OBJECT_DIC_REFERENCE_DIC_ITEM" FromRole="DIC_REFERENCE" ToRole="DIC_ITEM" v:RelationStructure="a7d0e75e-2619-49ae-b9fd-797cb6ceb7d0" v:DictionaryStructure="00000000-0000-0000-0000-000000000000" v:DictionaryCollection="00000000-0000-0000-0000-000000000000" v:Order="4">
+						<Documentation>
+							<Summary>Item</Summary>
+							<LongDescription>The item that belongs to the view</LongDescription>
+						</Documentation>
+					</NavigationProperty>
+					<NavigationProperty Name="View" Relationship="Self.FK_VIEW_DIC_REFERENCE_DIC_ITEM" FromRole="DIC_REFERENCE" ToRole="DIC_ITEM" v:RelationStructure="a7d0e75e-2619-49ae-b9fd-797cb6ceb7d0" v:DictionaryStructure="00000000-0000-0000-0000-000000000000" v:DictionaryCollection="00000000-0000-0000-0000-000000000000" v:Order="2">
+						<Documentation>
+							<Summary>View</Summary>
+							<LongDescription>The view</LongDescription>
+						</Documentation>
+					</NavigationProperty>
+				</EntityType>
+				<Association Name="FK_OBJECT_DIC_REFERENCE_DIC_ITEM">
+					<End Role="DIC_REFERENCE" Type="Self.DictionaryReference" Multiplicity="*" />
+					<End Role="DIC_ITEM" Type="Self.DictionaryItem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="DIC_ITEM">
+							<PropertyRef Name="ItemId" />
+						</Principal>
+						<Dependent Role="DIC_REFERENCE">
+							<PropertyRef Name="ItemId" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_VIEW_DIC_REFERENCE_DIC_ITEM">
+					<End Role="DIC_REFERENCE" Type="Self.DictionaryReference" Multiplicity="*" />
+					<End Role="DIC_ITEM" Type="Self.DictionaryItem" Multiplicity="1">
+						<OnDelete Action="Cascade" />
+					</End>
+					<ReferentialConstraint>
+						<Principal Role="DIC_ITEM">
+							<PropertyRef Name="ItemId" />
+						</Principal>
+						<Dependent Role="DIC_REFERENCE">
+							<PropertyRef Name="ViewId" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<EntityContainer Name="EntitiesContainer" annotation:LazyLoadingEnabled="false">
+					<EntitySet Name="DictionaryReferenceSet" EntityType="Self.DictionaryReference" />
+					<AssociationSet Name="FK_OBJECT_DIC_REFERENCE_DIC_ITEM" Association="Self.FK_OBJECT_DIC_REFERENCE_DIC_ITEM">
+						<End Role="DIC_REFERENCE" EntitySet="DictionaryReferenceSet" />
+						<End Role="DIC_ITEM" EntitySet="DictionaryItemSet" />
+					</AssociationSet>
+					<AssociationSet Name="FK_VIEW_DIC_REFERENCE_DIC_ITEM" Association="Self.FK_VIEW_DIC_REFERENCE_DIC_ITEM">
+						<End Role="DIC_REFERENCE" EntitySet="DictionaryReferenceSet" />
+						<End Role="DIC_ITEM" EntitySet="DictionaryItemSet" />
+					</AssociationSet>
+				</EntityContainer>
+			</Schema>
+		</ConceptualModels>
+		<Mappings>
+			<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+				<EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EntitiesContainer">
+					<EntitySetMapping Name="DictionaryReferenceSet">
+						<EntityTypeMapping TypeName="VSoft.BusinessPlatform.DataModel.DictionaryReference">
+							<MappingFragment StoreEntitySet="DictionaryReference">
+								<ScalarProperty Name="Id" ColumnName="DIR_ID" />
+								<ScalarProperty Name="Index" ColumnName="DIR_INDEX" />
+								<ScalarProperty Name="ItemId" ColumnName="DIR_OBJECT_ID" />
+								<ScalarProperty Name="StructureItemId" ColumnName="DIR_DICSTR_OBJECT_ID" />
+								<ScalarProperty Name="StructureViewId" ColumnName="DIR_DICSTR_VIEW_ID" />
+								<ScalarProperty Name="ViewId" ColumnName="DIR_VIEW_ID" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+				</EntityContainerMapping>
+			</Mapping>
+		</Mappings>
+		<StorageModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" Namespace="VSoft.BusinessPlatform.StorageModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+				<EntityType Name="DictionaryReference">
+					<Key>
+						<PropertyRef Name="DIR_ID" />
+					</Key>
+					<Property Name="DIR_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIR_INDEX" Type="int" Nullable="false" />
+					<Property Name="DIR_OBJECT_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIR_DICSTR_OBJECT_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIR_DICSTR_VIEW_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIR_VIEW_ID" Type="uniqueidentifier" Nullable="false" />
+				</EntityType>
+				<Association Name="FK_OBJECT_DIC_REFERENCE_DIC_ITEM">
+					<End Role="DictionaryItem" Type="Self.DictionaryItem" Multiplicity="1" />
+					<End Role="DictionaryReference" Type="Self.DictionaryReference" Multiplicity="*" />
+					<ReferentialConstraint>
+						<Principal Role="DictionaryItem">
+							<PropertyRef Name="DII_ID" />
+						</Principal>
+						<Dependent Role="DictionaryReference">
+							<PropertyRef Name="DIR_OBJECT_ID" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_VIEW_DIC_REFERENCE_DIC_ITEM">
+					<End Role="DictionaryItem" Type="Self.DictionaryItem" Multiplicity="1">
+						<OnDelete Action="Cascade" />
+					</End>
+					<End Role="DictionaryReference" Type="Self.DictionaryReference" Multiplicity="*" />
+					<ReferentialConstraint>
+						<Principal Role="DictionaryItem">
+							<PropertyRef Name="DII_ID" />
+						</Principal>
+						<Dependent Role="DictionaryReference">
+							<PropertyRef Name="DIR_VIEW_ID" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<EntityContainer Name="ModelStoreContainer">
+					<EntitySet Name="DictionaryReference" EntityType="Self.DictionaryReference" Schema="dbo" Table="DIC_REFERENCE" />
+					<AssociationSet Name="FK_OBJECT_DIC_REFERENCE_DIC_ITEM" Association="Self.FK_OBJECT_DIC_REFERENCE_DIC_ITEM">
+						<End Role="DictionaryItem" EntitySet="DictionaryItem" />
+						<End Role="DictionaryReference" EntitySet="DictionaryReference" />
+					</AssociationSet>
+					<AssociationSet Name="FK_VIEW_DIC_REFERENCE_DIC_ITEM" Association="Self.FK_VIEW_DIC_REFERENCE_DIC_ITEM">
+						<End Role="DictionaryItem" EntitySet="DictionaryItem" />
+						<End Role="DictionaryReference" EntitySet="DictionaryReference" />
+					</AssociationSet>
+				</EntityContainer>
+			</Schema>
+		</StorageModels>
+	</Runtime>
+	<Designer>
+		<Connection>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+			</DesignerInfoPropertySet>
+		</Connection>
+		<Options>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="ValidateOnBuild" Value="False" />
+				<DesignerProperty Name="EnablePluralization" Value="True" />
+				<DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+				<DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+				<DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="False" />
+				<DesignerProperty Name="UseLegacyProvider" Value="False" />
+			</DesignerInfoPropertySet>
+		</Options>
+		<Diagrams />
+	</Designer>
+</Edmx>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<object type="VSoft.BusinessPlatform.Application.Contracts.LocalizedEntry, VSoft.BusinessPlatform.Application.Contracts">
+	<LocalizedValues>
+		<KeyValuePair_x0060_2>
+			<Key>
+				<IsoName>pl</IsoName>
+			</Key>
+			<Value>Błąd w polu {0}: Niedozwolone słowo kluczowe.</Value>
+		</KeyValuePair_x0060_2>
+		<KeyValuePair_x0060_2>
+			<Key>
+				<IsoName>en</IsoName>
+			</Key>
+			<Value>An error occurred in field {0}: key word is forbidden.</Value>
+		</KeyValuePair_x0060_2>
+	</LocalizedValues>
+</object>

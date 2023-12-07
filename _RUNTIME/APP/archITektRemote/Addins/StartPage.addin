@@ -1,0 +1,88 @@
+﻿<AddIn name="Start Page" addInManagerHidden = "preinstalled">
+
+  <Manifest>
+    <Identity name = "VSoft.archITekt.StartPage" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":StartPage">
+      <ConditionEvaluator name="IsLauncherInstalledCondition" class="VSoft.archITekt.StartPage.Conditions.IsLauncherInstalledCondition" />
+      <ConditionEvaluator name="IsLauncherProjectCondition" class="VSoft.archITekt.StartPage.Conditions.IsLauncherProjectCondition" />
+      <ConditionEvaluator name="OpenForumsCondition" class="VSoft.archITekt.StartPage.Conditions.OpenForumsCondition" />
+      <ConditionEvaluator name="OpenHelpCondition" class="VSoft.archITekt.StartPage.Conditions.OpenHelpCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VSoft.archITekt.StartPage.StartCommand" class = "VSoft.archITekt.StartPage.StartCommand" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/MainMenu/View">
+    <MenuItem id = "ShowStartPage"
+		          insertafter  = "ViewItemsSeparator"
+		          insertbefore = "StartPageSeparator"
+		          label = "${res:XML.MainMenu.ViewMenu.ShowStartPage}"
+		          icon  = "StartPage"
+		          class = "VSoft.archITekt.StartPage.ShowStartPageCommand" />
+    <MenuItem id = "StartPageSeparator"
+				  insertbefore = "FullScreen"
+				  type = "Separator" />
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/ToolBar/Standard">
+    <ToolbarItem id="NowyElement" icon="AddNewFile" tooltip="${res:ToolBar.Standard.NewElement}"
+                 class="VSoft.archITekt.StartPage.NewItemCommand" insertbefore="Save" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/AutostartNothingLoaded">
+    <Class id = "ShowStartPageCommand"
+		       class = "VSoft.archITekt.StartPage.ShowStartPageCommand" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/MainMenu/File">
+    <MenuItem
+       id="New"
+       insertbefore = "CloseSeparator"
+       label="${res:XML.MainMenu.FileMenu.New}"
+       icon="AddNewFile"
+       class="VSoft.archITekt.StartPage.NewItemCommand"
+       shortcut = "Ctrl+N"/>
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/Tools">
+    <Condition name = "IsLauncherInstalledCondition" action="Exclude">
+      <MenuItem id ="ArchITektLauncher"
+               label = "${res:ArchITektLauncher}"
+               class ="VSoft.archITekt.StartPage.Commands.ShowLauncherCommand"
+               icon="VaLogo" />
+      <MenuItem id ="PackageExport"
+                label = "${res:PackageExport}"
+                class ="VSoft.archITekt.StartPage.Commands.PackageExportCommand"
+                icon="ExportIcon" />
+    </Condition>
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/MainMenu/Help">
+    <Condition name = "OpenForumsCondition" action="Disable">
+      <MenuItem id = "Forums"
+                icon = "Forum"
+                label = "${res:Forums}"
+                class ="VSoft.archITekt.StartPage.Commands.OpenForumsCommand" />
+    </Condition>
+    <Condition name = "OpenHelpCondition" action="Disable">
+      <MenuItem id = "Help"
+                icon = "Help"
+                label = "${res:Documentation}"
+                class ="VSoft.archITekt.StartPage.Commands.OpenHelpCommand" />
+    </Condition>
+    <Condition name = "IsLauncherProjectCondition" action="Exclude">
+      <MenuItem id = "CheckForUpdates"
+                icon="Update"
+                label = "${res:CheckForUpdates}"
+                class ="VSoft.archITekt.StartPage.Commands.UpdateCheckCommand" />
+    </Condition>
+    <MenuItem id = "AboutSeparator"
+          insertbefore = "About"
+          type = "Separator" />
+  </Path>
+</AddIn>

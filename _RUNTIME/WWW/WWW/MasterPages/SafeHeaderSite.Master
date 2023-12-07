@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SafeHeaderSite.Master.cs" Inherits="VBP_WebUI.MasterPages.SafeHeaderSite" MasterPageFile="Base.Master" %>
+
+<%@ Import Namespace="VSoft.BusinessPlatform.Web.Mvc" %>
+<%@ Import Namespace="VSoft.Framework.Mvc.Features.Layout" %>
+<%@ Import Namespace="VBP_WebUI.Features.Layout" %>
+<%@ Import Namespace="VSoft.BusinessPlatform.Common.Web.Interfaces" %>
+
+<asp:Content ContentPlaceHolderID="head" runat="server">
+   <asp:ContentPlaceHolder runat="server" ID="head" />
+</asp:Content>
+
+<asp:Content runat="server" ContentPlaceHolderID="Header">
+   <div class="header navbar-fixed-top">
+      <div class="container-fluid">
+         <% PartialViewRender<LayoutController>.TryRenderViewOrEmpty("~/Features/Layout/Views/AppInfo.cshtml"); %>
+         <asp:PlaceHolder ID="MainMenu" runat="server" />
+         <% PartialViewRender<VbpLayoutController>.TryRenderViewOrEmpty(x => nameof(x.HorizontalMenu)); %>
+         <div id="toolbar-wrapper" class="save-layout">
+            <% PartialViewRender<LayoutController>.TryRenderViewOrEmpty("~/Features/Layout/Views/UserInfo.cshtml"); %>
+         </div>
+      </div>
+   </div>
+   <% PartialViewRender<VbpLayoutController>.TryRenderViewOrEmpty(x => nameof(x.Breadcrumbs), context => context.ViewBag.PageTitle = (Page as IVBPNavigationPage)?.CurrentControl.Title ?? "..."); %>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="MC" runat="server">
+   <asp:ContentPlaceHolder ID="MC" runat="server" />
+</asp:Content>
+
+<asp:Content runat="server" ContentPlaceHolderID="Footer">
+   <% PartialViewRender<LayoutController>.TryRenderViewOrEmpty("~/Features/Layout/Views/Footer.cshtml"); %>
+</asp:Content>

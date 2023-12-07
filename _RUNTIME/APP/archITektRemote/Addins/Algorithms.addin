@@ -1,0 +1,475 @@
+﻿<AddIn url="http://www.vsoft.pl" name="Algorithms module">
+
+  <Manifest>
+    <Identity name="AlgorithmsDesigner" version=":VSoft.Algorithms.Designer" />
+  </Manifest>
+  
+  <Runtime>
+    <Import assembly=":ICSharpCode.SharpDevelop" />
+
+      <!-- SharpDevelop defines more conditions and doozers, we just -->
+      <!-- import those we need here. -->
+    <Import assembly=":VSoft.Algorithms.Designer">
+      <ConditionEvaluator name="RenameWindowActive" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.RenameConditionEvaluator" />
+      <ConditionEvaluator name="SaveAsWindowActive" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.SaveAsConditionEvaluator" />
+      <ConditionEvaluator name="CheckCorrectnessWithReferencesWindowActive" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.CheckCorrectnessWithReferencesConditionEvaluator" />
+      <ConditionEvaluator name="TestWindowActive" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.TestConditionEvaluator" />
+      <ConditionEvaluator name="ReturnToSuperModelWindowActive" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.ReturnToSuperModelEvaluator" />
+
+      <ConditionEvaluator name="MDWindowActive" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.MDWindowActiveEvaluator" />
+      <ConditionEvaluator name="SaveToXMLVisibility" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.SaveToXMLVisibilityEvaluator" />
+      <ConditionEvaluator name="SaveTestResultVisibility" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.SaveTestResultVisibilityEvaluator" />
+      <ConditionEvaluator name="AutoFillVisibility" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.AutoFillVisibilityEvaluator" />
+
+      <ConditionEvaluator name="IsInEditModeActive" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.IsInEditModeConditionEvaluator" />
+
+      <ConditionEvaluator name="RunBusinessTestAvailability" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.RunBusinnesTestsEvaluator" />
+      <ConditionEvaluator name="RunBusinessTestForVersionAvailability" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.RunBusinessTestForVersionEvaluator" />
+      <ConditionEvaluator name="BusinessTestLicenseAvailability" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.BusinessTestsLicenseEvaluator" />
+      <ConditionEvaluator name="CompareInOutDataButtonEnabled" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.CompareInOutDataButtonEnabledEvaluator" />
+      <ConditionEvaluator name="IsExecutableVersionsProvider" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.ExecutableVersionsProviderEvaluator" />
+      <ConditionEvaluator name="CanDeploy" class="VSoft.Algorithms.Designer.SharpDevelop.ConditionEvaluators.DeployCommandConditionEveluator" />
+      <ConditionEvaluator name="BusinessTestWindowActive" class="VSoft.Algorithms.Designer.BusinessTests.BusinessTestWindowActiveEvaluator" />
+      <ConditionEvaluator name="VariablesNamespaceToolbarCondition" class="VSoft.Algorithms.Designer.Variables.ConditionEvaluators.VariablesNamespaceToolbarCondition" />
+      <ConditionEvaluator name="VariablesNamespaceAddDirectoryCondition" class="VSoft.Algorithms.Designer.Variables.ConditionEvaluators.AddDirectoryConditionEvaluator" />
+      <ConditionEvaluator name="VariablesNamespaceAddDataGroupCondition" class="VSoft.Algorithms.Designer.Variables.ConditionEvaluators.AddDataGroupConditionEvaluator" />
+      <ConditionEvaluator name="VariablesNamespaceAddElementCondition" class="VSoft.Algorithms.Designer.Variables.ConditionEvaluators.AddElementConditionEvaluator" />
+    </Import>
+  </Runtime>
+
+  <Path name="/SharpDevelop/Workbench/Pads">
+    <Pad id="BusinessTestPad"
+         category="Main"
+         icon="PadIcons.Architekt.Tests"
+         title="${res:BusinessTestPadName}"
+         class="VSoft.Algorithms.Designer.BusinessTests.BusinessTestMainPad"
+         shortcut="Control|Alt|T"
+         group="VMD"
+         />
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/DesignerToolBar/Standard">
+
+    <Condition name="VariablesNamespaceToolbarCondition" action="Exclude">
+      <ToolbarItem id="ExpandVariablesTree"
+                   tooltip="${res:ToolStripExpandText}"
+                   ribbonlabel="${res:ToolbarCopy}"
+                   icon="ExpandList"
+                   largeicon="Copy32"
+                   group="${res:GroupEdit}"
+                   class="VSoft.Algorithms.Designer.Variables.ToolbarCommands.ExpandVariablesTreeCommand" />
+
+      <ToolbarItem id="CollapseVariablesTree"
+                   tooltip="${res:ToolStripCollapseText}"
+                   ribbonlabel="${res:ToolbarCopy}"
+                   icon="CollapseList"
+                   largeicon="Copy32"
+                   group="${res:GroupEdit}"
+                   class="VSoft.Algorithms.Designer.Variables.ToolbarCommands.CollapseVariablesTreeCommand" />
+
+      <ToolbarItem id="ExpandCollapseVariablesToolbarSeparator" type="Separator" />
+    </Condition>
+
+    <Condition name="MDWindowActive" action="Exclude">
+      <ToolbarItem id="ToolbarCopy"
+                   tooltip="${res:ToolbarCopy}"
+                   ribbonlabel="${res:ToolbarCopy}"
+                   icon="Copy"
+                   largeicon="Copy32"
+                   group="${res:GroupEdit}"
+                   class="VSoft.Algorithms.Designer.SharpDevelop.CopyCommand" />
+      <ToolbarItem id="ToolbarPaste"
+                   tooltip="${res:ToolbarPaste}"
+                   ribbonlabel="${res:ToolbarPaste}"
+                   icon="Paste"
+                   largeicon="Paste32"
+                   group="${res:GroupEdit}"
+                   class="VSoft.Algorithms.Designer.SharpDevelop.PasteCommand" />
+      <ToolbarItem id="ToolbarRemove"
+                   tooltip="${res:ToolbarRemove}"
+                   ribbonlabel="${res:ToolbarRemove}"
+                   icon="Delete"
+                   largeicon="Delete32"
+                   group="${res:GroupEdit}"
+                   class="VSoft.Algorithms.Designer.SharpDevelop.DeleteCommand" />
+      <Condition name="IsInEditModeActive" action="Disable">
+        <ToolbarItem id="ToolbarUndo"
+                     tooltip="${res:ToolbarUndo}"
+                     ribbonlabel="${res:ToolbarUndo}"
+                     icon="Undo"
+                     largeicon="Undo32"
+                     group="${res:GroupEdit}"
+                     class="VSoft.Algorithms.Designer.SharpDevelop.UndoSharpDevelopCommand" />
+        <ToolbarItem id="ToolbarRedo"
+                     tooltip="${res:ToolbarRedo}"
+                     ribbonlabel="${res:ToolbarRedo}"
+                     icon="Repeat"
+                     largeicon="Repeat32"
+                     group="${res:GroupEdit}"
+                     class="VSoft.Algorithms.Designer.SharpDevelop.RedoSharpDevelopCommand" />
+      </Condition>
+    </Condition>
+
+
+    <Condition name="IsExecutableVersionsProvider" action="Exclude">
+      <ToolbarItem id="VersionsComboBox"
+                   type="Custom"
+                   class="VSoft.Algorithms.Designer.SharpDevelop.CustomControls.VersionsComboBox" />
+      <ToolbarItem id="ShowVersionsManager"
+                   icon="Cog"
+                   tooltip="${res:ManageVersions}"
+                   class="VSoft.Algorithms.Designer.SharpDevelop.ShowVersionsManagerCommand" />
+      <ToolbarItem id="ShowVersionsComparer"
+                   icon="Compare"
+                   tooltip="${res:CompareVersions}"
+                   class="VSoft.Algorithms.Designer.SharpDevelop.ShowVersionsComparerCommand" />
+    </Condition>
+
+    <Condition name="BusinessTestWindowActive" action="Exclude">
+      <ToolbarItem id="TestGroupToolbarSeparator" type="Separator" />
+      <ToolbarItem tooltip="${res:GoToModel}" class="VSoft.Algorithms.Designer.BusinessTests.OpenRelatedModelCommand" icon="OpenElatedVersion"/>
+
+      <Condition name="IsInEditModeActive" action="Disable">
+        <ToolbarItem tooltip="${res:RefreshStructure}" class="VSoft.Algorithms.Designer.BusinessTests.RefreshSchemaCommand" icon="Refresh"/>
+      </Condition>
+
+    </Condition>
+
+    <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.ITestable" action="Exclude">
+      <ToolbarItem id="TestGroupToolbarSeparator" type="Separator" />
+      <ToolbarItem id="ExecutionDatePicker"
+                   type="Custom"
+                   class="VSoft.Algorithms.Designer.SharpDevelop.CustomControls.ExecutionDatePicker" />
+      <ToolbarItem id="ToolbarTest"
+                    tooltip="${res:ToolbarTest}"
+                    ribbonlabel="${res:ToolbarTest}"
+                    icon="RunProcess"
+                    largeicon="RunProcess32"
+                    group="${res:GroupTest}"
+                    class="VSoft.Algorithms.Designer.SharpDevelop.TestButtonClickedCommand" />
+    </Condition>
+    <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.IStopable" action="Exclude">
+      <ToolbarItem id="ToolbarStop"
+                   tooltip="${res:ToolbarStop}"
+                   ribbonlabel="${res:ToolbarStop}"
+                   icon="Stop"
+                   largeicon="Stop32"
+                   group="${res:GroupTest}"
+                   class="VSoft.Algorithms.Designer.SharpDevelop.StopTestModeButtonClickedCommand" />
+    </Condition>
+    <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.IStopable" action="Exclude">
+      <Condition name="ReturnToSuperModelWindowActive" action="Disable">
+        <ToolbarItem id="ToolbarBackTest"
+                     tooltip="${res:ToolbarBackTestTooltip}"
+                     ribbonlabel="${res:ToolbarBackTest}"
+                     icon="ReturnToParentModel"
+                     largeicon="ReturnToParentModel32"
+                     group="${res:GroupTest}"
+                     class="VSoft.Algorithms.Designer.SharpDevelop.TestSuperModelButtonClickedCommand" />
+      </Condition>
+    </Condition>
+
+    <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.IStopable" action="Exclude">
+      <Condition name="CompareInOutDataButtonEnabled" action="Disable">
+        <ToolbarItem id="ToolbarBackTest"
+                     tooltip="${res:CompareInOutDataTooltip}"
+                     ribbonlabel="${res:CompareInOutData}"
+                     icon="Compare"
+                     group="${res:GroupTest}"
+                     class="VSoft.Algorithms.Designer.SharpDevelop.CompareInOutDataButtonClickedCommand" />
+      </Condition>
+    </Condition>
+
+    <Condition name="VariablesNamespaceToolbarCondition" action="Exclude">
+      <ToolbarItem id="VariablesNamespaceGroupToolbarSeparator" type="Separator" />
+      <Condition name="VariablesNamespaceAddDirectoryCondition" action="Disable">
+        <ToolbarItem id="VariablesNamespaceAddDirectory"
+                     icon="AddDirectory"
+                     tooltip="${res:AddCatalogDesc}"
+                     ribbonlabel="${res:AddCatalog}"
+                     group="${res:DataStructure}"
+                     class="VSoft.Algorithms.Designer.Variables.ToolbarCommands.AddDirectoryToolbarCommand" />
+      </Condition>
+      <Condition name="VariablesNamespaceAddDataGroupCondition" action="Disable">
+        <ToolbarItem id="VariablesNamespaceAddDataGroup"
+                     icon="AddDataGroup"
+                     tooltip="${res:AddDataGroupDesc}"
+                     ribbonlabel="${res:AddDataGroup}"
+                     group="${res:DataStructure}"
+                     class="VSoft.Algorithms.Designer.Variables.ToolbarCommands.AddDataGroupToolbarCommand" />
+      </Condition>
+      <Condition name="VariablesNamespaceAddElementCondition" action="Disable">
+        <ToolbarItem id="VariablesNamespaceAddNamespace"
+                     icon="AddItem"
+                     tooltip="${res:AddElementDesc}"
+                     ribbonlabel="${res:AddElement}"
+                     group="${res:DataStructure}"
+                     class="VSoft.Algorithms.Designer.Variables.ToolbarCommands.AddElementToolbarCommand" />
+      </Condition>
+
+      <ToolbarItem id="VariablesNamespaceDataModelSeparator" type="Separator" />
+      <ToolbarItem id="VariablesNamespaceFromDataModel"
+                   type="CheckBox"
+                   label="${res:FromDataModel}"
+                   class="VSoft.Algorithms.Designer.Variables.ToolbarCommands.ShowEdmxSelectionPanelCommand"
+                   />
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/DesignerToolBar/VersionServer">
+    <Condition name="VariablesNamespaceToolbarCondition" action="Exclude">
+      <ToolbarItem id="VariablesNamespaceSearch"
+                   type="Custom"
+                   insertbefore="VersionServer_CheckOutCommand"
+                   class="VSoft.Algorithms.Designer.SharpDevelop.CustomControls.ToolbarSearchTextBox"
+                  />
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/MainMenu/File">
+    <Condition name="SaveToXMLVisibility" element="Zapisz do XML" action="Exclude">
+      <Condition name="SaveAsWindowActive" action="Disable">
+        <MenuItem id="SaveToXML"
+                  insertbefore="ExitWorkbenchSeperator"
+                  icon="SaveToExcelSheet"
+                  label="${res:MenuItemSaveToXML}"
+                  class="VSoft.Algorithms.Designer.SharpDevelop.WriteTableToExcelXMLCommand" />
+        <MenuItem type="Separator" insertbefore="SaveToXML" />
+      </Condition>
+    </Condition>
+    <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.IStopable" action="Exclude">
+      <MenuItem type="Separator" />
+      <MenuItem id="SaveSchema"
+                tooltip="${res:MenuItemSaveSchema}"
+                label="${res:MenuItemSaveSchema}"
+                icon="SaveXmlSchema"
+                group="${res:GroupGeneral}"
+                class="VSoft.Algorithms.Designer.SharpDevelop.SaveModelSchemaButtonClickedCommand" />
+    </Condition>
+    <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.IStopable" action="Exclude">
+      <Condition name="SaveTestResultVisibility" action="Disable">
+        <MenuItem id="SaveTestResult"
+                  tooltip="${res:MenuItemSaveTestResult}"
+                  label="${res:MenuItemSaveTestResult}"
+                  icon="SaveTestResults"
+                  group="${res:GroupGeneral}"
+                  class="VSoft.Algorithms.Designer.SharpDevelop.SaveTestResultButtonClickedCommand" />
+      </Condition>
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/MainMenu/Edit">
+    <Condition name="RenameWindowActive" action="Exclude">
+      <MenuItem type="Separator" />
+      <MenuItem id="Rename"
+                icon="Rename"
+                label="${res:MenuItemRename}"
+                class="VSoft.Algorithms.Designer.SharpDevelop.RenameCommand"
+                  />
+    </Condition>
+    <Condition name="AutoFillVisibility" element="Autouzupełnianie" action="Exclude">
+      <MenuItem type="Separator" />
+      <MenuItem id="AutoFill"
+                  icon="CompleteRemaining"
+                  label="${res:MenuItemAutoFill}"
+                  class="VSoft.Algorithms.Designer.SharpDevelop.AutoFillCommand"
+                  shortcut="Control|Shift|F" />
+      <MenuItem type="Separator" />
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/MainMenu/Tools">
+
+    <MenuItem id="SaveReport"
+              icon="EnvironmentReport"
+              label="${res:MenuItemSaveReport}"
+              tooltip="${res:MenuItemSaveReportToolTip}"
+              class="VSoft.Algorithms.Designer.SharpDevelop.SaveReportCommand" />
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/MainMenu">
+    <Condition name="MDWindowActive" action="Exclude">
+      <MenuItem id="Versions"
+                label="${res:MenuItemVersions}"
+                type="Menu"
+                insertafter="View"
+                insertbefore="Help">
+
+        <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.IValidateable" action="Disable">
+          <Condition name="CheckCorrectnessWithReferencesWindowActive" action="Disable">
+            <MenuItem id="ValidateAll"
+                      icon="ValidateAll"
+                      label="${res:MenuItemValidateAll}"
+                      class="VSoft.Algorithms.Designer.SharpDevelop.CheckCorrectnessWithReferencesCommand"
+                      shortcut="F6" />
+          </Condition>
+        </Condition>
+        <MenuItem type="Separator" />
+
+        <Condition name="CanDeploy" action="Exclude">
+          <MenuItem id="DeployModel"
+                    icon="Publish"
+                    label="${res:MenuItemDeployModel}"
+                    class="VSoft.Algorithms.Designer.SharpDevelop.DeployCommand"
+                    shortcut="F4" />
+        </Condition>
+      </MenuItem>
+    </Condition>
+
+    <MenuItem id="Tests" label="${res:MenuItemTest}" type="Menu" insertbefore="Help">
+
+      <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.ITestable" action="Exclude">
+        <MenuItem id="Test"
+                  tooltip="${res:MenuItemDoTest}"
+                  label="${res:MenuItemDoTest}"
+                  icon="Test"
+                  group="${res:GroupGeneral}"
+                  class="VSoft.Algorithms.Designer.SharpDevelop.TestButtonClickedCommand"
+                  shortcut="F9" />
+
+        <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.IStopable" action="Disable">
+          <MenuItem id="Stop"
+                    tooltip="${res:MenuItemStop}"
+                    label="${res:MenuItemStop}"
+                    icon="Stop"
+                    group="${res:GroupGeneral}"
+                    class="VSoft.Algorithms.Designer.SharpDevelop.StopTestModeButtonClickedCommand"
+                    shortcut="Control | B" />
+
+          <Condition name="ReturnToSuperModelWindowActive" action="Disable">
+            <MenuItem id="BackTest"
+                      tooltip="${res:MenuItemBackTest}"
+                      label="${res:MenuItemBackTest}"
+                      icon="ReturnToParentModel"
+                      group="${res:GroupGeneral}"
+                      class="VSoft.Algorithms.Designer.SharpDevelop.TestSuperModelButtonClickedCommand"
+                      shortcut="Control | P" />
+          </Condition>
+        </Condition>
+        <MenuItem type="Separator" />
+      </Condition>
+
+      <Condition name="BusinessTestLicenseAvailability" action="Exclude">
+        <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.IStopable" action="Exclude">
+          <MenuItem id="SaveBusinessTest"
+                    tooltip="${res:MenuItemSaveTest}"
+                    label="${res:MenuItemSaveTest}"
+                    icon="SaveTestResults"
+                    group="${res:GroupGeneral}"
+                    class="VSoft.Algorithms.Designer.SharpDevelop.SaveBusinessTestButtonClickedCommand"
+                    shortcut="Control|T" />
+          <MenuItem type="Separator" />
+        </Condition>
+      </Condition>
+
+      <Condition name="BusinessTestLicenseAvailability" action="Exclude">
+        <MenuItem id="BusinessTestsTest"
+                  icon="ListOfTests"
+                  label="${res:MenuItemBusinessTests}"
+                  class="VSoft.Algorithms.Designer.BusinessTests.BusinessTestPadShowCommand"
+                  shortcut="Control|Alt|T" />
+      </Condition>
+
+      <Condition name="BusinessTestLicenseAvailability" action="Exclude">
+        <Condition name="RunBusinessTestAvailability" action="Disable">
+          <MenuItem id="RunAllTests"
+                    icon="RunAll"
+                    label="${res:MenuItemRunAllTests}"
+                    class="VSoft.Algorithms.Designer.BusinessTests.RunAllTestsCommand" />
+        </Condition>
+      </Condition>
+
+      <Condition name="BusinessTestLicenseAvailability" action="Exclude">
+        <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.ITestable" action="Exclude">
+          <Condition name="RunBusinessTestForVersionAvailability" action="Disable">
+            <MenuItem id="RunVersionsTests"
+                      icon="TestModel"
+                      label="${res:MenuItemRunVersionsTests}"
+                      class="VSoft.Algorithms.Designer.BusinessTests.RunModelVersionTestCommand"
+                      shortcut="F10" />
+          </Condition>
+        </Condition>
+      </Condition>
+
+      <Condition name="BusinessTestLicenseAvailability" action="Exclude">
+        <MenuItem id="StopTests"
+                  label="${res:MenuItemStopRunnedTests}"
+                  class="VSoft.Algorithms.Designer.BusinessTests.StopTestsCommand"
+                  icon="Stop" />
+      </Condition>
+
+      <Condition name="TestWindowActive" action="Exclude">
+        <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.ITestable" action="Exclude">
+          <MenuItem type="Separator" />
+          <MenuItem id="LoopTest"
+                    tooltip="${res:MenuItemLoopTest}"
+                    label="${res:MenuItemLoopTest}"
+                    icon="MassTest"
+                    group="${res:GroupGeneral}"
+                    class="VSoft.Algorithms.Designer.SharpDevelop.MultiTestButtonClickedCommand" />
+        </Condition>
+      </Condition>
+    </MenuItem>
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/ToolBar/Standard">
+    <Condition name="MDWindowActive" action="Exclude">
+      <Condition name="WindowActive" activewindow="VSoft.Algorithms.Designer.SharpDevelop.Interfaces.IValidateable" action="Disable">
+        <Condition name="CheckCorrectnessWithReferencesWindowActive" action="Disable">
+          <ToolbarItem id="ToolbarCommonValidateAll"
+                       icon="ValidateAll"
+                       largeicon="ValidateAll32"
+                       tooltip="${res:ToolbarCommonValidateAllTooltip}"
+                       ribbonlabel="${res:ToolbarCommonValidateAll}"
+                       group="${res:GroupGeneral}"
+                       class="VSoft.Algorithms.Designer.SharpDevelop.CheckCorrectnessWithReferencesCommand" />
+        </Condition>
+      </Condition>
+
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Dialogs/OptionsDialog">
+    <OptionPanel id="UIOptions"
+                 label="${res:Environment}">
+      <OptionPanel id="Appearance"
+                   label="${res:AppearanceTitle}"
+                   class="VSoft.Algorithms.Designer.CustomConfiguration.Options.AppearanceOptionPanel" />
+    </OptionPanel>
+    <OptionPanel id="Moduły"
+                 label="${res:ModulesNode}">
+      <OptionPanel id="ModulesGeneral"
+                   label="${res:OtherTabPage}"
+                   class="VSoft.Algorithms.Designer.CustomConfiguration.Options.ModelsGeneralOptionPanel" />
+      <OptionPanel id="Tabele"
+                   label="${res:TablesTabPage}"
+                   class="VSoft.Algorithms.Designer.CustomConfiguration.Options.TablesOptionPanel" />
+      <OptionPanel id="Modele"
+                   label="${res:ModelsTabPage}"
+                   class="VSoft.Algorithms.Designer.CustomConfiguration.Options.ModelsOptionPanel" />
+      <OptionPanel id="Testy"
+                   label="${res:TestsTabPage}"
+                   class="VSoft.Algorithms.Designer.CustomConfiguration.Options.TestsOptionPanel" />
+    </OptionPanel>
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/ActiveViewContent">
+    <Class id="VSoft.Algorithms.Designer.Dictionaries.GuiCommands.DictionariesPadShowCommand" class="VSoft.Algorithms.Designer.Dictionaries.GuiCommands.DictionariesPadShowCommand" />
+  </Path>
+
+  <Path name="/Workspace/Autostart">
+    <Class id="VSoft.Algorithms.Designer.SharpDevelop.AttachCloseCommand" class="VSoft.Algorithms.Designer.SharpDevelop.AttachCloseCommand" />
+  </Path>
+  <Path name="/SharpDevelop/Autostart">
+    <Class id="VSoft.Algorithms.Designer.Host.StartCommand" class="VSoft.Algorithms.Designer.Host.StartCommand" />
+  </Path>
+  <Path name="/SharpDevelop/Workbench/AutostartAfterWorkbenchInitialized">
+    <Class id="VSoft.Algorithms.Designer.Host.StartAfterWorkbenchInitializedCommand" class="VSoft.Algorithms.Designer.Host.StartAfterWorkbenchInitializedCommand" />
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/Combine/FileFilter">
+    <FileFilter id="AllFiles"
+                name="${res:SharpDevelop.FileFilter.AllFiles}"
+                extensions="*.*" />
+  </Path>
+</AddIn>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<object type="VSoft.BusinessPlatform.Application.Contracts.LocalizedEntry, VSoft.BusinessPlatform.Application.Contracts">
+	<LocalizedValues>
+		<KeyValuePair_x0060_2>
+			<Key>
+				<IsoName>pl</IsoName>
+			</Key>
+			<Value>Akcja dopinania elementu może być wywoływana tylko na liście osadzonej na formularzu.</Value>
+		</KeyValuePair_x0060_2>
+		<KeyValuePair_x0060_2>
+			<Key>
+				<IsoName>en</IsoName>
+			</Key>
+			<Value>Action attaching element may be called on list embedded on form.</Value>
+		</KeyValuePair_x0060_2>
+	</LocalizedValues>
+</object>

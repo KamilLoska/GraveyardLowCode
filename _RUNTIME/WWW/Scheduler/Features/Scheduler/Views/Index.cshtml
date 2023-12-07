@@ -1,0 +1,9 @@
+﻿@{ PageTitle = "VSoft Scheduler"; }
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+
+@model object
+@{ var config = JsonConvert.SerializeObject(Model, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() }); }
+
+<div id="scheduler-app" data-config="@config"></div>
+

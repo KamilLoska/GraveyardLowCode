@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<object type="VSoft.BusinessPlatform.Rights.Contracts.RightDefinition, VSoft.BusinessPlatform.Rights">
+	<Description>~/Pages/RightsMapping.aspx</Description>
+	<Info>
+		<Id>b9d46089-83cc-027d-8010-55d012adf4cd</Id>
+		<Name>Permissions</Name>
+	</Info>
+	<IsGroup>false</IsGroup>
+	<ParentId>2e1b28ac-703d-4302-b5c8-696bdba85ebb</ParentId>
+	<Roles />
+</object>

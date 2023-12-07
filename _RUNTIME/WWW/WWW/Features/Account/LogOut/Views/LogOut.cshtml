@@ -1,0 +1,47 @@
+﻿@using VSoft.BusinessPlatform.Application.Contracts;
+@using VSoft.Framework.Mvc.ConfigurationSections;
+@using VSoft.Framework.Mvc.Security;
+@{ Layout = "~/Features/Layout/Views/EmptyLayout.cshtml"; }
+
+<div class="a-logout-page">
+
+    @if (!SecurityMvcWebConfigurationSection.Current.EncryptQueryString)
+    {
+        using (@Html.BeginForm(@VSoft.Framework.Mvc.HttpHandlers.WindowsAuthExtensions.Autologin ? "Sso" : "LogIn", "LogIn", FormMethod.Get))
+        {
+            <input type="hidden" name="ReturnUrl" value="@Request.ApplicationPath" />
+
+            <div class="portlet goodbye a-bg-portlet a-bg-white">
+                <div class="portlet-wrapper">
+                    <div class="portlet-title">@System.Web.Configuration.WebConfigurationManager.AppSettings["ApplicationName"]</div>
+                    <div class="portlet-content">
+                        <span>@Localization.LoggedOutOfTheApplication</span>
+                        <br /><br />
+                        @Html.Kendo().Button().ThemeColor(ThemeColor.Primary).Name("log-in").Content(Localization.LoginAgain).HtmlAttributes(new { type = "submit" })
+                        <br /><br />
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        var baseUrl = Url.Action(@VSoft.Framework.Mvc.HttpHandlers.WindowsAuthExtensions.Autologin ? "Sso" : "LogIn", "LogIn", new { ReturnUrl = @Request.ApplicationPath });
+        var encryptedUrl = UrlEncryptor.EncryptUrl(baseUrl);
+       
+        <div class="portlet goodbye a-bg-portlet a-bg-white">
+            <div class="portlet-wrapper">
+                <div class="portlet-title">@System.Web.Configuration.WebConfigurationManager.AppSettings["ApplicationName"]</div>
+                <div class="portlet-content">
+                    <span>@Localization.LoggedOutOfTheApplication</span>
+                    <br /><br />
+                    @Html.Kendo().Button().ThemeColor(ThemeColor.Primary).Name("log-in").Content(Localization.LoginAgain).Tag("a").HtmlAttributes(new {href=encryptedUrl})
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+    }
+    <div class="k-text-center">
+        <small><strong>Copyright</strong> VSoft SA &copy; 2016-@DateTime.UtcNow.Year</small>
+    </div>
+</div>

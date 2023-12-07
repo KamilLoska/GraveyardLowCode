@@ -1,0 +1,35 @@
+﻿<AddIn name        = "SDO"
+       description = "Silnik Decyzyjno-Obliczeniowy"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+  <Manifest>
+    <Identity name="Sdo" version=":VSoft.archITekt.Sdo.Core" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":VSoft.archITekt.Sdo.Designer">
+      <ConditionEvaluator name="DataSourceCondition" class="VSoft.archITekt.Sdo.Designer.Components.DataSpaces.Addin.DataSourceCondition"/>
+    </Import>
+    <Import assembly = "VTS_Addin.dll"/>
+  </Runtime>
+
+  <Path name="/Addin/Manifest">
+    <String name="${res:ModuleName}" description="${res:ModuleDescription}" />
+  </Path>
+
+  <Path name="/SharpDevelop/AutostartAsync">
+    <Class id="VSoft.archITekt.Sdo.Designer.Components.Autostart" class="VSoft.archITekt.Sdo.Designer.Components.Autostart" />
+  </Path>
+
+  <Path name="/SharpDevelop/Autostart">
+    <Class id="VSoft.archITekt.Sdo.Designer.Components.RegisterStarters" class="VSoft.archITekt.Sdo.Designer.Components.RegisterStarters" />
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/DesignerToolBar/Standard">
+    <Condition name="DataSourceCondition" action="Exclude">
+      <ToolbarItem tooltip="Deklaracja argumentów" class="VSoft.archITekt.Sdo.Designer.Components.DataSpaces.Addin.DataSourceArgumentsCommand" icon="ArgumentsDeclaration" />
+      <ToolbarItem tooltip="Zewnętrzny kod .NET (CC)" class="VSoft.archITekt.Sdo.Designer.Components.DataSpaces.Addin.DataSourceCustomCodeCommand" icon="ExternalCodeNETCC" />
+    </Condition>
+  </Path>
+</AddIn>

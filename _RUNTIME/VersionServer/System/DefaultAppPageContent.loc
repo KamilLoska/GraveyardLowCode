@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<object type="VSoft.BusinessPlatform.Application.Contracts.LocalizedEntry, VSoft.BusinessPlatform.Application.Contracts">
+	<LocalizedValues>
+		<KeyValuePair_x0060_2>
+			<Key>
+				<IsoName>en</IsoName>
+			</Key>
+			<Value>To replace this page with your own, create a &lt;strong&gt;Menu&lt;/strong&gt; object and set &lt;strong&gt;Start page&lt;/strong&gt; in the properties.
+
+You can set any form or list as the Start page.
+
+For more information, check the &lt;a class="btn-link" target="_blank" href="https://architekt.vsoft.pl/docs/en/User_Interface_Module/Menu/Menu.htm"&gt;MENU section&lt;/a&gt; of the documentation.</Value>
+		</KeyValuePair_x0060_2>
+		<KeyValuePair_x0060_2>
+			<Key>
+				<IsoName>pl</IsoName>
+			</Key>
+			<Value>Aby zmienić tą stronę na własną, utwórz obiekt &lt;strong&gt;Menu&lt;/strong&gt; i we właściwościach ustaw opcję &lt;strong&gt;Strona startowa&lt;/strong&gt;.
+
+Jako stronę domyślną, możesz ustawić dowolny formularz lub listę.
+
+Więcej informacji znajdziesz w &lt;a class="btn-link" target="_blank" href="https://architekt.vsoft.pl/docs/pl/User_Interface_Module/Menu/Menu.htm"&gt;dokumentacji w dziale MENU&lt;/a&gt;.</Value>
+		</KeyValuePair_x0060_2>
+	</LocalizedValues>
+</object>

@@ -1,0 +1,106 @@
+﻿@using System.Globalization
+@using VSoft.Framework.Mvc.Extensions
+@using VSoft.Framework.Mvc.Features.Layout
+@using VSoft.Framework.Mvc.Routing
+@using VSoft.BusinessPlatform.Application.Contracts;
+@using VSoft.BusinessPlatform.Web.Controls
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>@System.Web.Configuration.WebConfigurationManager.AppSettings["ApplicationName"]</title>
+    <link rel="SHORTCUT ICON" href="~/favicon.ico" />
+    <style id="antiClickjack">
+        #wrapper {
+            display: none !important;
+        }
+    </style>
+    <style type="text/css">
+        .js .fouc {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript">
+        var parentLocation = null;
+        if (window.parent != null && window.parent.document != null) {
+            parentLocation = window.parent.document.location.origin;
+        }
+        if (self === top || parentLocation === document.location.origin) {
+            var antiClickjack = document.getElementById("antiClickjack");
+            antiClickjack.parentNode.removeChild(antiClickjack);
+        } else {
+            top.location = self.location;
+        }
+    </script>
+    <script type="text/javascript">
+        var Web = { Scripts: {} };
+        Web.Scripts.App = {
+            rootPath: '@Request.GetBaseUrl()',
+            errorPagePath: '~/ErrorPages/500.html',
+            langResourcesPath: '@(Url.Action("GetJavaScriptLangResources", typeof(LayoutController).GetRoute()))',
+            isDebug: @(Context.IsDebuggingEnabled.ToString().ToLower())
+        };
+    </script>
+    
+    <!-- WebPack bundle -->
+    <link href="~/dist/@VbpBasePage.ResourcesVersion/vendors.css" rel="stylesheet">
+
+    @{
+
+      string FindResourceFile(string extension)
+      {
+        const string baseDir = "~/Features/";
+        var parts = !string.IsNullOrEmpty(PagePath) && PagePath.StartsWith(baseDir)
+          ? PagePath.Substring(baseDir.Length).Replace("Views/", "").SubstringFromEnd(-".cshtml".Length).Split('/')
+          : Array.Empty<string>();
+        var normalized = parts.Length < 3 || parts[parts.Length - 1] != parts[parts.Length - 2] ? parts : parts.Take(parts.Length - 1).ToArray();
+        if (normalized.Length == 0)
+          return null;
+        var entryPoint = $"{string.Join("-", normalized).ToLower()}.{extension}";
+        return File.Exists(Path.Combine(Server.MapPath($"~/dist/{VbpBasePage.ResourcesVersion}"), entryPoint)) ? entryPoint : null;
+      }
+    }
+
+    @{ var css = FindResourceFile("css"); }
+    @if (!string.IsNullOrEmpty(css))
+    {
+        <link href="~/dist/@VbpBasePage.ResourcesVersion/@css" rel="stylesheet">
+    }
+    <script src="~/dist/@VbpBasePage.ResourcesVersion/vendors.js"></script>
+    <script type="text/javascript">
+        Mvc.Web.Breadcrumbs.manager.setup({ displayedBreadcrumbsLimit: 5 }).init();
+    </script>
+</head>
+<body class="@BodyClass">
+    <script>
+          Mvc.Localization.setupLanguage('@CultureInfo.CurrentUICulture.TextInfo.CultureName');
+         @(Equals(TempData["vsoft.arch.web.layout.cookie.clear"], true) ? "Web.Features.Layout.cookie.clear();" : "")
+
+         @if (TempData["vsoft.arch.web.state.redirectId"] != null)
+         {
+             @:app.state.redirectThisState(@TempData["vsoft.arch.web.state.redirectId"]);
+         }
+    </script>
+
+    <div id="wrapper">
+        @RenderBody()
+    </div>
+
+    @{ var js = FindResourceFile("js"); }
+
+    @if (!string.IsNullOrEmpty(js))
+    {
+      <script src="~/dist/@VbpBasePage.ResourcesVersion/@js"></script>
+    }
+    <script type="text/javascript">
+        $('html').css('js');
+    </script>
+
+    <div class="fouc" style="display: flex; align-items: center; justify-content: center; align-content: center; height: 100vh;">
+        <h2>@Localization.JsIsDisabled</h2>
+    </div>
+</body>
+</html>

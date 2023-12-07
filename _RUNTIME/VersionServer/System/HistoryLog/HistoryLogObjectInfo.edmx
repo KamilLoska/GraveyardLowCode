@@ -1,0 +1,166 @@
+﻿<Edmx xmlns:v="http://vsoft.pl" Version="3.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+	<Runtime>
+		<ConceptualModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Namespace="VSoft.BusinessPlatform.DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+				<EntityType Name="HistoryLogObjectInfo" v:Prefix="OI" v:IsTable="false">
+					<Documentation>
+						<Summary>History log object info</Summary>
+						<LongDescription>Table containing information about objects for which the change occurred</LongDescription>
+					</Documentation>
+					<Key>
+						<PropertyRef Name="Id" />
+					</Key>
+					<Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" v:Order="0">
+						<Documentation>
+							<Summary>Id</Summary>
+							<LongDescription>Primary key</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ChangesetId" Type="Int64" Nullable="false" v:Order="0">
+						<Documentation>
+							<Summary>Changeset Id</Summary>
+							<LongDescription>Relation (foreign key) to table that stores changeset information</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ChangeType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" v:Order="4">
+						<Documentation>
+							<Summary>Change type</Summary>
+							<LongDescription>Change type N – new, M – modified, D – deleted, U – unmodified</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Number" Type="Int32" Nullable="true" v:Order="5">
+						<Documentation>
+							<Summary>Number</Summary>
+							<LongDescription>The number given to the object when creating the object hierarchy</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ObjectId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" v:Order="3">
+						<Documentation>
+							<Summary>Object id</Summary>
+							<LongDescription>The Id of the affected object</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ObjectType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" v:Order="2">
+						<Documentation>
+							<Summary>Object type</Summary>
+							<LongDescription>A name that uniquely identifies objects of the same type (the name of the table in the database)</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ParentNumber" Type="Int32" Nullable="true" v:Order="6">
+						<Documentation>
+							<Summary>Parent number</Summary>
+							<LongDescription>The number of the parent object within the object hierarchy</LongDescription>
+						</Documentation>
+					</Property>
+					<NavigationProperty Name="Changeset" Relationship="Self.HistoryLogObjectInfo_Changeset" FromRole="HistoryLogObjectInfo_Changeset_Source" ToRole="HistoryLogObjectInfo_Changeset_Target" v:RelationStructure="8c225eb1-9b58-4d1f-9d80-486a28ffe1f0" v:DictionaryStructure="00000000-0000-0000-0000-000000000000" v:DictionaryCollection="00000000-0000-0000-0000-000000000000" v:Order="7">
+						<Documentation>
+							<Summary>Changeset</Summary>
+							<LongDescription>Changeset information</LongDescription>
+						</Documentation>
+					</NavigationProperty>
+					<NavigationProperty Name="PropertyChanges" Relationship="Self.HistoryLogPropertyChange_ObjectInfo" FromRole="HistoryLogPropertyChange_ObjectInfo_Target" ToRole="HistoryLogPropertyChange_ObjectInfo_Source" v:RelationStructure="17b95215-993c-4125-b5eb-7cd4b6b62bce" v:DictionaryStructure="00000000-0000-0000-0000-000000000000" v:DictionaryCollection="00000000-0000-0000-0000-000000000000" v:Order="8">
+						<Documentation>
+							<Summary>Property changes</Summary>
+							<LongDescription>Information about changes in individual fields of an object</LongDescription>
+						</Documentation>
+					</NavigationProperty>
+				</EntityType>
+				<Association Name="HistoryLogObjectInfo_Changeset">
+					<End Role="HistoryLogObjectInfo_Changeset_Source" Type="Self.HistoryLogObjectInfo" Multiplicity="*" />
+					<End Role="HistoryLogObjectInfo_Changeset_Target" Type="Self.HistoryLogChangeset" Multiplicity="1">
+						<OnDelete Action="Cascade" />
+					</End>
+					<ReferentialConstraint>
+						<Principal Role="HistoryLogObjectInfo_Changeset_Target">
+							<PropertyRef Name="Id" />
+						</Principal>
+						<Dependent Role="HistoryLogObjectInfo_Changeset_Source">
+							<PropertyRef Name="ChangesetId" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<EntityContainer Name="EntitiesContainer" annotation:LazyLoadingEnabled="false">
+					<EntitySet Name="HistoryLogObjectInfoSet" EntityType="Self.HistoryLogObjectInfo" />
+					<AssociationSet Name="HistoryLogObjectInfo_Changeset" Association="Self.HistoryLogObjectInfo_Changeset">
+						<End Role="HistoryLogObjectInfo_Changeset_Source" EntitySet="HistoryLogObjectInfoSet" />
+						<End Role="HistoryLogObjectInfo_Changeset_Target" EntitySet="HistoryLogChangesetSet" />
+					</AssociationSet>
+				</EntityContainer>
+			</Schema>
+		</ConceptualModels>
+		<Mappings>
+			<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+				<EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EntitiesContainer">
+					<EntitySetMapping Name="HistoryLogObjectInfoSet">
+						<EntityTypeMapping TypeName="VSoft.BusinessPlatform.DataModel.HistoryLogObjectInfo">
+							<MappingFragment StoreEntitySet="HistoryLogObjectInfo">
+								<ScalarProperty Name="Id" ColumnName="OI_ID" />
+								<ScalarProperty Name="ChangesetId" ColumnName="OI_CHANGESET_ID" />
+								<ScalarProperty Name="ChangeType" ColumnName="OI_CHANGE_TYPE" />
+								<ScalarProperty Name="Number" ColumnName="OI_NUMBER" />
+								<ScalarProperty Name="ObjectId" ColumnName="OI_OBJECT_ID" />
+								<ScalarProperty Name="ObjectType" ColumnName="OI_TYPE" />
+								<ScalarProperty Name="ParentNumber" ColumnName="OI_PARENT_NUMBER" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+				</EntityContainerMapping>
+			</Mapping>
+		</Mappings>
+		<StorageModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" Namespace="VSoft.BusinessPlatform.StorageModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+				<EntityType Name="HistoryLogObjectInfo">
+					<Key>
+						<PropertyRef Name="OI_ID" />
+					</Key>
+					<Property Name="OI_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+					<Property Name="OI_CHANGESET_ID" Type="bigint" Nullable="false" />
+					<Property Name="OI_CHANGE_TYPE" Type="char" MaxLength="1" Nullable="false" />
+					<Property Name="OI_NUMBER" Type="int" Nullable="true" />
+					<Property Name="OI_OBJECT_ID" Type="varchar" MaxLength="100" Nullable="false" />
+					<Property Name="OI_TYPE" Type="varchar" MaxLength="255" Nullable="false" />
+					<Property Name="OI_PARENT_NUMBER" Type="int" Nullable="true" />
+				</EntityType>
+				<Association Name="HistoryLogObjectInfo_Changeset">
+					<End Role="HistoryLogChangeset" Type="Self.HistoryLogChangeset" Multiplicity="1">
+						<OnDelete Action="Cascade" />
+					</End>
+					<End Role="HistoryLogObjectInfo" Type="Self.HistoryLogObjectInfo" Multiplicity="*" />
+					<ReferentialConstraint>
+						<Principal Role="HistoryLogChangeset">
+							<PropertyRef Name="C_ID" />
+						</Principal>
+						<Dependent Role="HistoryLogObjectInfo">
+							<PropertyRef Name="OI_CHANGESET_ID" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<EntityContainer Name="ModelStoreContainer">
+					<EntitySet Name="HistoryLogObjectInfo" EntityType="Self.HistoryLogObjectInfo" Schema="dbo" Table="HIS_OBJECT_INFO" />
+					<AssociationSet Name="HistoryLogObjectInfo_Changeset" Association="Self.HistoryLogObjectInfo_Changeset">
+						<End Role="HistoryLogChangeset" EntitySet="HistoryLogChangeset" />
+						<End Role="HistoryLogObjectInfo" EntitySet="HistoryLogObjectInfo" />
+					</AssociationSet>
+				</EntityContainer>
+			</Schema>
+		</StorageModels>
+	</Runtime>
+	<Designer>
+		<Connection>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+			</DesignerInfoPropertySet>
+		</Connection>
+		<Options>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="ValidateOnBuild" Value="False" />
+				<DesignerProperty Name="EnablePluralization" Value="True" />
+				<DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+				<DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+				<DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="False" />
+				<DesignerProperty Name="UseLegacyProvider" Value="False" />
+			</DesignerInfoPropertySet>
+		</Options>
+		<Diagrams />
+	</Designer>
+</Edmx>

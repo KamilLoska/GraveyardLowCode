@@ -1,0 +1,27 @@
+﻿<%@ Register TagPrefix="commoncontrols" Namespace="VSoft.Framework.AuthorizationProviders.Impl.Web.CommonControls" Assembly="VSoft.Framework.AuthorizationProviders.Impl.Web" %>
+<commoncontrols:LogOnControl SkinID="LogOnCtrl" runat="server"
+			 BackColor="#ffffff" BorderColor="#DDDDDD" BorderPadding="6" BorderStyle="Solid" BorderWidth="0px" Font-Names="Verdana"
+        Font-Size="0.8em" ForeColor="#333333" LoginButtonText="Zaloguj"
+			 PasswordLabelText="Hasło:" TitleText="" UserNameLabelText="Login:" Width="100%">
+		<CheckBoxStyle BackColor="Transparent" />
+        <TextBoxStyle CssClass="CSS_TextBox" Width="250px" />
+        <LoginButtonStyle CssClass="CSS_Button" />
+        <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+        <TitleTextStyle CssClass="CSS_Title" />
+</commoncontrols:LogOnControl>
+
+<commoncontrols:ChangePasswordControl SkinID="ChangePwdCtrl" runat="server"
+			 BackColor="#ffffff" BorderColor="#DDDDDD"
+        BorderPadding="6" BorderStyle="Solid" BorderWidth="0px" Font-Names="Verdana"
+        Font-Size="0.8em" ForeColor="#333333">
+		  <TextBoxStyle CssClass="CSS_TextBox" Width="250px" />
+		  <ChangePasswordButtonStyle CssClass="CSS_Button" />
+        <CancelButtonStyle CssClass="CSS_Button" />
+        <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+        <TitleTextStyle CssClass="CSS_Title" />
+    </commoncontrols:ChangePasswordControl>
+
+<asp:Button SkinID="ChangeProfileButton" runat="server" CssClass="CSS_ButtonWide" />
+<asp:Button SkinID="ReturnButton" runat="server" CssClass="CSS_ButtonWide" />
+
+<asp:DropDownList SkinID="ChangeProfileDD" runat="server" Width="100px" CssClass="CSS_DropDown"></asp:DropDownList>

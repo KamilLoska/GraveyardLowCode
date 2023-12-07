@@ -1,0 +1,56 @@
+﻿<AddIn name        = "Search &amp; Replace"
+       description = "Implements the Search &amp; Replace feature for the text editor"
+       addInManagerHidden = "preinstalled">
+
+  <Manifest>
+    <Identity name="ICSharpCode.SearchAndReplace" />
+    <Dependency addin="SharpDevelop" />
+  </Manifest>
+
+   <Path name="/SharpDevelop/Autostart">
+      <Class id="SearchAndReplace.OnStartCommand" class="SearchAndReplace.OnStartCommand" />
+   </Path>
+   
+  <Runtime>
+    <Import assembly = ":SearchAndReplace" />
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Workbench/MainMenu/Search">
+    <MenuItem id = "Find"
+		          label = "${res:XML.MainMenu.SearchMenu.Find}"
+		          icon = "Find"
+		          shortcut = "Control|Shift|F"
+		          class = "SearchAndReplace.Find" />
+    <MenuItem id = "FindNext"
+		          insertafter = "Find"
+		          label = "${res:XML.MainMenu.SearchMenu.FindNext}"
+		          icon = "FindNext"
+		          shortcut = "F3"
+		          class = "SearchAndReplace.FindNext" />
+    <MenuItem id = "Replace"
+		          insertafter = "FindNextSelected"
+		          insertbefore = "SearchSeparator"
+		          label = "${res:XML.MainMenu.SearchMenu.Replace}"
+		          icon = "FindReplace"
+		          shortcut = "Control|H"
+		          class = "SearchAndReplace.Replace" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/ToolBar/Standard">
+    <ToolbarItem id = "FindSeparator" type = "Separator" />
+    <ToolbarItem id      = "Find"
+		             icon    = "Find"
+		             tooltip = "${res:MainWindow.Windows.ClassBrowser.CommitSearch.ToolTip}"
+		             class   = "SearchAndReplace.Find" />
+  </Path>
+
+  <Path name="/SharpDevelop/Pads/SearchResultPad/Factories">
+    <Class id="DefaultSearchResultFactory" class="SearchAndReplace.DefaultSearchResultFactory" />
+  </Path>
+
+  <Path name="/SharpDevelop/ViewContent/TextEditor/Extensions">
+    <TextEditorExtension
+			id="SearchAndReplace"
+			class="SearchAndReplace.SearchAndReplaceTextEditorExtension" />
+  </Path>
+</AddIn>

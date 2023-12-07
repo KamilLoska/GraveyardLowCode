@@ -1,0 +1,18 @@
+﻿<AddIn name        = "Version Server"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl"
+       addInManagerHidden = "preinstalled">
+
+  <Manifest>
+    <Identity name="VersionServerBusinessPlatform" version=":VSoft.BusinessPlatform.VersionServer.Win" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly = ":VSoft.BusinessPlatform.VersionServer.Win">
+    </Import>
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VersionServerAddinStartCommand" class = "VSoft.BusinessPlatform.VersionServer.Win.Addin.Commands.StartCommand" />
+  </Path>
+</AddIn>

@@ -1,0 +1,316 @@
+﻿<Edmx xmlns:v="http://vsoft.pl" Version="3.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+	<Runtime>
+		<ConceptualModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Namespace="VSoft.BusinessPlatform.DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+				<EntityType Name="DictionaryAttribute" v:Prefix="A" v:IsTable="false">
+					<Documentation>
+						<Summary>Dictionary attribute</Summary>
+						<LongDescription>A table containing dictionary attributes</LongDescription>
+					</Documentation>
+					<Key>
+						<PropertyRef Name="Id" />
+					</Key>
+					<Property Name="Id" Type="Guid" Nullable="false" v:Order="0">
+						<Documentation>
+							<Summary>Id</Summary>
+							<LongDescription>Primary key (Id assigned when creating an attribute)</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Active" Type="Boolean" Nullable="false" v:Order="15">
+						<Documentation>
+							<Summary>Active</Summary>
+							<LongDescription>Is the attribute active</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="BlobValue" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="true" v:Order="12">
+						<Documentation>
+							<Summary>Blob value</Summary>
+							<LongDescription>Binary attribute value</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="DateTimeValue" Type="DateTime" Nullable="true" v:Order="8">
+						<Documentation>
+							<Summary>Date &amp; time value</Summary>
+							<LongDescription>DateTime attribute value</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="GuidValue" Type="Guid" Nullable="true" v:Order="9">
+						<Documentation>
+							<Summary>Guid value</Summary>
+							<LongDescription>GUID attribute value</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Index" Type="Int32" Nullable="false" v:Order="16">
+						<Documentation>
+							<Summary>Index</Summary>
+							<LongDescription>Index</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ItemValueId" Type="Guid" Nullable="true" v:Order="0">
+						<Documentation>
+							<Summary>Item value id</Summary>
+							<LongDescription>The Id of the selected item</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="NumericValue" Type="Decimal" Precision="19" Scale="4" Nullable="true" v:Order="6">
+						<Documentation>
+							<Summary>Numeric value</Summary>
+							<LongDescription>Decimal attribute value</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ParentId" Type="Guid" Nullable="false" v:Order="0">
+						<Documentation>
+							<Summary>Parent Id</Summary>
+							<LongDescription>The Id of the parent element</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="StringValue" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="true" v:Order="7">
+						<Documentation>
+							<Summary>String value</Summary>
+							<LongDescription>String attribute value</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="StructureId" Type="Guid" Nullable="false" v:Order="1">
+						<Documentation>
+							<Summary>Structure Id</Summary>
+							<LongDescription>Primary key (Structure Id)</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="StructureIdValue" Type="Guid" Nullable="true" v:Order="10">
+						<Documentation>
+							<Summary>Structure Id value</Summary>
+							<LongDescription>The Id of the structure that contains the elements</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="StructureTypeId" Type="Guid" Nullable="false" v:Order="4">
+						<Documentation>
+							<Summary>Structure type Id</Summary>
+							<LongDescription>The Id of the structure that contains the elements that define the types</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="TypeId" Type="Guid" Nullable="false" v:Order="0">
+						<Documentation>
+							<Summary>Type</Summary>
+							<LongDescription>The Id of the type-defining element</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ValidFrom" Type="DateTime" Nullable="false" v:Order="13">
+						<Documentation>
+							<Summary>Valid from</Summary>
+							<LongDescription>Attribute validity from</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ValidTo" Type="DateTime" Nullable="false" v:Order="14">
+						<Documentation>
+							<Summary>Valid to</Summary>
+							<LongDescription>Attribute validity to</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ValueAsString" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="true" v:Order="5">
+						<Documentation>
+							<Summary>Value as string</Summary>
+							<LongDescription>Attribute value as a string</LongDescription>
+						</Documentation>
+					</Property>
+					<NavigationProperty Name="ItemValue" Relationship="Self.FK_DICVALUE_DIC_ATTRIB_DIC_ITEM" FromRole="DIC_ATTRIB" ToRole="DIC_ITEM" v:RelationStructure="a7d0e75e-2619-49ae-b9fd-797cb6ceb7d0" v:DictionaryStructure="00000000-0000-0000-0000-000000000000" v:DictionaryCollection="00000000-0000-0000-0000-000000000000" v:Order="11">
+						<Documentation>
+							<Summary>Item value</Summary>
+							<LongDescription>The selected item</LongDescription>
+						</Documentation>
+					</NavigationProperty>
+					<NavigationProperty Name="Parent" Relationship="Self.FK_PARENT_DIC_ATTRIB_DIC_ITEM" FromRole="DIC_ATTRIB" ToRole="DIC_ITEM" v:RelationStructure="a7d0e75e-2619-49ae-b9fd-797cb6ceb7d0" v:DictionaryStructure="00000000-0000-0000-0000-000000000000" v:DictionaryCollection="00000000-0000-0000-0000-000000000000" v:Order="2">
+						<Documentation>
+							<Summary>Parent</Summary>
+							<LongDescription>The parent element</LongDescription>
+						</Documentation>
+					</NavigationProperty>
+					<NavigationProperty Name="Type" Relationship="Self.FK_TYPE_DIC_ATTRIB_DIC_ITEM" FromRole="DIC_ATTRIB" ToRole="DIC_ITEM" v:RelationStructure="a7d0e75e-2619-49ae-b9fd-797cb6ceb7d0" v:DictionaryStructure="00000000-0000-0000-0000-000000000000" v:DictionaryCollection="00000000-0000-0000-0000-000000000000" v:Order="3">
+						<Documentation>
+							<Summary>Type</Summary>
+							<LongDescription>The type-defining element</LongDescription>
+						</Documentation>
+					</NavigationProperty>
+				</EntityType>
+				<Association Name="FK_DICVALUE_DIC_ATTRIB_DIC_ITEM">
+					<End Role="DIC_ATTRIB" Type="Self.DictionaryAttribute" Multiplicity="*" />
+					<End Role="DIC_ITEM" Type="Self.DictionaryItem" Multiplicity="0..1" />
+					<ReferentialConstraint>
+						<Principal Role="DIC_ITEM">
+							<PropertyRef Name="ItemId" />
+						</Principal>
+						<Dependent Role="DIC_ATTRIB">
+							<PropertyRef Name="ItemValueId" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_PARENT_DIC_ATTRIB_DIC_ITEM">
+					<End Role="DIC_ATTRIB" Type="Self.DictionaryAttribute" Multiplicity="*" />
+					<End Role="DIC_ITEM" Type="Self.DictionaryItem" Multiplicity="1">
+						<OnDelete Action="Cascade" />
+					</End>
+					<ReferentialConstraint>
+						<Principal Role="DIC_ITEM">
+							<PropertyRef Name="ItemId" />
+						</Principal>
+						<Dependent Role="DIC_ATTRIB">
+							<PropertyRef Name="ParentId" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_TYPE_DIC_ATTRIB_DIC_ITEM">
+					<End Role="DIC_ATTRIB" Type="Self.DictionaryAttribute" Multiplicity="*" />
+					<End Role="DIC_ITEM" Type="Self.DictionaryItem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="DIC_ITEM">
+							<PropertyRef Name="ItemId" />
+						</Principal>
+						<Dependent Role="DIC_ATTRIB">
+							<PropertyRef Name="TypeId" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<EntityContainer Name="EntitiesContainer" annotation:LazyLoadingEnabled="false">
+					<EntitySet Name="DictionaryAttributeSet" EntityType="Self.DictionaryAttribute" />
+					<AssociationSet Name="FK_DICVALUE_DIC_ATTRIB_DIC_ITEM" Association="Self.FK_DICVALUE_DIC_ATTRIB_DIC_ITEM">
+						<End Role="DIC_ATTRIB" EntitySet="DictionaryAttributeSet" />
+						<End Role="DIC_ITEM" EntitySet="DictionaryItemSet" />
+					</AssociationSet>
+					<AssociationSet Name="FK_PARENT_DIC_ATTRIB_DIC_ITEM" Association="Self.FK_PARENT_DIC_ATTRIB_DIC_ITEM">
+						<End Role="DIC_ATTRIB" EntitySet="DictionaryAttributeSet" />
+						<End Role="DIC_ITEM" EntitySet="DictionaryItemSet" />
+					</AssociationSet>
+					<AssociationSet Name="FK_TYPE_DIC_ATTRIB_DIC_ITEM" Association="Self.FK_TYPE_DIC_ATTRIB_DIC_ITEM">
+						<End Role="DIC_ATTRIB" EntitySet="DictionaryAttributeSet" />
+						<End Role="DIC_ITEM" EntitySet="DictionaryItemSet" />
+					</AssociationSet>
+				</EntityContainer>
+			</Schema>
+		</ConceptualModels>
+		<Mappings>
+			<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+				<EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EntitiesContainer">
+					<EntitySetMapping Name="DictionaryAttributeSet">
+						<EntityTypeMapping TypeName="VSoft.BusinessPlatform.DataModel.DictionaryAttribute">
+							<MappingFragment StoreEntitySet="DictionaryAttribute">
+								<ScalarProperty Name="Id" ColumnName="DIA_ID" />
+								<ScalarProperty Name="Active" ColumnName="DIA_ACTIVE" />
+								<ScalarProperty Name="BlobValue" ColumnName="DIA_VAL_BLOB" />
+								<ScalarProperty Name="DateTimeValue" ColumnName="DIA_VAL_DAT" />
+								<ScalarProperty Name="GuidValue" ColumnName="DIA_VAL_GUID" />
+								<ScalarProperty Name="Index" ColumnName="DIA_INDEX" />
+								<ScalarProperty Name="ItemValueId" ColumnName="DIA_VAL_DICOBJ_ID" />
+								<ScalarProperty Name="NumericValue" ColumnName="DIA_VAL_NUM" />
+								<ScalarProperty Name="ParentId" ColumnName="DIA_PARENT_ID" />
+								<ScalarProperty Name="StringValue" ColumnName="DIA_VAL_STR" />
+								<ScalarProperty Name="StructureId" ColumnName="DIA_DICSTR_ID" />
+								<ScalarProperty Name="StructureIdValue" ColumnName="DIA_VAL_DICSTR_ID" />
+								<ScalarProperty Name="StructureTypeId" ColumnName="DIA_DICSTR_TYPE_ID" />
+								<ScalarProperty Name="TypeId" ColumnName="DIA_TYPE_ID" />
+								<ScalarProperty Name="ValidFrom" ColumnName="DIA_VALID_FROM" />
+								<ScalarProperty Name="ValidTo" ColumnName="DIA_VALID_TO" />
+								<ScalarProperty Name="ValueAsString" ColumnName="DIA_VAL_AS_STR" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+				</EntityContainerMapping>
+			</Mapping>
+		</Mappings>
+		<StorageModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" Namespace="VSoft.BusinessPlatform.StorageModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+				<EntityType Name="DictionaryAttribute">
+					<Key>
+						<PropertyRef Name="DIA_ID" />
+					</Key>
+					<Property Name="DIA_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIA_ACTIVE" Type="bit" Nullable="false" />
+					<Property Name="DIA_VAL_BLOB" Type="varbinary(max)" Nullable="true" />
+					<Property Name="DIA_VAL_DAT" Type="datetime" Nullable="true" />
+					<Property Name="DIA_VAL_GUID" Type="uniqueidentifier" Nullable="true" />
+					<Property Name="DIA_INDEX" Type="int" Nullable="false" />
+					<Property Name="DIA_VAL_DICOBJ_ID" Type="uniqueidentifier" Nullable="true" />
+					<Property Name="DIA_VAL_NUM" Type="numeric" Precision="19" Scale="4" Nullable="true" />
+					<Property Name="DIA_PARENT_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIA_VAL_STR" Type="nvarchar(max)" Nullable="true" />
+					<Property Name="DIA_DICSTR_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIA_VAL_DICSTR_ID" Type="uniqueidentifier" Nullable="true" />
+					<Property Name="DIA_DICSTR_TYPE_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIA_TYPE_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIA_VALID_FROM" Type="datetime" Nullable="false" />
+					<Property Name="DIA_VALID_TO" Type="datetime" Nullable="false" />
+					<Property Name="DIA_VAL_AS_STR" Type="nvarchar(max)" Nullable="true" />
+				</EntityType>
+				<Association Name="FK_DICVALUE_DIC_ATTRIB_DIC_ITEM">
+					<End Role="DictionaryItem" Type="Self.DictionaryItem" Multiplicity="0..1" />
+					<End Role="DictionaryAttribute" Type="Self.DictionaryAttribute" Multiplicity="*" />
+					<ReferentialConstraint>
+						<Principal Role="DictionaryItem">
+							<PropertyRef Name="DII_ID" />
+						</Principal>
+						<Dependent Role="DictionaryAttribute">
+							<PropertyRef Name="DIA_VAL_DICOBJ_ID" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_PARENT_DIC_ATTRIB_DIC_ITEM">
+					<End Role="DictionaryItem" Type="Self.DictionaryItem" Multiplicity="1">
+						<OnDelete Action="Cascade" />
+					</End>
+					<End Role="DictionaryAttribute" Type="Self.DictionaryAttribute" Multiplicity="*" />
+					<ReferentialConstraint>
+						<Principal Role="DictionaryItem">
+							<PropertyRef Name="DII_ID" />
+						</Principal>
+						<Dependent Role="DictionaryAttribute">
+							<PropertyRef Name="DIA_PARENT_ID" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_TYPE_DIC_ATTRIB_DIC_ITEM">
+					<End Role="DictionaryItem" Type="Self.DictionaryItem" Multiplicity="1" />
+					<End Role="DictionaryAttribute" Type="Self.DictionaryAttribute" Multiplicity="*" />
+					<ReferentialConstraint>
+						<Principal Role="DictionaryItem">
+							<PropertyRef Name="DII_ID" />
+						</Principal>
+						<Dependent Role="DictionaryAttribute">
+							<PropertyRef Name="DIA_TYPE_ID" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<EntityContainer Name="ModelStoreContainer">
+					<EntitySet Name="DictionaryAttribute" EntityType="Self.DictionaryAttribute" Schema="dbo" Table="DIC_ATTRIB" />
+					<AssociationSet Name="FK_DICVALUE_DIC_ATTRIB_DIC_ITEM" Association="Self.FK_DICVALUE_DIC_ATTRIB_DIC_ITEM">
+						<End Role="DictionaryItem" EntitySet="DictionaryItem" />
+						<End Role="DictionaryAttribute" EntitySet="DictionaryAttribute" />
+					</AssociationSet>
+					<AssociationSet Name="FK_PARENT_DIC_ATTRIB_DIC_ITEM" Association="Self.FK_PARENT_DIC_ATTRIB_DIC_ITEM">
+						<End Role="DictionaryItem" EntitySet="DictionaryItem" />
+						<End Role="DictionaryAttribute" EntitySet="DictionaryAttribute" />
+					</AssociationSet>
+					<AssociationSet Name="FK_TYPE_DIC_ATTRIB_DIC_ITEM" Association="Self.FK_TYPE_DIC_ATTRIB_DIC_ITEM">
+						<End Role="DictionaryItem" EntitySet="DictionaryItem" />
+						<End Role="DictionaryAttribute" EntitySet="DictionaryAttribute" />
+					</AssociationSet>
+				</EntityContainer>
+			</Schema>
+		</StorageModels>
+	</Runtime>
+	<Designer>
+		<Connection>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+			</DesignerInfoPropertySet>
+		</Connection>
+		<Options>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="ValidateOnBuild" Value="False" />
+				<DesignerProperty Name="EnablePluralization" Value="True" />
+				<DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+				<DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+				<DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="False" />
+				<DesignerProperty Name="UseLegacyProvider" Value="False" />
+			</DesignerInfoPropertySet>
+		</Options>
+		<Diagrams />
+	</Designer>
+</Edmx>

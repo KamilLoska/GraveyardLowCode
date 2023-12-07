@@ -1,0 +1,1343 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<Form PrototypingMode="false">
+	<PreRender type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyDynamicHandler, VSoft.BusinessPlatform.Common" />
+	<Controls>
+		<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.ComplexControlDefinition, VSoft.BusinessPlatform.Forms">
+			<Controls>
+				<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+					<LabelText type="VSoft.BusinessPlatform.Common.DynamicValues.FormulaValue`2[String, [VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.Common">
+						<Formula type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+							<m_conditions>
+								<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.BaseIsNotNullValueFunction`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+										<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+											<Children />
+											<DataSource>Logs.Exception</DataSource>
+											<ListDataSource isNull="true" />
+											<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+											<RelationFieldName isNull="true" />
+										</Argument>
+									</ConditionNode>
+									<ValueNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+										<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+											<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+												<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+													<StringValue>&lt;pre&gt;</StringValue>
+												</TypedConstValue>
+											</m_ArgumentsItem>
+											<m_ArgumentsItem type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+												<Children />
+												<DataSource>Logs.Exception</DataSource>
+												<ListDataSource isNull="true" />
+												<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+												<RelationFieldName isNull="true" />
+											</m_ArgumentsItem>
+											<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+												<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+													<StringValue>&lt;/pre&gt;</StringValue>
+												</TypedConstValue>
+											</m_ArgumentsItem>
+										</m_Arguments>
+									</ValueNode>
+								</m_conditionsItem>
+								<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<ConditionNode isNull="true" />
+									<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+										<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+											<StringValue />
+										</TypedConstValue>
+									</ValueNode>
+								</m_conditionsItem>
+							</m_conditions>
+						</Formula>
+					</LabelText>
+					<HTMLEncode>false</HTMLEncode>
+					<Column>0</Column>
+					<ColumnSpan>12</ColumnSpan>
+					<Row>0</Row>
+					<RowSpan>1</RowSpan>
+					<Name>LabelWyjatek</Name>
+					<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+					<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+					<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+						<Constant>TextLeft,TextOverflow</Constant>
+					</Styles>
+				</AnyType>
+			</Controls>
+			<ContainerLayout>container-col-3</ContainerLayout>
+			<FormGroupLayout>formgroup-lev-h</FormGroupLayout>
+			<ColumnCount>12</ColumnCount>
+			<RowCount>1</RowCount>
+			<RenderContentOnly>false</RenderContentOnly>
+			<RenderContentOnStart>true</RenderContentOnStart>
+			<AfterRefreshScript isNull="true" />
+			<Collapsible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<IsCollapsed type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<IsReadOnly type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.BusinessPlatform.Common.Enums.ReadOnlyMode, VSoft.BusinessPlatform.Common]], VSoft.BusinessPlatform.Common">
+				<Constant>INHERITED</Constant>
+			</IsReadOnly>
+			<Title type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+				<LocalizedEntryId>
+					<Id>f48f8179-e0f1-4a33-8dde-b7d80f3d1b95</Id>
+				</LocalizedEntryId>
+			</Title>
+			<TabOrder>0</TabOrder>
+			<IsAsynchronous>false</IsAsynchronous>
+			<RefreshActionPanel>false</RefreshActionPanel>
+			<AttachHeader>true</AttachHeader>
+			<Column>0</Column>
+			<ColumnSpan>12</ColumnSpan>
+			<Row>4</Row>
+			<RowSpan>1</RowSpan>
+			<Name>PortletWyjatek</Name>
+			<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+			<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+				<Constant>PortletAdditional_4,ContainerPaddingOn</Constant>
+			</Styles>
+		</AnyType>
+		<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.ComplexControlDefinition, VSoft.BusinessPlatform.Forms">
+			<Controls>
+				<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+					<LabelText type="VSoft.BusinessPlatform.Common.DynamicValues.FormulaValue`2[String, [VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.Common">
+						<Formula type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+							<m_conditions>
+								<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.BaseIsNotNullValueFunction`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+										<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+											<Children />
+											<DataSource>Logs.Message</DataSource>
+											<ListDataSource isNull="true" />
+											<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+											<RelationFieldName isNull="true" />
+										</Argument>
+									</ConditionNode>
+									<ValueNode type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+										<Children />
+										<DataSource>Logs.Message</DataSource>
+										<ListDataSource isNull="true" />
+										<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+										<RelationFieldName isNull="true" />
+									</ValueNode>
+								</m_conditionsItem>
+								<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<ConditionNode isNull="true" />
+									<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+										<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+											<StringValue />
+										</TypedConstValue>
+									</ValueNode>
+								</m_conditionsItem>
+							</m_conditions>
+						</Formula>
+					</LabelText>
+					<HTMLEncode>false</HTMLEncode>
+					<Column>0</Column>
+					<ColumnSpan>12</ColumnSpan>
+					<Row>0</Row>
+					<RowSpan>1</RowSpan>
+					<Name>LabelTresc</Name>
+					<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+					<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+					<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+						<Constant>TextLeft,TextOverflow</Constant>
+					</Styles>
+				</AnyType>
+			</Controls>
+			<ContainerLayout>container-col-3</ContainerLayout>
+			<FormGroupLayout>formgroup-lev-h</FormGroupLayout>
+			<ColumnCount>12</ColumnCount>
+			<RowCount>1</RowCount>
+			<RenderContentOnly>false</RenderContentOnly>
+			<RenderContentOnStart>true</RenderContentOnStart>
+			<AfterRefreshScript isNull="true" />
+			<Collapsible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<IsCollapsed type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<IsReadOnly type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.BusinessPlatform.Common.Enums.ReadOnlyMode, VSoft.BusinessPlatform.Common]], VSoft.BusinessPlatform.Common">
+				<Constant>INHERITED</Constant>
+			</IsReadOnly>
+			<Title type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+				<LocalizedEntryId>
+					<Id>2b7139d2-48bb-4ba8-a531-a8aaec2ffaa4</Id>
+				</LocalizedEntryId>
+			</Title>
+			<TabOrder>0</TabOrder>
+			<IsAsynchronous>false</IsAsynchronous>
+			<RefreshActionPanel>false</RefreshActionPanel>
+			<AttachHeader>true</AttachHeader>
+			<Column>0</Column>
+			<ColumnSpan>12</ColumnSpan>
+			<Row>3</Row>
+			<RowSpan>1</RowSpan>
+			<Name>PortletTresc</Name>
+			<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+			<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+				<Constant>PortletAdditional_4,ContainerPaddingOn</Constant>
+			</Styles>
+		</AnyType>
+		<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.ComplexControlDefinition, VSoft.BusinessPlatform.Forms">
+			<Controls>
+				<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+					<LabelText type="VSoft.BusinessPlatform.Common.DynamicValues.FormulaValue`2[String, [VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.Common">
+						<Formula type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+							<m_conditions>
+								<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.BaseIsNotNullValueFunction`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+										<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+											<Children />
+											<DataSource>Logs.ContextData</DataSource>
+											<ListDataSource isNull="true" />
+											<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+											<RelationFieldName isNull="true" />
+										</Argument>
+									</ConditionNode>
+									<ValueNode type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+										<Children />
+										<DataSource>Logs.ContextData</DataSource>
+										<ListDataSource isNull="true" />
+										<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+										<RelationFieldName isNull="true" />
+									</ValueNode>
+								</m_conditionsItem>
+								<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<ConditionNode isNull="true" />
+									<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+										<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+											<StringValue />
+										</TypedConstValue>
+									</ValueNode>
+								</m_conditionsItem>
+							</m_conditions>
+						</Formula>
+					</LabelText>
+					<HTMLEncode>false</HTMLEncode>
+					<Column>0</Column>
+					<ColumnSpan>12</ColumnSpan>
+					<Row>0</Row>
+					<RowSpan>1</RowSpan>
+					<Name>LabelDane</Name>
+					<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+					<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+					<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+						<Constant>TextLeft,TextOverflow</Constant>
+					</Styles>
+				</AnyType>
+			</Controls>
+			<ContainerLayout>container-col-3</ContainerLayout>
+			<FormGroupLayout>formgroup-lev-h</FormGroupLayout>
+			<ColumnCount>12</ColumnCount>
+			<RowCount>1</RowCount>
+			<RenderContentOnly>false</RenderContentOnly>
+			<RenderContentOnStart>true</RenderContentOnStart>
+			<AfterRefreshScript isNull="true" />
+			<Collapsible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<IsCollapsed type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<IsReadOnly type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.BusinessPlatform.Common.Enums.ReadOnlyMode, VSoft.BusinessPlatform.Common]], VSoft.BusinessPlatform.Common">
+				<Constant>INHERITED</Constant>
+			</IsReadOnly>
+			<Title type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+				<LocalizedEntryId>
+					<Id>416322db-1aa8-4719-9ac1-cbba4f189e5b</Id>
+				</LocalizedEntryId>
+			</Title>
+			<TabOrder>0</TabOrder>
+			<IsAsynchronous>false</IsAsynchronous>
+			<RefreshActionPanel>false</RefreshActionPanel>
+			<AttachHeader>true</AttachHeader>
+			<Column>0</Column>
+			<ColumnSpan>12</ColumnSpan>
+			<Row>2</Row>
+			<RowSpan>1</RowSpan>
+			<Name>PortletDane</Name>
+			<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+			<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+				<Constant>PortletAdditional_4,ContainerPaddingOn</Constant>
+			</Styles>
+		</AnyType>
+		<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.ComplexControlDefinition, VSoft.BusinessPlatform.Forms">
+			<Controls>
+				<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.FormGroupDefinition, VSoft.BusinessPlatform.Forms">
+					<ColumnCount>12</ColumnCount>
+					<RowCount>1</RowCount>
+					<IsVerticalLayout>false</IsVerticalLayout>
+					<Controls>
+						<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+							<LabelText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+								<LocalizedEntryId>
+									<Id>9e875af2-f3d5-44bf-8de8-f1a9fddff3f7</Id>
+								</LocalizedEntryId>
+							</LabelText>
+							<HTMLEncode>false</HTMLEncode>
+							<Column>0</Column>
+							<ColumnSpan>4</ColumnSpan>
+							<Row>0</Row>
+							<RowSpan>1</RowSpan>
+							<Name>LabelId</Name>
+							<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+							<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+							<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+						</AnyType>
+						<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+							<LabelText type="VSoft.BusinessPlatform.Common.DynamicValues.FormulaValue`2[String, [VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.Common">
+								<Formula type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<m_conditions>
+										<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+											<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.BaseIsNotNullValueFunction`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+												<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+													<Children />
+													<DataSource>Logs.Id</DataSource>
+													<ListDataSource isNull="true" />
+													<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+													<RelationFieldName isNull="true" />
+												</Argument>
+											</ConditionNode>
+											<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+												<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+													<Children />
+													<DataSource>Logs.Id</DataSource>
+													<ListDataSource isNull="true" />
+													<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+													<RelationFieldName isNull="true" />
+												</Argument>
+											</ValueNode>
+										</m_conditionsItem>
+										<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+											<ConditionNode isNull="true" />
+											<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+												<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+													<StringValue />
+												</TypedConstValue>
+											</ValueNode>
+										</m_conditionsItem>
+									</m_conditions>
+								</Formula>
+							</LabelText>
+							<HTMLEncode>false</HTMLEncode>
+							<Column>4</Column>
+							<ColumnSpan>8</ColumnSpan>
+							<Row>0</Row>
+							<RowSpan>1</RowSpan>
+							<Name>LabelIdWartosc</Name>
+							<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+							<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+							<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+								<Constant>TextReadOnly</Constant>
+							</Styles>
+						</AnyType>
+					</Controls>
+					<RenderContentOnStart>true</RenderContentOnStart>
+					<AfterRefreshScript isNull="true" />
+					<Collapsible isNull="true" />
+					<IsCollapsed isNull="true" />
+					<IsReadOnly isNull="true" />
+					<Title isNull="true" />
+					<TabOrder>0</TabOrder>
+					<IsAsynchronous>false</IsAsynchronous>
+					<RefreshActionPanel>false</RefreshActionPanel>
+					<AttachHeader>true</AttachHeader>
+					<Column>0</Column>
+					<ColumnSpan>4</ColumnSpan>
+					<Row>0</Row>
+					<RowSpan>1</RowSpan>
+					<Name>FormGroupId</Name>
+					<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+					<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+					<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				</AnyType>
+				<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.FormGroupDefinition, VSoft.BusinessPlatform.Forms">
+					<ColumnCount>12</ColumnCount>
+					<RowCount>1</RowCount>
+					<IsVerticalLayout>false</IsVerticalLayout>
+					<Controls>
+						<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+							<LabelText type="VSoft.BusinessPlatform.Common.DynamicValues.FormulaValue`2[String, [VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.Common">
+								<Formula type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<m_conditions>
+										<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+											<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.BaseIsNotNullValueFunction`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+												<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+													<Children />
+													<DataSource>Logs.Component</DataSource>
+													<ListDataSource isNull="true" />
+													<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+													<RelationFieldName isNull="true" />
+												</Argument>
+											</ConditionNode>
+											<ValueNode type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+												<Children />
+												<DataSource>Logs.Component</DataSource>
+												<ListDataSource isNull="true" />
+												<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+												<RelationFieldName isNull="true" />
+											</ValueNode>
+										</m_conditionsItem>
+										<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+											<ConditionNode isNull="true" />
+											<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+												<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+													<StringValue />
+												</TypedConstValue>
+											</ValueNode>
+										</m_conditionsItem>
+									</m_conditions>
+								</Formula>
+							</LabelText>
+							<HTMLEncode>false</HTMLEncode>
+							<Column>4</Column>
+							<ColumnSpan>8</ColumnSpan>
+							<Row>0</Row>
+							<RowSpan>1</RowSpan>
+							<Name>LabelComponentWartosc</Name>
+							<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+							<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+							<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+								<Constant>TextReadOnly</Constant>
+							</Styles>
+						</AnyType>
+						<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+							<LabelText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+								<LocalizedEntryId>
+									<Id>61c7dcfc-e9ed-498c-8312-db1c07c02f63</Id>
+								</LocalizedEntryId>
+							</LabelText>
+							<HTMLEncode>false</HTMLEncode>
+							<Column>0</Column>
+							<ColumnSpan>4</ColumnSpan>
+							<Row>0</Row>
+							<RowSpan>1</RowSpan>
+							<Name>LabelComponent</Name>
+							<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+							<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+							<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+						</AnyType>
+					</Controls>
+					<RenderContentOnStart>true</RenderContentOnStart>
+					<AfterRefreshScript isNull="true" />
+					<Collapsible isNull="true" />
+					<IsCollapsed isNull="true" />
+					<IsReadOnly isNull="true" />
+					<Title isNull="true" />
+					<TabOrder>0</TabOrder>
+					<IsAsynchronous>false</IsAsynchronous>
+					<RefreshActionPanel>false</RefreshActionPanel>
+					<AttachHeader>true</AttachHeader>
+					<Column>4</Column>
+					<ColumnSpan>4</ColumnSpan>
+					<Row>0</Row>
+					<RowSpan>1</RowSpan>
+					<Name>FormGroupComponent</Name>
+					<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+					<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+					<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				</AnyType>
+				<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.FormGroupDefinition, VSoft.BusinessPlatform.Forms">
+					<ColumnCount>12</ColumnCount>
+					<RowCount>1</RowCount>
+					<IsVerticalLayout>false</IsVerticalLayout>
+					<Controls>
+						<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+							<LabelText type="VSoft.BusinessPlatform.Common.DynamicValues.FormulaValue`2[String, [VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.Common">
+								<Formula type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<m_conditions>
+										<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+											<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.BaseIsNotNullValueFunction`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+												<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+													<Children />
+													<DataSource>Logs.Node</DataSource>
+													<ListDataSource isNull="true" />
+													<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+													<RelationFieldName isNull="true" />
+												</Argument>
+											</ConditionNode>
+											<ValueNode type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+												<Children />
+												<DataSource>Logs.Node</DataSource>
+												<ListDataSource isNull="true" />
+												<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+												<RelationFieldName isNull="true" />
+											</ValueNode>
+										</m_conditionsItem>
+										<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+											<ConditionNode isNull="true" />
+											<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+												<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+													<StringValue />
+												</TypedConstValue>
+											</ValueNode>
+										</m_conditionsItem>
+									</m_conditions>
+								</Formula>
+							</LabelText>
+							<HTMLEncode>false</HTMLEncode>
+							<Column>4</Column>
+							<ColumnSpan>8</ColumnSpan>
+							<Row>0</Row>
+							<RowSpan>1</RowSpan>
+							<Name>LabelNodeWartosc</Name>
+							<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+							<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+							<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+								<Constant>TextReadOnly</Constant>
+							</Styles>
+						</AnyType>
+						<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+							<LabelText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+								<LocalizedEntryId>
+									<Id>a33132b6-0531-46e7-95a5-b00ea8365bf6</Id>
+								</LocalizedEntryId>
+							</LabelText>
+							<HTMLEncode>false</HTMLEncode>
+							<Column>0</Column>
+							<ColumnSpan>4</ColumnSpan>
+							<Row>0</Row>
+							<RowSpan>1</RowSpan>
+							<Name>LabelNode</Name>
+							<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+							<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+							<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+						</AnyType>
+					</Controls>
+					<RenderContentOnStart>true</RenderContentOnStart>
+					<AfterRefreshScript isNull="true" />
+					<Collapsible isNull="true" />
+					<IsCollapsed isNull="true" />
+					<IsReadOnly isNull="true" />
+					<Title isNull="true" />
+					<TabOrder>0</TabOrder>
+					<IsAsynchronous>false</IsAsynchronous>
+					<RefreshActionPanel>false</RefreshActionPanel>
+					<AttachHeader>true</AttachHeader>
+					<Column>4</Column>
+					<ColumnSpan>4</ColumnSpan>
+					<Row>1</Row>
+					<RowSpan>1</RowSpan>
+					<Name>FormGroupNode</Name>
+					<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+					<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+					<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				</AnyType>
+				<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.FormGroupDefinition, VSoft.BusinessPlatform.Forms">
+					<ColumnCount>12</ColumnCount>
+					<RowCount>1</RowCount>
+					<IsVerticalLayout>false</IsVerticalLayout>
+					<Controls>
+						<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+							<LabelText type="VSoft.BusinessPlatform.Common.DynamicValues.FormulaValue`2[String, [VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.Common">
+								<Formula type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<m_conditions>
+										<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+											<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.BaseIsNotNullValueFunction`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+												<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+													<Children />
+													<DataSource>Logs.Level</DataSource>
+													<ListDataSource isNull="true" />
+													<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+													<RelationFieldName isNull="true" />
+												</Argument>
+											</ConditionNode>
+											<ValueNode type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+												<m_conditions>
+													<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+														<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualsIntFunction, VSoft.Framework.Formula.Impl">
+															<First type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																<Children />
+																<DataSource>Logs.Level</DataSource>
+																<ListDataSource isNull="true" />
+																<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																<RelationFieldName isNull="true" />
+															</First>
+															<Second type="VSoft.Framework.Formula.Impl.FormulaConstant.IntConstant, VSoft.Framework.Formula.Impl">
+																<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl">
+																	<TypeValue>0</TypeValue>
+																</TypedConstValue>
+															</Second>
+														</ConditionNode>
+														<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+															<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																<StringValue>Śledzenie</StringValue>
+															</TypedConstValue>
+														</ValueNode>
+													</m_conditionsItem>
+													<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+														<ConditionNode isNull="true" />
+														<ValueNode type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+															<m_conditions>
+																<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																	<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualsIntFunction, VSoft.Framework.Formula.Impl">
+																		<First type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																			<Children />
+																			<DataSource>Logs.Level</DataSource>
+																			<ListDataSource isNull="true" />
+																			<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																			<RelationFieldName isNull="true" />
+																		</First>
+																		<Second type="VSoft.Framework.Formula.Impl.FormulaConstant.IntConstant, VSoft.Framework.Formula.Impl">
+																			<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl">
+																				<TypeValue>1</TypeValue>
+																			</TypedConstValue>
+																		</Second>
+																	</ConditionNode>
+																	<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																		<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																			<StringValue>Diagnostyka</StringValue>
+																		</TypedConstValue>
+																	</ValueNode>
+																</m_conditionsItem>
+																<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																	<ConditionNode isNull="true" />
+																	<ValueNode type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																		<m_conditions>
+																			<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																				<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualsIntFunction, VSoft.Framework.Formula.Impl">
+																					<First type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																						<Children />
+																						<DataSource>Logs.Level</DataSource>
+																						<ListDataSource isNull="true" />
+																						<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																						<RelationFieldName isNull="true" />
+																					</First>
+																					<Second type="VSoft.Framework.Formula.Impl.FormulaConstant.IntConstant, VSoft.Framework.Formula.Impl">
+																						<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl">
+																							<TypeValue>2</TypeValue>
+																						</TypedConstValue>
+																					</Second>
+																				</ConditionNode>
+																				<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																					<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																						<StringValue>Informacja</StringValue>
+																					</TypedConstValue>
+																				</ValueNode>
+																			</m_conditionsItem>
+																			<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																				<ConditionNode isNull="true" />
+																				<ValueNode type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																					<m_conditions>
+																						<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																							<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualsIntFunction, VSoft.Framework.Formula.Impl">
+																								<First type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																									<Children />
+																									<DataSource>Logs.Level</DataSource>
+																									<ListDataSource isNull="true" />
+																									<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																									<RelationFieldName isNull="true" />
+																								</First>
+																								<Second type="VSoft.Framework.Formula.Impl.FormulaConstant.IntConstant, VSoft.Framework.Formula.Impl">
+																									<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl">
+																										<TypeValue>3</TypeValue>
+																									</TypedConstValue>
+																								</Second>
+																							</ConditionNode>
+																							<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																								<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																									<StringValue>Ostrzeżenie</StringValue>
+																								</TypedConstValue>
+																							</ValueNode>
+																						</m_conditionsItem>
+																						<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																							<ConditionNode isNull="true" />
+																							<ValueNode type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																								<m_conditions>
+																									<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																										<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualsIntFunction, VSoft.Framework.Formula.Impl">
+																											<First type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																												<Children />
+																												<DataSource>Logs.Level</DataSource>
+																												<ListDataSource isNull="true" />
+																												<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																												<RelationFieldName isNull="true" />
+																											</First>
+																											<Second type="VSoft.Framework.Formula.Impl.FormulaConstant.IntConstant, VSoft.Framework.Formula.Impl">
+																												<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl">
+																													<TypeValue>4</TypeValue>
+																												</TypedConstValue>
+																											</Second>
+																										</ConditionNode>
+																										<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																											<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																												<StringValue>Błąd</StringValue>
+																											</TypedConstValue>
+																										</ValueNode>
+																									</m_conditionsItem>
+																									<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																										<ConditionNode isNull="true" />
+																										<ValueNode type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																											<m_conditions>
+																												<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																													<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualsIntFunction, VSoft.Framework.Formula.Impl">
+																														<First type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																															<Children />
+																															<DataSource>Logs.Level</DataSource>
+																															<ListDataSource isNull="true" />
+																															<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																															<RelationFieldName isNull="true" />
+																														</First>
+																														<Second type="VSoft.Framework.Formula.Impl.FormulaConstant.IntConstant, VSoft.Framework.Formula.Impl">
+																															<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl">
+																																<TypeValue>5</TypeValue>
+																															</TypedConstValue>
+																														</Second>
+																													</ConditionNode>
+																													<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																														<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																															<StringValue>Błąd krytyczny</StringValue>
+																														</TypedConstValue>
+																													</ValueNode>
+																												</m_conditionsItem>
+																												<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																													<ConditionNode isNull="true" />
+																													<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																														<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																															<StringValue>Nie znany</StringValue>
+																														</TypedConstValue>
+																													</ValueNode>
+																												</m_conditionsItem>
+																											</m_conditions>
+																										</ValueNode>
+																									</m_conditionsItem>
+																								</m_conditions>
+																							</ValueNode>
+																						</m_conditionsItem>
+																					</m_conditions>
+																				</ValueNode>
+																			</m_conditionsItem>
+																		</m_conditions>
+																	</ValueNode>
+																</m_conditionsItem>
+															</m_conditions>
+														</ValueNode>
+													</m_conditionsItem>
+												</m_conditions>
+											</ValueNode>
+										</m_conditionsItem>
+										<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+											<ConditionNode isNull="true" />
+											<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+												<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+													<StringValue />
+												</TypedConstValue>
+											</ValueNode>
+										</m_conditionsItem>
+									</m_conditions>
+								</Formula>
+							</LabelText>
+							<HTMLEncode>false</HTMLEncode>
+							<Column>4</Column>
+							<ColumnSpan>8</ColumnSpan>
+							<Row>0</Row>
+							<RowSpan>1</RowSpan>
+							<Name>LabelLevelWartosc</Name>
+							<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+							<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+							<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+								<Constant>TextReadOnly</Constant>
+							</Styles>
+						</AnyType>
+						<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+							<LabelText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+								<LocalizedEntryId>
+									<Id>4bb6324a-3333-4743-a36e-1539b35c2f77</Id>
+								</LocalizedEntryId>
+							</LabelText>
+							<HTMLEncode>false</HTMLEncode>
+							<Column>0</Column>
+							<ColumnSpan>4</ColumnSpan>
+							<Row>0</Row>
+							<RowSpan>1</RowSpan>
+							<Name>LabelLevel</Name>
+							<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+							<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+							<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+						</AnyType>
+					</Controls>
+					<RenderContentOnStart>true</RenderContentOnStart>
+					<AfterRefreshScript isNull="true" />
+					<Collapsible isNull="true" />
+					<IsCollapsed isNull="true" />
+					<IsReadOnly isNull="true" />
+					<Title isNull="true" />
+					<TabOrder>0</TabOrder>
+					<IsAsynchronous>false</IsAsynchronous>
+					<RefreshActionPanel>false</RefreshActionPanel>
+					<AttachHeader>true</AttachHeader>
+					<Column>0</Column>
+					<ColumnSpan>4</ColumnSpan>
+					<Row>1</Row>
+					<RowSpan>1</RowSpan>
+					<Name>FormGroupLevel</Name>
+					<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+					<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+					<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				</AnyType>
+				<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.FormGroupDefinition, VSoft.BusinessPlatform.Forms">
+					<ColumnCount>12</ColumnCount>
+					<RowCount>1</RowCount>
+					<IsVerticalLayout>false</IsVerticalLayout>
+					<Controls>
+						<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+							<LabelText type="VSoft.BusinessPlatform.Common.DynamicValues.FormulaValue`2[String, [VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.Common">
+								<Formula type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<m_conditions>
+										<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+											<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.BaseIsNotNullValueFunction`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+												<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+													<Children />
+													<DataSource>Logs.Time</DataSource>
+													<ListDataSource isNull="true" />
+													<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+													<RelationFieldName isNull="true" />
+												</Argument>
+											</ConditionNode>
+											<ValueNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+												<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+													<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConverter.DateTime2ShortString, VSoft.Framework.Formula.Impl">
+														<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+															<Children />
+															<DataSource>Logs.Time</DataSource>
+															<ListDataSource isNull="true" />
+															<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+															<RelationFieldName isNull="true" />
+														</Argument>
+													</m_ArgumentsItem>
+													<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+														<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+															<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																	<StringValue xml:space="preserve"> </StringValue>
+																</TypedConstValue>
+															</m_ArgumentsItem>
+															<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+																<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+																	<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																		<m_conditions>
+																			<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																				<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualsIntFunction, VSoft.Framework.Formula.Impl">
+																					<First type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.StringLengthFunction, VSoft.Framework.Formula.Impl">
+																						<Argument type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+																							<Argument type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetHourFromDateTime, VSoft.Framework.Formula.Impl">
+																								<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																									<Children />
+																									<DataSource>Logs.Time</DataSource>
+																									<ListDataSource isNull="true" />
+																									<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																									<RelationFieldName isNull="true" />
+																								</Argument>
+																							</Argument>
+																						</Argument>
+																					</First>
+																					<Second type="VSoft.Framework.Formula.Impl.FormulaConstant.IntConstant, VSoft.Framework.Formula.Impl">
+																						<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl">
+																							<TypeValue>1</TypeValue>
+																						</TypedConstValue>
+																					</Second>
+																				</ConditionNode>
+																				<ValueNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+																					<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+																						<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																							<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																								<StringValue>0</StringValue>
+																							</TypedConstValue>
+																						</m_ArgumentsItem>
+																						<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+																							<Argument type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetHourFromDateTime, VSoft.Framework.Formula.Impl">
+																								<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																									<Children />
+																									<DataSource>Logs.Time</DataSource>
+																									<ListDataSource isNull="true" />
+																									<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																									<RelationFieldName isNull="true" />
+																								</Argument>
+																							</Argument>
+																						</m_ArgumentsItem>
+																					</m_Arguments>
+																				</ValueNode>
+																			</m_conditionsItem>
+																			<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																				<ConditionNode isNull="true" />
+																				<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+																					<Argument type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetHourFromDateTime, VSoft.Framework.Formula.Impl">
+																						<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																							<Children />
+																							<DataSource>Logs.Time</DataSource>
+																							<ListDataSource isNull="true" />
+																							<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																							<RelationFieldName isNull="true" />
+																						</Argument>
+																					</Argument>
+																				</ValueNode>
+																			</m_conditionsItem>
+																		</m_conditions>
+																	</m_ArgumentsItem>
+																	<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+																		<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+																			<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																				<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																					<StringValue>:</StringValue>
+																				</TypedConstValue>
+																			</m_ArgumentsItem>
+																			<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+																				<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+																					<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																						<m_conditions>
+																							<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																								<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualsIntFunction, VSoft.Framework.Formula.Impl">
+																									<First type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.StringLengthFunction, VSoft.Framework.Formula.Impl">
+																										<Argument type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+																											<Argument type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetMinuteFromDateTime, VSoft.Framework.Formula.Impl">
+																												<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																													<Children />
+																													<DataSource>Logs.Time</DataSource>
+																													<ListDataSource isNull="true" />
+																													<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																													<RelationFieldName isNull="true" />
+																												</Argument>
+																											</Argument>
+																										</Argument>
+																									</First>
+																									<Second type="VSoft.Framework.Formula.Impl.FormulaConstant.IntConstant, VSoft.Framework.Formula.Impl">
+																										<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl">
+																											<TypeValue>1</TypeValue>
+																										</TypedConstValue>
+																									</Second>
+																								</ConditionNode>
+																								<ValueNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+																									<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+																										<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																											<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																												<StringValue>0</StringValue>
+																											</TypedConstValue>
+																										</m_ArgumentsItem>
+																										<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+																											<Argument type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetMinuteFromDateTime, VSoft.Framework.Formula.Impl">
+																												<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																													<Children />
+																													<DataSource>Logs.Time</DataSource>
+																													<ListDataSource isNull="true" />
+																													<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																													<RelationFieldName isNull="true" />
+																												</Argument>
+																											</Argument>
+																										</m_ArgumentsItem>
+																									</m_Arguments>
+																								</ValueNode>
+																							</m_conditionsItem>
+																							<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																								<ConditionNode isNull="true" />
+																								<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+																									<Argument type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetMinuteFromDateTime, VSoft.Framework.Formula.Impl">
+																										<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																											<Children />
+																											<DataSource>Logs.Time</DataSource>
+																											<ListDataSource isNull="true" />
+																											<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																											<RelationFieldName isNull="true" />
+																										</Argument>
+																									</Argument>
+																								</ValueNode>
+																							</m_conditionsItem>
+																						</m_conditions>
+																					</m_ArgumentsItem>
+																					<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+																						<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+																							<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																								<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																									<StringValue>:</StringValue>
+																								</TypedConstValue>
+																							</m_ArgumentsItem>
+																							<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																								<m_conditions>
+																									<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																										<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualsIntFunction, VSoft.Framework.Formula.Impl">
+																											<First type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.StringLengthFunction, VSoft.Framework.Formula.Impl">
+																												<Argument type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+																													<Argument type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetSecondFromDateTime, VSoft.Framework.Formula.Impl">
+																														<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																															<Children />
+																															<DataSource>Logs.Time</DataSource>
+																															<ListDataSource isNull="true" />
+																															<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																															<RelationFieldName isNull="true" />
+																														</Argument>
+																													</Argument>
+																												</Argument>
+																											</First>
+																											<Second type="VSoft.Framework.Formula.Impl.FormulaConstant.IntConstant, VSoft.Framework.Formula.Impl">
+																												<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl">
+																													<TypeValue>1</TypeValue>
+																												</TypedConstValue>
+																											</Second>
+																										</ConditionNode>
+																										<ValueNode type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+																											<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+																												<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+																													<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+																														<StringValue>0</StringValue>
+																													</TypedConstValue>
+																												</m_ArgumentsItem>
+																												<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+																													<Argument type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetSecondFromDateTime, VSoft.Framework.Formula.Impl">
+																														<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																															<Children />
+																															<DataSource>Logs.Time</DataSource>
+																															<ListDataSource isNull="true" />
+																															<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																															<RelationFieldName isNull="true" />
+																														</Argument>
+																													</Argument>
+																												</m_ArgumentsItem>
+																											</m_Arguments>
+																										</ValueNode>
+																									</m_conditionsItem>
+																									<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+																										<ConditionNode isNull="true" />
+																										<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+																											<Argument type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetSecondFromDateTime, VSoft.Framework.Formula.Impl">
+																												<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+																													<Children />
+																													<DataSource>Logs.Time</DataSource>
+																													<ListDataSource isNull="true" />
+																													<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+																													<RelationFieldName isNull="true" />
+																												</Argument>
+																											</Argument>
+																										</ValueNode>
+																									</m_conditionsItem>
+																								</m_conditions>
+																							</m_ArgumentsItem>
+																						</m_Arguments>
+																					</m_ArgumentsItem>
+																				</m_Arguments>
+																			</m_ArgumentsItem>
+																		</m_Arguments>
+																	</m_ArgumentsItem>
+																</m_Arguments>
+															</m_ArgumentsItem>
+														</m_Arguments>
+													</m_ArgumentsItem>
+												</m_Arguments>
+											</ValueNode>
+										</m_conditionsItem>
+										<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+											<ConditionNode isNull="true" />
+											<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+												<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+													<StringValue />
+												</TypedConstValue>
+											</ValueNode>
+										</m_conditionsItem>
+									</m_conditions>
+								</Formula>
+							</LabelText>
+							<HTMLEncode>false</HTMLEncode>
+							<Column>4</Column>
+							<ColumnSpan>8</ColumnSpan>
+							<Row>0</Row>
+							<RowSpan>1</RowSpan>
+							<Name>LabelTimeWartosc</Name>
+							<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+							<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+							<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+								<Constant>TextReadOnly</Constant>
+							</Styles>
+						</AnyType>
+						<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+							<LabelText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+								<LocalizedEntryId>
+									<Id>c4bd1908-dafa-4d43-8182-c80b1122f4d4</Id>
+								</LocalizedEntryId>
+							</LabelText>
+							<HTMLEncode>false</HTMLEncode>
+							<Column>0</Column>
+							<ColumnSpan>4</ColumnSpan>
+							<Row>0</Row>
+							<RowSpan>1</RowSpan>
+							<Name>LabelTime</Name>
+							<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+							<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+							<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+						</AnyType>
+					</Controls>
+					<RenderContentOnStart>true</RenderContentOnStart>
+					<AfterRefreshScript isNull="true" />
+					<Collapsible isNull="true" />
+					<IsCollapsed isNull="true" />
+					<IsReadOnly isNull="true" />
+					<Title isNull="true" />
+					<TabOrder>0</TabOrder>
+					<IsAsynchronous>false</IsAsynchronous>
+					<RefreshActionPanel>false</RefreshActionPanel>
+					<AttachHeader>true</AttachHeader>
+					<Column>8</Column>
+					<ColumnSpan>4</ColumnSpan>
+					<Row>0</Row>
+					<RowSpan>1</RowSpan>
+					<Name>FormGroupTime</Name>
+					<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+					<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+					<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				</AnyType>
+			</Controls>
+			<ContainerLayout>container-col-3</ContainerLayout>
+			<FormGroupLayout>formgroup-lev-h</FormGroupLayout>
+			<ColumnCount>12</ColumnCount>
+			<RowCount>2</RowCount>
+			<RenderContentOnly>false</RenderContentOnly>
+			<RenderContentOnStart>true</RenderContentOnStart>
+			<AfterRefreshScript isNull="true" />
+			<Collapsible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<IsCollapsed type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<IsReadOnly type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.BusinessPlatform.Common.Enums.ReadOnlyMode, VSoft.BusinessPlatform.Common]], VSoft.BusinessPlatform.Common">
+				<Constant>INHERITED</Constant>
+			</IsReadOnly>
+			<Title type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+				<LocalizedEntryId>
+					<Id>7e282e36-1188-409a-a9e9-7c90114e4407</Id>
+				</LocalizedEntryId>
+			</Title>
+			<TabOrder>0</TabOrder>
+			<IsAsynchronous>false</IsAsynchronous>
+			<RefreshActionPanel>false</RefreshActionPanel>
+			<AttachHeader>true</AttachHeader>
+			<Column>0</Column>
+			<ColumnSpan>12</ColumnSpan>
+			<Row>0</Row>
+			<RowSpan>1</RowSpan>
+			<Name>PortletDanePodstawowe</Name>
+			<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+			<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+		</AnyType>
+		<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.ComplexControlDefinition, VSoft.BusinessPlatform.Forms">
+			<Controls>
+				<AnyType type="VSoft.BusinessPlatform.Forms.ControlDefinitions.LabelDefinition, VSoft.BusinessPlatform.Forms">
+					<LabelText type="VSoft.BusinessPlatform.Common.DynamicValues.FormulaValue`2[String, [VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.Common">
+						<Formula type="VSoft.Framework.Formula.Impl.FormulaCondition.FormulaCondition`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+							<m_conditions>
+								<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<ConditionNode type="VSoft.Framework.Formula.Impl.FormulaFunction.BaseIsNotNullValueFunction`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+										<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+											<Children />
+											<DataSource>Logs.Context</DataSource>
+											<ListDataSource isNull="true" />
+											<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+											<RelationFieldName isNull="true" />
+										</Argument>
+									</ConditionNode>
+									<ValueNode type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+										<Children />
+										<DataSource>Logs.Context</DataSource>
+										<ListDataSource isNull="true" />
+										<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+										<RelationFieldName isNull="true" />
+									</ValueNode>
+								</m_conditionsItem>
+								<m_conditionsItem type="VSoft.Framework.Formula.Impl.FormulaCondition.ConditionBranch`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula.Impl">
+									<ConditionNode isNull="true" />
+									<ValueNode type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+										<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+											<StringValue />
+										</TypedConstValue>
+									</ValueNode>
+								</m_conditionsItem>
+							</m_conditions>
+						</Formula>
+					</LabelText>
+					<HTMLEncode>false</HTMLEncode>
+					<Column>0</Column>
+					<ColumnSpan>12</ColumnSpan>
+					<Row>0</Row>
+					<RowSpan>1</RowSpan>
+					<Name>LabelKontekst</Name>
+					<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+					<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+					<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+						<Constant>TextLeft,TextOverflow</Constant>
+					</Styles>
+				</AnyType>
+			</Controls>
+			<ContainerLayout>container-col-3</ContainerLayout>
+			<FormGroupLayout>formgroup-lev-h</FormGroupLayout>
+			<ColumnCount>12</ColumnCount>
+			<RowCount>1</RowCount>
+			<RenderContentOnly>false</RenderContentOnly>
+			<RenderContentOnStart>true</RenderContentOnStart>
+			<AfterRefreshScript isNull="true" />
+			<Collapsible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<IsCollapsed type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<IsReadOnly type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.BusinessPlatform.Common.Enums.ReadOnlyMode, VSoft.BusinessPlatform.Common]], VSoft.BusinessPlatform.Common">
+				<Constant>INHERITED</Constant>
+			</IsReadOnly>
+			<Title type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+				<LocalizedEntryId>
+					<Id>7c2cd501-65fa-439f-a7ed-dde796ca4316</Id>
+				</LocalizedEntryId>
+			</Title>
+			<TabOrder>0</TabOrder>
+			<IsAsynchronous>false</IsAsynchronous>
+			<RefreshActionPanel>false</RefreshActionPanel>
+			<AttachHeader>true</AttachHeader>
+			<Column>0</Column>
+			<ColumnSpan>12</ColumnSpan>
+			<Row>1</Row>
+			<RowSpan>1</RowSpan>
+			<Name>PortletKontekst</Name>
+			<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+			<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+				<Constant>PortletAdditional_4,ContainerPaddingOn</Constant>
+			</Styles>
+		</AnyType>
+	</Controls>
+	<BeyondFormChanges>Deny</BeyondFormChanges>
+	<ActionPanelDefinition>
+		<Buttons>
+			<ActionDataButtonDefinition>
+				<ActionColumnsSelected type="List[Guid]">
+					<Guid>ffffffff-ffff-ffff-ffff-ffffffffffff</Guid>
+				</ActionColumnsSelected>
+				<ReloadKind>AsynchronousContainer</ReloadKind>
+				<Name type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>8eaccb46-f3e2-41a4-9a2b-3b0799d770ad</Id>
+					</LocalizedEntryId>
+				</Name>
+				<ToolTip type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[String], VSoft.BusinessPlatform.Common">
+					<Constant isNull="true" />
+				</ToolTip>
+				<Id>3cd3af9e-a246-4541-a496-ee81f73ab3b8</Id>
+				<CssClass type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+					<Constant>ButtonNegation,PullLeft,ButtonIcon_Back</Constant>
+				</CssClass>
+				<IconId isNull="true" />
+				<OnClick type="VSoft.BusinessPlatform.Common.ActionFramework.ActionDynamicHandler, VSoft.BusinessPlatform.Common">
+					<ActionData type="VSoft.BusinessPlatform.Forms.ActionData.NavigateBackActionData, VSoft.BusinessPlatform.Forms">
+						<MappingsMode>BeforeSave</MappingsMode>
+						<RequiedValidations isNull="true" />
+						<Mappings>
+							<MappingsCollection>
+								<MappingStructure type="MappingsMechanismProviders.DataModule.DataModuleMappingStructure, MappingsMechanismProviders">
+									<StructGuid>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</StructGuid>
+								</MappingStructure>
+								<ElementRoot isNull="true" />
+								<MappingsList />
+							</MappingsCollection>
+						</Mappings>
+						<SaveSucceededMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>ab7d20f7-368d-4153-8abe-4dedf621eb9f</Id>
+							</LocalizedEntryId>
+						</SaveSucceededMessage>
+						<ValidationErrorMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>f60569c8-4a18-46d7-971c-518f79668b8d</Id>
+							</LocalizedEntryId>
+						</ValidationErrorMessage>
+						<BlockedValidationErrorMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>41cf7315-8958-4d85-ac2c-2e37f2b704f0</Id>
+							</LocalizedEntryId>
+						</BlockedValidationErrorMessage>
+						<Id>bce22047-6595-4f4a-928f-18a1a2e0d1e6</Id>
+						<CssClass isNull="true" />
+						<ToolTip isNull="true" />
+						<DisplayName>Navigate back</DisplayName>
+						<Save>false</Save>
+						<RefreshData>NONE</RefreshData>
+						<ValidationType>ALL</ValidationType>
+						<Right type="VSoft.BusinessPlatform.Rights.DynamicValues.RightVersionIdConstantValue, VSoft.BusinessPlatform.Rights">
+							<Constant>
+								<Id>cad33c02-dd5b-411b-8cdb-6118ee3abef2</Id>
+							</Constant>
+						</Right>
+						<ReadOnlyEnabled>true</ReadOnlyEnabled>
+						<DisplayConfirmation type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[Bool], VSoft.BusinessPlatform.Common">
+							<Constant>false</Constant>
+						</DisplayConfirmation>
+						<ConfirmationText type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+						<RightsUnavailableMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>2bc00c68-0d9f-4a12-bd36-82ed9ce318cd</Id>
+							</LocalizedEntryId>
+						</RightsUnavailableMessage>
+						<MapInPlace isNull="true" />
+					</ActionData>
+					<ReloadKind>AsynchronousContainer</ReloadKind>
+					<NameOfContainerToRefresh />
+				</OnClick>
+				<HideOnActionList>false</HideOnActionList>
+				<ReadOnlyVisibility>true</ReadOnlyVisibility>
+				<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+			</ActionDataButtonDefinition>
+		</Buttons>
+		<PanelPosition>BELOW</PanelPosition>
+	</ActionPanelDefinition>
+	<FormValidation />
+	<UseNewDataStructures>false</UseNewDataStructures>
+	<DeclaredDataStructure isNull="true" />
+	<InitialMapping isNull="true" />
+	<DataSource type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.VersionServer.VersionId, VSoft.VersionServer]], VSoft.BusinessPlatform.Common">
+		<Constant>
+			<Id>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</Id>
+		</Constant>
+	</DataSource>
+	<JavaScriptOnPage isNull="true" />
+	<FormName type="VSoft.BusinessPlatform.Common.DynamicValues.FormulaValue`2[String, [VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.Common">
+		<Formula type="VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction, VSoft.Framework.Formula.Impl">
+			<m_Arguments type="VSoft.Framework.Formula.FormulaFunction.FormulaNodeCollection`1[[VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl]], VSoft.Framework.Formula">
+				<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant, VSoft.Framework.Formula.Impl">
+					<TypedConstValue type="VSoft.Framework.Formula.Impl.ReturnType.StringReturnType, VSoft.Framework.Formula.Impl">
+						<StringValue>Wpis </StringValue>
+					</TypedConstValue>
+				</m_ArgumentsItem>
+				<m_ArgumentsItem type="VSoft.Framework.Formula.Impl.FormulaConverter.Int2String, VSoft.Framework.Formula.Impl">
+					<Argument type="VSoft.BusinessPlatform.DataModule.Formula.DataModuleVariable`1[[VSoft.Framework.Formula.Impl.ReturnType.IntReturnType, VSoft.Framework.Formula.Impl]], VSoft.BusinessPlatform.DataModule">
+						<Children />
+						<DataSource>Logs.Id</DataSource>
+						<ListDataSource isNull="true" />
+						<DataSourceVersion>86bf2a1e-8285-4a30-a2b2-ecf6ea16f846</DataSourceVersion>
+						<RelationFieldName isNull="true" />
+					</Argument>
+				</m_ArgumentsItem>
+			</m_Arguments>
+		</Formula>
+	</FormName>
+	<Right type="VSoft.BusinessPlatform.Rights.DynamicValues.RightVersionIdConstantValue, VSoft.BusinessPlatform.Rights">
+		<Constant>
+			<Id>cad33c02-dd5b-411b-8cdb-6118ee3abef2</Id>
+		</Constant>
+	</Right>
+	<AfterDataCreated type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyDynamicHandler, VSoft.BusinessPlatform.Common" />
+	<AfterDataLoaded type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyDynamicHandler, VSoft.BusinessPlatform.Common" />
+	<BeforeSetData type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyDynamicHandler, VSoft.BusinessPlatform.Common" />
+	<DisableIDsGenerate>false</DisableIDsGenerate>
+	<CompactControlsInRows>false</CompactControlsInRows>
+	<SaveObjectAccessLog type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[Bool], VSoft.BusinessPlatform.Common">
+		<Constant>false</Constant>
+	</SaveObjectAccessLog>
+	<ContainerLayout>container-col-3</ContainerLayout>
+	<FormGroupLayout>formgroup-lev-h</FormGroupLayout>
+	<ColumnCount>12</ColumnCount>
+	<RowCount>5</RowCount>
+	<RenderContentOnly>false</RenderContentOnly>
+	<RenderContentOnStart>true</RenderContentOnStart>
+	<AfterRefreshScript isNull="true" />
+	<Collapsible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+	<IsCollapsed type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+	<IsReadOnly type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.BusinessPlatform.Common.Enums.ReadOnlyMode, VSoft.BusinessPlatform.Common]], VSoft.BusinessPlatform.Common">
+		<Constant>TRUE</Constant>
+	</IsReadOnly>
+	<Title type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+	<TabOrder>0</TabOrder>
+	<IsAsynchronous>false</IsAsynchronous>
+	<RefreshActionPanel>false</RefreshActionPanel>
+	<AttachHeader>true</AttachHeader>
+	<Column>0</Column>
+	<ColumnSpan>1</ColumnSpan>
+	<Row>0</Row>
+	<RowSpan>0</RowSpan>
+	<Name>FormLogs</Name>
+	<IsVisible isNull="true" />
+	<ControlHidingMode>DONT_RENDER</ControlHidingMode>
+	<Styles type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+</Form>

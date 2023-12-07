@@ -1,0 +1,17 @@
+﻿<AddIn name        = "Formula"
+       description = "${res:FormulaModule}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+  <Manifest>
+    <Identity name = "FormulaDesigner" version=":VSoft.Framework.Formula" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":VSoft.archITekt.Formula.Designer.Addin" />
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VSoft.archITekt.Formula.Designer.Addin.Commands.StartCommand" class = "VSoft.archITekt.Formula.Designer.Addin.Commands.StartCommand" />
+  </Path>
+</AddIn>

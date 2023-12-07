@@ -1,0 +1,198 @@
+﻿<Edmx xmlns:v="http://vsoft.pl" Version="3.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+	<Runtime>
+		<ConceptualModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Namespace="VSoft.BusinessPlatform.DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+				<EntityType Name="BusinessParametersHistory" v:Prefix="BPH" v:IsTable="false">
+					<Documentation>
+						<Summary>Business parameters history</Summary>
+						<LongDescription>History of changes in business parameters</LongDescription>
+					</Documentation>
+					<Key>
+						<PropertyRef Name="Id" />
+					</Key>
+					<Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" v:Order="0">
+						<Documentation>
+							<Summary>Id</Summary>
+							<LongDescription>Id (primary key) of the business parameter history</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="BussinesParametersId" Type="Int32" Nullable="false" v:Order="15">
+						<Documentation>
+							<Summary>Business parameters Id</Summary>
+							<LongDescription>Id (primary key) of the business parameter</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Category" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="true" v:Order="5">
+						<Documentation>
+							<Summary>Category</Summary>
+							<LongDescription>Parameter category</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="DatabaseTime" Type="DateTime" Precision="3" Nullable="false" v:Order="16">
+						<Documentation>
+							<Summary>Database time</Summary>
+							<LongDescription>Time at which the query was executed in the database</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="DatabaseUser" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="true" v:Order="14">
+						<Documentation>
+							<Summary>Database user</Summary>
+							<LongDescription>The database user who executed the query</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="DataType" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" v:Order="2">
+						<Documentation>
+							<Summary>Data type</Summary>
+							<LongDescription>Parameter value type</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Editor" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="true" v:Order="3">
+						<Documentation>
+							<Summary>Editor</Summary>
+							<LongDescription>Editor type</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Key" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" v:Order="1">
+						<Documentation>
+							<Summary>Key</Summary>
+							<LongDescription>Parameter key</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Modified" Type="DateTime" Precision="3" Nullable="true" v:Order="12">
+						<Documentation>
+							<Summary>Modified</Summary>
+							<LongDescription>Date of change</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Modifier" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="true" v:Order="11">
+						<Documentation>
+							<Summary>Modifier</Summary>
+							<LongDescription>User who edited</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" v:Order="6">
+						<Documentation>
+							<Summary>Name</Summary>
+							<LongDescription>Parameter name</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Operation" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="true" v:Order="13">
+						<Documentation>
+							<Summary>Operation</Summary>
+							<LongDescription>Operation</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ValueBool" Type="Boolean" Nullable="true" v:Order="9">
+						<Documentation>
+							<Summary>Value: logical</Summary>
+							<LongDescription>Parameter value: logical</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ValueDateTime" Type="DateTime" Precision="3" Nullable="true" v:Order="8">
+						<Documentation>
+							<Summary>Value: date</Summary>
+							<LongDescription>Parameter value: date</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ValueDecimal" Type="Decimal" Precision="18" Scale="6" Nullable="true" v:Order="7">
+						<Documentation>
+							<Summary>Value: decimal</Summary>
+							<LongDescription>Parameter value: decimal</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ValueLong" Type="Int64" Nullable="true" v:Order="10">
+						<Documentation>
+							<Summary>Value: long number</Summary>
+							<LongDescription>Parameter value: long number</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ValueString" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="true" v:Order="4">
+						<Documentation>
+							<Summary>Value: string</Summary>
+							<LongDescription>Parameter value: string</LongDescription>
+						</Documentation>
+					</Property>
+				</EntityType>
+				<EntityContainer Name="EntitiesContainer" annotation:LazyLoadingEnabled="false">
+					<EntitySet Name="BusinessParametersHistorySet" EntityType="Self.BusinessParametersHistory" />
+				</EntityContainer>
+			</Schema>
+		</ConceptualModels>
+		<Mappings>
+			<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+				<EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EntitiesContainer">
+					<EntitySetMapping Name="BusinessParametersHistorySet">
+						<EntityTypeMapping TypeName="VSoft.BusinessPlatform.DataModel.BusinessParametersHistory">
+							<MappingFragment StoreEntitySet="BusinessParametersHistory">
+								<ScalarProperty Name="Id" ColumnName="BPH_ID" />
+								<ScalarProperty Name="BussinesParametersId" ColumnName="BP_ID" />
+								<ScalarProperty Name="Category" ColumnName="BP_CATEGORY" />
+								<ScalarProperty Name="DatabaseTime" ColumnName="BPH_DATABASE_TIME" />
+								<ScalarProperty Name="DatabaseUser" ColumnName="BPH_DATABASE_USER" />
+								<ScalarProperty Name="DataType" ColumnName="BP_DATA_TYPE" />
+								<ScalarProperty Name="Editor" ColumnName="BP_EDITOR" />
+								<ScalarProperty Name="Key" ColumnName="BP_KEY" />
+								<ScalarProperty Name="Modified" ColumnName="BP_MODIFIED" />
+								<ScalarProperty Name="Modifier" ColumnName="BP_MODIFIER" />
+								<ScalarProperty Name="Name" ColumnName="BP_NAME" />
+								<ScalarProperty Name="Operation" ColumnName="BPH_OPERATION" />
+								<ScalarProperty Name="ValueBool" ColumnName="BP_VALUE_BOOL" />
+								<ScalarProperty Name="ValueDateTime" ColumnName="BP_VALUE_DATETIME" />
+								<ScalarProperty Name="ValueDecimal" ColumnName="BP_VALUE_DECIMAL" />
+								<ScalarProperty Name="ValueLong" ColumnName="BP_VALUE_LONG" />
+								<ScalarProperty Name="ValueString" ColumnName="BP_VALUE_STRING" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+				</EntityContainerMapping>
+			</Mapping>
+		</Mappings>
+		<StorageModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" Namespace="VSoft.BusinessPlatform.StorageModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+				<EntityType Name="BusinessParametersHistory">
+					<Key>
+						<PropertyRef Name="BPH_ID" />
+					</Key>
+					<Property Name="BPH_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+					<Property Name="BP_ID" Type="int" Nullable="false" />
+					<Property Name="BP_CATEGORY" Type="nvarchar" MaxLength="255" Nullable="true" />
+					<Property Name="BPH_DATABASE_TIME" Type="datetime2" Precision="3" Nullable="false" />
+					<Property Name="BPH_DATABASE_USER" Type="nvarchar" MaxLength="255" Nullable="true" />
+					<Property Name="BP_DATA_TYPE" Type="varchar" MaxLength="16" Nullable="false" />
+					<Property Name="BP_EDITOR" Type="nvarchar(max)" Nullable="true" />
+					<Property Name="BP_KEY" Type="varchar" MaxLength="64" Nullable="false" />
+					<Property Name="BP_MODIFIED" Type="datetime2" Precision="3" Nullable="true" />
+					<Property Name="BP_MODIFIER" Type="nvarchar" MaxLength="255" Nullable="true" />
+					<Property Name="BP_NAME" Type="nvarchar" MaxLength="255" Nullable="false" />
+					<Property Name="BPH_OPERATION" Type="varchar" MaxLength="1" Nullable="true" />
+					<Property Name="BP_VALUE_BOOL" Type="bit" Nullable="true" />
+					<Property Name="BP_VALUE_DATETIME" Type="datetime2" Precision="3" Nullable="true" />
+					<Property Name="BP_VALUE_DECIMAL" Type="decimal" Precision="18" Scale="6" Nullable="true" />
+					<Property Name="BP_VALUE_LONG" Type="bigint" Nullable="true" />
+					<Property Name="BP_VALUE_STRING" Type="nvarchar(max)" Nullable="true" />
+				</EntityType>
+				<EntityContainer Name="ModelStoreContainer">
+					<EntitySet Name="BusinessParametersHistory" EntityType="Self.BusinessParametersHistory" Schema="dbo" Table="BUSINESS_PARAMETERS_HISTORY" />
+				</EntityContainer>
+			</Schema>
+		</StorageModels>
+	</Runtime>
+	<Designer>
+		<Connection>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+			</DesignerInfoPropertySet>
+		</Connection>
+		<Options>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="ValidateOnBuild" Value="False" />
+				<DesignerProperty Name="EnablePluralization" Value="True" />
+				<DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+				<DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+				<DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="False" />
+				<DesignerProperty Name="UseLegacyProvider" Value="False" />
+			</DesignerInfoPropertySet>
+		</Options>
+		<Diagrams />
+	</Designer>
+</Edmx>

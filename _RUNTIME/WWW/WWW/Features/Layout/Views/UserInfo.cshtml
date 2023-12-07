@@ -1,0 +1,61 @@
+﻿@using VSoft.BusinessPlatform.Application.Contracts;
+@using VSoft.BusinessPlatform.Guts.Security.User
+@using VSoft.Framework
+@using VSoft.Framework.Mvc.Features.Account.ChangePassword
+@using VSoft.Framework.Mvc.Features.Account.LogOut
+@using VSoft.Framework.Mvc.Routing
+
+<div class="a-user-area">
+  <i class="k-icon k-i-user"></i>
+  <div class="a-user-area-popup">
+    <div class="a-user-info">
+      <div class="a-user-name">@BaseIdentityPrincipal.DisplayName</div>
+	    <div class="a-user-roles">
+		    @foreach (string role in TopRoles)
+		    {
+			    <div class="a-user-role">@role</div>
+		    }
+		    @{var diff = TotalRoles - TopRoles.Length; }
+		    @if (diff > 0)
+		    {
+			    var message = $"+{diff} {Localization.More.ToLower()}";
+			    <div class="a-user-role"><a href="#" id="roleList" style="margin-top: 0px; margin-left: 0px;">@message</a></div>
+		    }
+	    </div>
+       @{
+	       var passwordChangeIsSupported = ObjectBuilder.GetInstance<IUserInfo>().PasswordChangeIsSupported;
+       }
+       <div class="a-user-actions">
+          @if (passwordChangeIsSupported)
+          {
+	          @(Html.ActionLink(Localization.ChangePassword, nameof(ChangePasswordController.ChangePassword), typeof(ChangePasswordController).GetRoute(), null, new Dictionary<string, object> { { "class", "k-button k-button-solid-base k-button-sm k-rounded-md" } }))
+          }
+	       @(Html.ActionLink(Localization.Logout, nameof(LogOutController.LogOut), typeof(LogOutController).GetRoute(), null, new Dictionary<string, object> { { "class", "k-button k-button-solid-base k-button-sm k-rounded-md logout-btn" } }))
+       </div>
+    </div>
+  </div>
+</div>
+<div id='roleModalContent'>
+</div>
+<script>
+  var getUrl = window.location;
+  var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+  var TeamDetailPostBackURL = baseUrl + '/Account/User-Info';
+  $(function () {
+    $("#roleList").click(function () {
+      var options = { "backdrop": "static", keyboard: true };
+      $.ajax({
+        type: "GET",
+        url: TeamDetailPostBackURL,
+        contentType: "application/json; charset=utf-8",
+        datatype: "json",
+        success: function (data) {
+          $('#roleModalContent').empty();
+          $('#roleModalContent').html(data);
+        },
+        error: function () {
+        }
+      });
+    });
+  });
+</script>

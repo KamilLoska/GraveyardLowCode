@@ -1,0 +1,26 @@
+﻿<AddIn name        = "Application"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl"
+       addInManagerHidden = "preinstalled">
+
+  <Manifest>
+    <Identity name="ApplicationModule" version=":VSoft.BusinessPlatform.Application.Addin" />
+    <Dependency addin="BusinessStudio" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":VSoft.BusinessPlatform.Application.Addin">
+    </Import>
+  </Runtime>
+
+  <Path name="/SharpDevelop/Workbench/MainMenu/Tools">
+    <MenuItem id="Wlasciwosci" label="${res:WlasciwosciAplikacji}"
+              class="VSoft.BusinessPlatform.Application.Addin.Commands.ShowApplicationPropertiesEditorCommand"
+              icon="AppProperties" />
+    <MenuItem id="WlasciwosciAplikacjiSeparator" type="Separator" />
+  </Path>
+
+  <Path name="/SharpDevelop/Autostart">
+    <Class id="ApplicationModuleAddinStartCommand" class="VSoft.BusinessPlatform.Application.Addin.Commands.StartCommand" />
+  </Path>
+</AddIn>

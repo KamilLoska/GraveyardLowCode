@@ -1,0 +1,33 @@
+﻿<AddIn name        = "Filetype Registerer"
+       author      = "Georg Brandl"
+       copyright   = "prj:///doc/copyright.txt"
+       description = "Registers files in the Windows Explorer for #Develop"
+       addInManagerHidden = "preinstalled">
+
+  <Manifest>
+    <Identity name = "ICSharpCode.FiletypeRegisterer" />
+    <Dependency addin="SharpDevelop" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly = ":ICSharpCode.FiletypeRegisterer">
+      <Doozer name = "FiletypeAssociation"
+			        class = "ICSharpCode.FiletypeRegisterer.FiletypeAssociationDoozer" />
+    </Import>
+  </Runtime>
+
+  <Path name = "/AddIns/FileTypeRegisterer/FileTypes">
+
+    <FiletypeAssociation
+			id = "xml"
+			icon = "${AddInPath:ICSharpCode.FiletypeRegisterer}/filetypes/xml.ico"
+			text = "${res:ICSharpCode.FiletypeRegisterer.XmlFileAssozisation}" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Dialogs/OptionsDialog/UIOptions">
+    <OptionPanel id          = "RegisterFiletypes"
+		             label       = "${res:ICSharpCode.SharpDevelop.Gui.Dialogs.OptionPanels.RegisterFiletypesPanel.PanelName}"
+		             insertafter = "LoadSave"
+		             class       = "ICSharpCode.FiletypeRegisterer.RegisterFiletypesPanel" />
+  </Path>
+</AddIn>

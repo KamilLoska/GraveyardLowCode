@@ -1,0 +1,114 @@
+﻿<AddIn name        = "Dictionary"
+       description = "${res:DictionaryModule}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+  <Manifest>
+    <Identity name="DicionaryDesigner" version=":VSoft.Framework.Dictionaries" />
+  </Manifest>
+
+  <BitmapResources file="Resources\DmrBitmapResources.resources" />
+
+  <Runtime>
+    <Import assembly=":VSoft.archITekt.Dictionary">
+      <ConditionEvaluator name="CreateDicElementCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.CreateDicElementCommandCondition" />
+      <ConditionEvaluator name="CreateDicCategoryCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.CreateDicCategoryCommandCondition" />
+      <ConditionEvaluator name="CreateDicViewCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.CreateDicViewCommandCondition" />
+      <ConditionEvaluator name="LinkOrUnLinkDicObjectCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.LinkOrUnLinkDicObjectCommandCondition" />
+      <ConditionEvaluator name="ImportDicStructureFromTextCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.ImportDicStructureFromTextCommandCondition" />
+      <ConditionEvaluator name="ExpandOrCollapseDicTreeCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.ExpandOrCollapseDicTreeCommandCondition" />
+      <ConditionEvaluator name="EditDicStructCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.EditDicStructCommandCondition" />
+      <ConditionEvaluator name="DicCategoryVersioningCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.DicCategoryVersioningCommandCondition" />
+      <ConditionEvaluator name="DicCategoryTurnOnVersioningCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.DicCategoryTurnOnVersioningCommandCondition" />
+      <ConditionEvaluator name="CreateVersioningViewCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.CreateVersioningViewCommandCondition" />
+      <ConditionEvaluator name="UpdateDictionaryDatabaseCommandCondition" class="VSoft.archITekt.Dictionary.Conditions.UpdateDictionaryDatabaseCommandCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VSoft.archITekt.Dictionary.Commands.StartCommand" class = "VSoft.archITekt.Dictionary.Commands.StartCommand" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Console">
+    <Class id = "VSoft.archITekt.Dictionary.Commands.GenerateSQLScriptForDictionariesCommand" class = "VSoft.archITekt.Dictionary.Commands.GenerateSQLScriptForDictionariesCommand" />
+  </Path>
+
+  <Path name ="/SharpDevelop/Workbench/MainMenu/Tools">
+    <Condition name = "UpdateDictionaryDatabaseCommandCondition" action = "Disable">
+      <MenuItem id ="UpdateDictionaries"
+            label = "${res:AktualizacjaBazyDanychDlaStrukturSlownikowych}"
+            class ="VSoft.archITekt.Dictionary.Commands.UpdateDictionaryDatabaseCommand"
+            icon="Refresh" />
+    </Condition>
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/DesignerToolBar/Standard">
+    <Condition name = "EditDicStructCommandCondition" action = "Exclude">
+
+      <Condition name = "ImportDicStructureFromTextCommandCondition" action = "Exclude">
+        <ToolbarItem id = "ImportujStruktureZPlikuTekstowego"
+                     tooltip = "${res:ImportujStruktureZPlikuTekstowegoCtrlI}"
+                     class = "VSoft.archITekt.Dictionary.Commands.ImportDicStructureFromTextCommand"
+                     icon  = "ImportStructureFromTextFile" />
+      </Condition>
+      <Condition name = "CreateDicElementCommandCondition" action = "Exclude">
+        <ToolbarItem id = "UtworzElementSlownikowy"
+                     tooltip = "${res:UtworzNowyElementSlownikowyCtrlE}"
+                     class = "VSoft.archITekt.Dictionary.Commands.CreateDicElementCommand"
+                     icon = "CreateNewDictionaryItem" />
+      </Condition>
+      <Condition name = "CreateDicCategoryCommandCondition" action = "Exclude">
+        <ToolbarItem id = "UtworzKategorieSlownikowa"
+                     tooltip = "${res:UtworzNowaKategorieSlownikowaCtrlK}"
+                     class = "VSoft.archITekt.Dictionary.Commands.CreateDicCategoryCommand"
+                     icon = "CreateNewDictionaryCategory" />
+      </Condition>
+      <Condition name = "CreateDicViewCommandCondition" action = "Exclude">
+        <ToolbarItem id = "UtworzWidokSlownikowy"
+                     tooltip = "${res:UtworzNowyWidokSlownikowyCtrlW}"
+                     class = "VSoft.archITekt.Dictionary.Commands.CreateDicViewCommand"
+                     icon = "CreateNewDictionaryView" />
+      </Condition>
+
+      <Condition name = "LinkOrUnLinkDicObjectCommandCondition" action = "Exclude">
+        <ToolbarItem id = "PrzylaczLubOdlaczObiektSlownikowy"
+                     tooltip = "${res:PrzylaczLubOdlaczObiektSlownikowyCtrlL}"
+                     class = "VSoft.archITekt.Dictionary.Commands.LinkOrUnLinkDicObjectCommand"
+                     icon = "AttachOrDetachDictionaryObject" />
+      </Condition>
+      <Condition name = "DicCategoryVersioningCommandCondition" action = "Exclude">
+        <ToolbarItem id = "WersjonowanieKategoriiSlownikowej"
+                     tooltip = "${res:WersjonowanieKategoriiSlownikowejCtrlR}"
+                     class = "VSoft.archITekt.Dictionary.Commands.DicCategoryVersioningCommand"
+                     icon = "DictionaryCategoryVersioningEditing" />
+      </Condition>
+      <Condition name = "DicCategoryTurnOnVersioningCommandCondition" action = "Exclude">
+        <ToolbarItem id = "WlaczWersjonowanieKategoriiSlownikowej"
+                     tooltip = "${res:WlaczWersjonowanieKategoriiSlownikowejCtrlT}"
+                     class = "VSoft.archITekt.Dictionary.Commands.DicCategoryTurnOnVersioningCommand"
+                     icon = "EnableDictionaryCategoryVersioning" />
+      </Condition>
+      <Condition name = "CreateVersioningViewCommandCondition" action = "Exclude">
+        <ToolbarItem id = "UtworzWidokWersjonowania"
+                     tooltip = "${res:UtworzWidokWersjonowaniaCtrlP}"
+                     class = "VSoft.archITekt.Dictionary.Commands.CreateVersioningViewCommand"
+                     icon = "CreateVersionedView" />
+      </Condition>
+    </Condition>
+    <Condition name = "ExpandOrCollapseDicTreeCommandCondition" action = "Exclude">
+      <ToolbarItem id = "ZwinDrzewo"
+                   tooltip = "${res:ZwinDrzewo}"
+                   class = "VSoft.archITekt.Dictionary.Commands.CollapseDicTreeCommand"
+                   icon = "CollapseTree" />
+      <ToolbarItem id = "RozwinDrzewo"
+                   tooltip = "${res:RozwinDrzewo}"
+                   class = "VSoft.archITekt.Dictionary.Commands.ExpandDicTreeCommand"
+                   icon = "ExpandTree" />
+
+      <ToolbarItem id = "PokazUkryjElementyNieaktywne"
+                   type ="CheckBox"
+                   tooltip = "${res:PokazUkryjElementyNieaktywne}"
+                   class = "VSoft.archITekt.Dictionary.Commands.ShowHideInActiveElementsCommand"
+                   icon = "Hidden" />
+    </Condition>
+  </Path>
+</AddIn>

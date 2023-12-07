@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Simple.master.cs" Inherits="UserIntegration.Web.Simple" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="_headMain" runat="server">
+	<asp:PlaceHolder runat="server">
+		<link rel="SHORTCUT ICON" href="<%= ResolveUrl("~/favicon.ico") %>"/>
+	</asp:PlaceHolder>
+	<asp:ContentPlaceHolder ID="_headContentPlaceHolder" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="_form1" runat="server">
+       <!--#include virtual ="Css/WebBlue/Layout/Includes/Start.htm" -->
+    <div>
+        <asp:ContentPlaceHolder ID="_mainContentPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <!--#include virtual ="Css/WebBlue/Layout/Includes/End.htm" -->
+    </form>
+</body>
+</html>

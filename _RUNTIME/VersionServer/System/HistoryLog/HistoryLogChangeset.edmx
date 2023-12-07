@@ -1,0 +1,108 @@
+﻿<Edmx xmlns:v="http://vsoft.pl" Version="3.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+	<Runtime>
+		<ConceptualModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Namespace="VSoft.BusinessPlatform.DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+				<EntityType Name="HistoryLogChangeset" v:Prefix="C" v:IsTable="false">
+					<Documentation>
+						<Summary>History log changeset</Summary>
+						<LongDescription>Table that stores changeset information</LongDescription>
+					</Documentation>
+					<Key>
+						<PropertyRef Name="Id" />
+					</Key>
+					<Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" v:Order="0">
+						<Documentation>
+							<Summary>Id</Summary>
+							<LongDescription>Primary key</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="BussinessContext" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="true" v:Order="4">
+						<Documentation>
+							<Summary>Business context</Summary>
+							<LongDescription>Information on the business activity in which the modification of data was performed</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Date" Type="DateTime" Nullable="false" v:Order="1">
+						<Documentation>
+							<Summary>Date</Summary>
+							<LongDescription>Date the change was created</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Source" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="true" v:Order="3">
+						<Documentation>
+							<Summary>Source</Summary>
+							<LongDescription>The system that is a source of change</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="User" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" v:Order="2">
+						<Documentation>
+							<Summary>User</Summary>
+							<LongDescription>Id of the user committing the change</LongDescription>
+						</Documentation>
+					</Property>
+					<NavigationProperty Name="ObjectInfos" Relationship="Self.HistoryLogObjectInfo_Changeset" FromRole="HistoryLogObjectInfo_Changeset_Target" ToRole="HistoryLogObjectInfo_Changeset_Source" v:RelationStructure="08f1869e-23d6-4f0c-90ab-a913f7175f3e" v:DictionaryStructure="00000000-0000-0000-0000-000000000000" v:DictionaryCollection="00000000-0000-0000-0000-000000000000" v:Order="5">
+						<Documentation>
+							<Summary>Object infos</Summary>
+							<LongDescription>List of changes in individual fields of an object</LongDescription>
+						</Documentation>
+					</NavigationProperty>
+				</EntityType>
+				<EntityContainer Name="EntitiesContainer" annotation:LazyLoadingEnabled="false">
+					<EntitySet Name="HistoryLogChangesetSet" EntityType="Self.HistoryLogChangeset" />
+				</EntityContainer>
+			</Schema>
+		</ConceptualModels>
+		<Mappings>
+			<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+				<EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EntitiesContainer">
+					<EntitySetMapping Name="HistoryLogChangesetSet">
+						<EntityTypeMapping TypeName="VSoft.BusinessPlatform.DataModel.HistoryLogChangeset">
+							<MappingFragment StoreEntitySet="HistoryLogChangeset">
+								<ScalarProperty Name="Id" ColumnName="C_ID" />
+								<ScalarProperty Name="BussinessContext" ColumnName="C_BUSSINESS_CONTEXT" />
+								<ScalarProperty Name="Date" ColumnName="C_DATE" />
+								<ScalarProperty Name="Source" ColumnName="C_SOURCE" />
+								<ScalarProperty Name="User" ColumnName="C_USER" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+				</EntityContainerMapping>
+			</Mapping>
+		</Mappings>
+		<StorageModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" Namespace="VSoft.BusinessPlatform.StorageModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+				<EntityType Name="HistoryLogChangeset">
+					<Key>
+						<PropertyRef Name="C_ID" />
+					</Key>
+					<Property Name="C_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+					<Property Name="C_BUSSINESS_CONTEXT" Type="varchar" MaxLength="1000" Nullable="true" />
+					<Property Name="C_DATE" Type="datetime" Nullable="false" />
+					<Property Name="C_SOURCE" Type="varchar" MaxLength="255" Nullable="true" />
+					<Property Name="C_USER" Type="varchar" MaxLength="255" Nullable="false" />
+				</EntityType>
+				<EntityContainer Name="ModelStoreContainer">
+					<EntitySet Name="HistoryLogChangeset" EntityType="Self.HistoryLogChangeset" Schema="dbo" Table="HIS_CHANGESET" />
+				</EntityContainer>
+			</Schema>
+		</StorageModels>
+	</Runtime>
+	<Designer>
+		<Connection>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+			</DesignerInfoPropertySet>
+		</Connection>
+		<Options>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="ValidateOnBuild" Value="False" />
+				<DesignerProperty Name="EnablePluralization" Value="True" />
+				<DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+				<DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+				<DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="False" />
+				<DesignerProperty Name="UseLegacyProvider" Value="False" />
+			</DesignerInfoPropertySet>
+		</Options>
+		<Diagrams />
+	</Designer>
+</Edmx>

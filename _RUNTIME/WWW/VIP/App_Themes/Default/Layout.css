@@ -1,0 +1,414 @@
+﻿HTML {
+	background-image: url(Images/bg_app.png);
+}
+
+BODY {
+	margin: 0px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	color: #3E3E3E;
+	scrollbar-3dlight-color: #0090DC;
+	scrollbar-arrow-color: #0090DC;
+	scrollbar-base-color: #C6E1CD;
+	scrollbar-darkshadow-color: #FFFFFF;
+	scrollbar-face-color: #C7D0DC;
+	scrollbar-highlight-color: ivory;
+	scrollbar-shadow-color: #0090DC;
+	scrollWidth: 10px;
+	scrollWidth: 10;
+}
+
+INPUT, SELECT, TEXTAREA {
+	border: 1px solid #AC9B94;
+	background-color: #F1EEEB;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	color: #3E3E3E;
+}
+
+	INPUT[type="radio"] {
+		background-image: none;
+		border: 0px;
+	}
+
+	INPUT[type="checkbox"] {
+		background-image: none;
+		border: 0px;
+	}
+
+.CSS_LaoyutTable {
+	width: 100%;
+	height: 600;
+}
+
+/* TABELA GÓRNA - GRAFIKA - START>*/
+.CSS_TopTable {
+	width: 100%;
+	border: 0;
+}
+
+.CSS_TopTable_1 {
+	height: 96px;
+	width: 160px;
+	background-image: url(Images/logo.png);
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.CSS_TopTable_2 {
+	background-image: url(Images/topImg.png);
+	border-bottom: 1px solid #FFFFFF;
+}
+/* TABELA GÓRNA - GRAFIKA - KONIEC>*/
+
+/* LAYOUT - GRAFIKA - START>*/
+
+.CSS_LaoyutTop_2 {
+	background-image: url(Images/bg_topX.png);
+}
+
+.CSS_LaoyutTop_1 {
+	width: 35px;
+	height: 35px;
+	background-image: url(Images/bg_top1.png);
+	background-position: right;
+}
+
+.CSS_LaoyutTop0 {
+	background-image: url(Images/bg_top2.png);
+}
+
+.CSS_LaoyutTop1 {
+	width: 138px;
+	background-image: url(Images/bg_top3.png);
+}
+
+.CSS_LaoyutTop2 {
+	background-image: url(Images/bg_topX.png);
+}
+
+.CSS_LaoyutMiddle_2 {
+}
+
+.CSS_LaoyutMiddle_1 {
+	background-image: url(Images/bg_middle1.png);
+	background-position: right;
+}
+
+.CSS_LaoyutMiddle0 {
+	width: 900px;
+	background: #FFFFFF;
+	padding-left: 20px;
+	vertical-align: top;
+}
+
+.CSS_LaoyutMiddle1 {
+	background-image: url(Images/bg_middle3.png);
+}
+
+.CSS_LaoyutMiddle2 {
+}
+
+.CSS_LaoyutBottom_2 {
+}
+
+.CSS_LaoyutBottom_1 {
+	height: 70px;
+	background-image: url(Images/bg_bottom1.png);
+	background-position: right;
+}
+
+.CSS_LaoyutBottom0 {
+	background-image: url(Images/bg_bottom2.png);
+}
+
+.CSS_LaoyutBottom1 {
+	background-image: url(Images/bg_bottom3.png);
+}
+
+.CSS_LaoyutBottom2 {
+}
+
+/* LAYOUT - GRAFIKA - KONIEC>*/
+
+/* PRZYCISKI - START>*/
+
+.CSS_ButtonSmall {
+	background-image: url(Images/small_button_bg.png);
+	border: 0px;
+	width: 65px;
+	color: #FFFFFF;
+	font-size: 10px;
+	font-family: Verdana;
+	text-transform: uppercase;
+	font-weight: bold;
+	height: 18px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+	.CSS_ButtonSmall:hover {
+		color: #FF7500;
+	}
+
+.CSS_ButtonWide {
+	background-image: url(Images/wide_button_bg.png);
+	border: 0px;
+	width: 200px;
+	color: #FFFFFF;
+	font-size: 10px;
+	font-family: Verdana;
+	text-transform: uppercase;
+	font-weight: bold;
+	height: 18px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+	.CSS_ButtonWide:hover {
+		color: #FF7500;
+	}
+
+.CSS_Button {
+	background-image: url(Images/button_bg.png);
+	border: 0px;
+	width: 133px;
+	color: #FFFFFF;
+	font-size: 10px;
+	font-family: Verdana;
+	text-transform: uppercase;
+	font-weight: bold;
+	height: 18px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+	.CSS_Button:hover {
+		color: #FF7500;
+	}
+
+/* PRZYCISKI - KONIEC>*/
+
+
+/* WYRÓŻNIKI TEKSTU - START>*/
+
+.CSS_Red {
+	color: #FF4800;
+}
+
+.CSS_Green {
+	color: #008F54;
+}
+
+.CSS_Blue {
+	color: #0066BD;
+}
+
+.CSS_Bold {
+	font-weight: bold;
+}
+
+.CSS_Italic {
+	font-style: italic;
+}
+
+.CSS_Font14 {
+	font-size: 14px;
+}
+
+.CSS_Font16 {
+	font-size: 16px;
+}
+
+.CSS_Font18 {
+	font-size: 18px;
+}
+
+/* WYRÓŻNIKI TEKSTU - KONIEC>*/
+
+
+.CSS_Label {
+	border: 0px;
+	border-top: 0px solid #D9D9D9;
+	color: #4C6071;
+	font-weight: bold;
+	PADDING: 3px;
+	padding-left: 1px;
+	padding-right: 5px;
+}
+
+.CSS_LabelRight {
+	border: 0px;
+	border-bottom: 1px solid #B7B7B7;
+	border-top: 0px solid #D9D9D9;
+	color: #4C6071;
+	font-weight: bold;
+	PADDING: 3px;
+	padding-left: 1px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.CSS_LabelReq {
+	border: 0px;
+	border-bottom: 1px solid #B7B7B7;
+	border-top: 0px solid #D9D9D9;
+	color: #4C6071;
+	font-weight: bold;
+	PADDING: 3px;
+	padding-left: 1px;
+	padding-right: 5px;
+	color: indianred;
+}
+
+.CSS_LabelReqRight {
+	border: 0px;
+	border-bottom: 1px solid #B7B7B7;
+	border-top: 0px solid #D9D9D9;
+	color: #4C6071;
+	font-weight: bold;
+	PADDING: 3px;
+	padding-left: 1px;
+	padding-right: 5px;
+	color: indianred;
+	text-align: right;
+}
+
+.CSS_TextBox {
+	padding: 2px;
+	font-size: 11px;
+	width: 100%;
+	color: #174C70;
+	font-family: Verdana, Tahoma, Arial;
+	background-color: #EBEFF1;
+	border: #174C70 1px solid;
+	height: 21px;
+}
+
+.CSS_TextBoxDisabled {
+	padding: 2px;
+	font-size: 10px;
+	width: 100%;
+	color: #5C798C;
+	font-family: Verdana, Tahoma, Arial;
+	background-color: #EBEFF1;
+	border: #174C70 1px solid;
+	border-bottom: #174C70 1px dashed;
+	line-height: 21px;
+	height: 21px;
+}
+
+.CSS_DropDown {
+	padding: 2px;
+	font-size: 10px;
+	width: 100%;
+	color: #174C70;
+	font-family: Verdana, Tahoma, Arial;
+	background-color: #EBEFF1;
+	border: #174C70 1px solid;
+	border-bottom: #174C70 1px dashed;
+	line-height: 21px;
+	height: 21px;
+}
+
+.CSS_DropDownDisabled {
+	padding: 2px;
+	font-size: 10px;
+	width: 100%;
+	color: #5C798C;
+	font-family: Verdana, Tahoma, Arial;
+	background-color: #EBEFF1;
+	border: #174C70 1px solid;
+	border-bottom: #174C70 1px dashed;
+	line-height: 21px;
+	height: 21px;
+}
+
+.CSS_Title {
+	color: #0088C7;
+	font-weight: bold;
+	font-size: 11px;
+	border-bottom: 3px solid #212F3C;
+	padding-top: 7px;
+	padding-bottom: 4px;
+	padding-left: 16px;
+	text-transform: uppercase;
+	background-image: url(Images/icon_title.gif);
+	text-align: left;
+}
+
+.CSS_Title2 {
+	color: #0088C7;
+	font-weight: bold;
+	font-size: 11px;
+	border-bottom: 2px solid #212F3C;
+	padding-top: 7px;
+	padding-bottom: 4px;
+	padding-left: 16px;
+	text-transform: uppercase;
+	background-image: url(Images/icon_title2.gif);
+}
+
+.CSS_Text {
+	border: 0px;
+	border-top: 0px solid #D9D9D9;
+	color: #4C6071;
+	PADDING: 3px;
+	padding-left: 1px;
+	padding-right: 5px;
+}
+
+.CSS_TextReq {
+	border: 0px;
+	border-top: 0px solid #D9D9D9;
+	color: #4C6071;
+	PADDING: 3px;
+	padding-left: 1px;
+	padding-right: 5px;
+	color: indianred;
+}
+
+.CSS_Error {
+	padding-right: 2px;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 9pt;
+	padding-bottom: 2px;
+	line-height: 30px;
+	border: #20822F 0px solid;
+	width: 100%;
+	color: #FF3600;
+	padding-top: 2px;
+	background-image: url(Images/error_bg.gif);
+	background-repeat: no-repeat;
+}
+
+.CSS_Info {
+	padding-right: 2px;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 9pt;
+	padding-bottom: 2px;
+	line-height: 30px;
+	border: #20822F 0px solid;
+	width: 100%;
+	color: #20822F;
+	padding-top: 2px;
+	background-image: url(Images/info_bg.gif);
+	background-repeat: no-repeat;
+}
+
+.CSS_Warning {
+	padding-right: 2px;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 9pt;
+	padding-bottom: 2px;
+	line-height: 30px;
+	border: #20822F 0px solid;
+	width: 100%;
+	color: #9B8000;
+	padding-top: 2px;
+	background-image: url(Images/warn_bg.gif);
+	background-repeat: no-repeat;
+}

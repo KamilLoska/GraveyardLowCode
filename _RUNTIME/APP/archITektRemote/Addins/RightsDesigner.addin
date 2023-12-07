@@ -1,0 +1,17 @@
+﻿<AddIn name        = "Rights"
+       description = "${res:RightsModuleName}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+  <Manifest>
+    <Identity name="RightsDesigner" version=":VSoft.BusinessPlatform.Rights.Addin" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":VSoft.BusinessPlatform.Rights.Addin"></Import>
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VSoft.BusinessPlatform.Rights.Addin.Commands.StartCommand" class = "VSoft.BusinessPlatform.Rights.Addin.Commands.StartCommand" />
+  </Path>
+</AddIn>

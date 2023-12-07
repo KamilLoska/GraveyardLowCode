@@ -1,0 +1,12 @@
+{
+    "DatabaseAdminLogin":  "aplikacjacmentarz_admin",
+    "DatabaseUserPassword":  "yD)x7g5vmaBs@h",
+    "ArchITektVersion":  "21.12.31102.1810",
+    "ProjectVersionServerProvider":  "FileSystem",
+    "ArchITektImage":  "21",
+    "ProjectVersionServerDatabaseName":  "",
+    "ProjectCodeName":  "AplikacjaCmentarz",
+    "DatabaseAdminPassword":  "hP/8heTl3f|knr",
+    "DatabaseUserLogin":  "aplikacjacmentarz_user",
+    "ProjectVersionServerServerInstance":  "(localdb)\\ArchITektLocalDB"
+}

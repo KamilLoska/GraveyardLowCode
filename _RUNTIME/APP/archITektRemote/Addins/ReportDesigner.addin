@@ -1,0 +1,27 @@
+﻿<AddIn name        = "Reports"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl"
+       addInManagerHidden = "preinstalled">
+
+  <Manifest>
+    <Identity name="ReportDesigner" version=":VSoft.BusinessPlatform.ReportDesigner.Addin" />
+  </Manifest>
+  <Runtime>
+    <Import assembly=":VSoft.BusinessPlatform.ReportDesigner.Addin">
+      <ConditionEvaluator name="ShowReportDesignerViewCommandCondition" class="VSoft.BusinessPlatform.ReportDesigner.Addin.Conditions.ShowReportDesignerViewCommandCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VSoft.BusinessPlatform.ReportDesigner.Addin.Commands.StartCommand" class = "VSoft.BusinessPlatform.ReportDesigner.Addin.Commands.StartCommand" />
+  </Path>
+
+  <Path name ="/SharpDevelop/Workbench/MainMenu/Tools">
+    <Condition name = "ShowReportDesignerViewCommandCondition" action="Exclude">
+      <MenuItem id = "ShowReportDesignerViewCommand"
+                  label = "${res:ZarzadzanieAmpRaportami}"
+                  class = "VSoft.BusinessPlatform.ReportDesigner.Addin.Commands.ShowReportDesignerViewCommand"
+                  icon="ReportManagement" />
+    </Condition>
+  </Path>
+</AddIn>

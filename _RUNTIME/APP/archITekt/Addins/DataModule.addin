@@ -1,0 +1,76 @@
+﻿<AddIn name        = "Data"
+       description = "${res:DataModuleName}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+  <Manifest>
+    <Identity name="DataModule" version=":VSoft.BusinessPlatform.DataModule.Designer.Addin" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":VSoft.BusinessPlatform.DataModule.Designer.Addin">
+      <ConditionEvaluator name="ShowDataModuleToolbarCondition" class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Conditions.ShowToolbarCondition" />
+      <ConditionEvaluator name="NewDataModelCondition" class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Conditions.NewStructCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name="/SharpDevelop/Workbench/MainMenu/File/New/VBP">
+    <Condition name="NewDataModelCondition" action="Disable">
+      <MenuItem id="DataStructure"
+                icon="DataStructure"
+                label="${res:NazwaElementuTypuStruktura}"
+                class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.NewStructCommand" />
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Autostart">
+    <Class id="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.StartCommand"
+           class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.StartCommand" />
+  </Path>
+
+  <Path name="/SharpDevelop/AutostartAsync">
+    <Class id="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.StartDelayed"
+           class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.StartDelayed" />
+  </Path>
+
+  <Path name="/SharpDevelop/Console">
+    <Class id="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.GenerateSQLScriptForDomainCommand"
+           class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.GenerateSQLScriptForDomainCommand" />
+  </Path>
+
+  <Path name ="/SharpDevelop/Workbench/MainMenu/Tools">
+    <MenuItem id ="UpdateStructures"
+          label = "${res:AktualizacjaBazyDanychDlaStrukturDanych}"
+          class ="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.UpdateStructuresCommand"
+          icon="Refresh"
+          insertafter="ToolsMenuSeparatorSDM" />
+    <MenuItem id="RefreshDataModelDefinition"
+               label ="${res:ImportujStrukturyDanychZKodu}"
+               class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.RefreshDataModelDefinitionCommand"
+               icon="ImportStructureFromTextFile"
+               insertafter="UpdateDictionaries" />
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/DesignerToolBar/Standard">
+    <Condition name="ShowDataModuleToolbarCondition" action="Exclude">
+      <ToolbarItem id="CollapseSdmTreeCommand"
+                   icon="CollapseTree"
+                   tooltip="${res:ZwinDrzewo}"
+                   class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.CollapseTreeCommand" />
+      <ToolbarItem id="ExpandSdmTreeCommand"
+                   icon="ExpandTree"
+                   tooltip="${res:RozwinDrzewo}"
+                   class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.ExpandTreeCommand" />
+      <!--<ToolbarItem id="SimpleTreeStyleModeCommand"
+                  icon="Options"
+                  type ="CheckBox"
+                  tooltip="${res:SimpleView}"
+                  class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.SimpleTreeStyleModeCommand" />-->
+      <ToolbarItem id="ShowGhostsCommand"
+                 icon="Ghost"
+                 type ="CheckBox"
+                 tooltip="${res:ShowGhosts}"
+                 class="VSoft.BusinessPlatform.DataModule.Designer.Addin.Addin.Commands.ShowGhostsCommand" />
+    </Condition>
+  </Path>
+</AddIn>

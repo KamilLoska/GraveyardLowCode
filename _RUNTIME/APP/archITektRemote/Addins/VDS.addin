@@ -1,0 +1,13 @@
+﻿<AddIn name="VSoft Document Services Addin"
+       author="VSoft"
+       url="https://www.vsoft.pl"
+       description="VSoft archITekt VDS Addin">
+  <Manifest>
+    <Identity name="VSoft.archITekt.VDS.Addin" version=":VSoft.archITekt.VDS.Addin" />
+    <Dependency addin="VSoft.archITekt.VersionServer" requirePreload="true" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":VSoft.archITekt.VDS.Addin" />
+  </Runtime>
+</AddIn>

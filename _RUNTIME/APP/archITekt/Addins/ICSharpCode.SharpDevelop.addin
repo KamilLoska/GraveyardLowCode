@@ -1,0 +1,574 @@
+﻿<AddIn name        = "SharpDevelop"
+			 author      = "Mike Krueger"
+			 copyright   = "prj:///doc/copyright.txt"
+			 url         = "http://www.icsharpcode.net"
+			 description = "SharpDevelop main module"
+			 addInManagerHidden = "true">
+
+  <Manifest>
+    <Identity name = "SharpDevelop" version = "@SharpDevelopCoreVersion" />
+  </Manifest>
+
+  <Path name="/SharpDevelop/Autostart">
+    <Class id="ICSharpCode.SharpDevelop.OnStartCommand" class="ICSharpCode.SharpDevelop.OnStartCommand" />
+  </Path>
+
+  <Runtime>
+    <Import assembly=":ICSharpCode.SharpDevelop">
+      <ConditionEvaluator name="ActiveContentExtension" class="ICSharpCode.SharpDevelop.ActiveContentExtensionConditionEvaluator" />
+      <ConditionEvaluator name="ActiveViewContentUntitled" class="ICSharpCode.SharpDevelop.ActiveViewContentUntitledConditionEvaluator" />
+      <ConditionEvaluator name="ActiveWindowState" class="ICSharpCode.SharpDevelop.ActiveWindowStateConditionEvaluator" />
+      <ConditionEvaluator name="OpenWindowState" class="ICSharpCode.SharpDevelop.OpenWindowStateConditionEvaluator" />
+      <ConditionEvaluator name="WindowActive" class="ICSharpCode.SharpDevelop.WindowActiveConditionEvaluator" />
+      <ConditionEvaluator name="WindowOpen" class="ICSharpCode.SharpDevelop.WindowOpenConditionEvaluator" />
+      <ConditionEvaluator name="WriteableSolution" class="ICSharpCode.SharpDevelop.WriteableSolutionConditionEvaluator" />
+      <ConditionEvaluator name="ProjectActive" class="ICSharpCode.SharpDevelop.ProjectActiveConditionEvaluator" />
+      <ConditionEvaluator name="TextContent" class="ICSharpCode.SharpDevelop.Editor.TextContentConditionEvaluator" />
+      <ConditionEvaluator name="BrowserLocation" class="ICSharpCode.SharpDevelop.BrowserDisplayBinding.BrowserLocationConditionEvaluator" />
+      <ConditionEvaluator name="CanNavigateBack" class="ICSharpCode.SharpDevelop.CanNavigateBackConditionEvaluator" />
+      <ConditionEvaluator name="CanNavigateForward" class="ICSharpCode.SharpDevelop.CanNavigateForwardConditionEvaluator" />
+      <ConditionEvaluator name="IsTextSelected" class="ICSharpCode.SharpDevelop.Editor.TextSelectedCondition" />
+      <ConditionEvaluator name="SymbolTypeAtCaret" class="ICSharpCode.SharpDevelop.Internal.ConditionEvaluators.SymbolTypeAtCaretConditionEvaluator" />
+      <ConditionEvaluator name="IsAssemblyUnpinned" class="ICSharpCode.SharpDevelop.Dom.ClassBrowser.IsAssemblyUnpinnedConditionEvaluator" />
+
+      <Doozer name="CustomTool" class="ICSharpCode.SharpDevelop.Project.CustomToolDoozer" />
+      <Doozer name="CustomProperty" class="ICSharpCode.SharpDevelop.Project.CustomPropertyDoozer" />
+      <Doozer name="OptionPanel" class="ICSharpCode.SharpDevelop.OptionPanelDoozer" />
+      <Doozer name="DisplayBinding" class="ICSharpCode.SharpDevelop.Workbench.DisplayBindingDoozer" />
+      <Doozer name="Pad" class="ICSharpCode.SharpDevelop.PadDoozer" />
+      <Doozer name="LanguageBinding" class="ICSharpCode.SharpDevelop.LanguageBindingDoozer" />
+      <Doozer name="TextEditorExtension" class="ICSharpCode.SharpDevelop.Editor.TextEditorExtensionDoozer" />
+      <Doozer name="BrowserSchemeExtension" class="ICSharpCode.SharpDevelop.BrowserDisplayBinding.SchemeExtensionDoozer" />
+      <Doozer name="CodeCompletionBinding" class="ICSharpCode.SharpDevelop.Editor.CodeCompletion.CodeCompletionBindingDoozer" />
+      <Doozer name="Directory" class="ICSharpCode.SharpDevelop.DirectoryDoozer" />
+      <Doozer name="TaskBoundAdditionalLogger" class="ICSharpCode.SharpDevelop.Project.TaskBoundAdditionalLoggerDoozer" />
+      <Doozer name="TaskBoundLoggerFilter" class="ICSharpCode.SharpDevelop.Project.TaskBoundLoggerFilterDoozer" />
+      <Doozer name="TemplateFile" class="ICSharpCode.SharpDevelop.Templates.TemplateFileDoozer" />
+      <Doozer name="TemplateCategory" class="ICSharpCode.SharpDevelop.Templates.TemplateCategoryDoozer" />
+    </Import>
+    <Import assembly=":SharpDevelop">
+      <Doozer name="Parser" class="ICSharpCode.SharpDevelop.Parser.ParserDoozer" />
+    </Import>
+    <Import assembly = ":VSoft.archITekt.VersionServer">
+      <ConditionEvaluator name="VersionServer_SaveVersionAsCommandCondition"
+													class="VSoft.archITekt.VersionServer.Conditions.SaveVersionAsCommandCondition" />
+      <ConditionEvaluator name="VersionServer_ViewContentIsNotReadOnly"
+													class="VSoft.archITekt.VersionServer.Conditions.ViewContentIsNotReadOnly" />
+      <ConditionEvaluator name="VersionServer_SaveCommandVisibleCondition"
+													class="VSoft.archITekt.VersionServer.Conditions.SaveCommandVisibleCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name="/SharpDevelop/Services">
+    <Service id="ICSharpCode.SharpDevelop.Parser.IGlobalAssemblyCacheService"
+						 class="ICSharpCode.SharpDevelop.Parser.GlobalAssemblyCacheService" />
+    <Service id="ICSharpCode.SharpDevelop.Parser.IParserService"
+						 class="ICSharpCode.SharpDevelop.Parser.ParserService" />
+    <Service id="ICSharpCode.SharpDevelop.Parser.IAssemblyParserService"
+						 class="ICSharpCode.SharpDevelop.Parser.AssemblyParserService" />
+    <Service id="ICSharpCode.SharpDevelop.Workbench.IFileService"
+						 class="ICSharpCode.SharpDevelop.Workbench.FileService" />
+    <Service id="ICSharpCode.SharpDevelop.Workbench.IShutdownService"
+						 class="ICSharpCode.SharpDevelop.Workbench.ShutdownService" />
+    <Service id="ICSharpCode.SharpDevelop.Workbench.IDisplayBindingService"
+						 class="ICSharpCode.SharpDevelop.Workbench.DisplayBindingService" />
+    <Service id="ICSharpCode.SharpDevelop.Dom.ITreeNodeFactory"
+						 class="ICSharpCode.SharpDevelop.Dom.TreeNodeFactoryService" />
+    <Service id="ICSharpCode.SharpDevelop.Dom.IModelFactory"
+						 class="ICSharpCode.SharpDevelop.Dom.ModelFactory" />
+    <Service id="ICSharpCode.SharpDevelop.IClipboard"
+						 class="ICSharpCode.SharpDevelop.ClipboardWrapper" />
+    <Service id="ICSharpCode.SharpDevelop.IFileSystem"
+						 class="ICSharpCode.SharpDevelop.FileSystem" />
+    <Service id="ICSharpCode.SharpDevelop.ILanguageService"
+						 class="ICSharpCode.SharpDevelop.SDLanguageService" />
+    <Service id="ICSharpCode.SharpDevelop.Editor.Bookmarks.IBookmarkManager"
+						 class="ICSharpCode.SharpDevelop.Editor.Bookmarks.BookmarkManager" />
+    <Service id="ICSharpCode.SharpDevelop.Dom.ClassBrowser.IClassBrowser"
+						 class="ICSharpCode.SharpDevelop.Dom.ClassBrowser.ClassBrowserServiceImpl" />
+    <Service id="ICSharpCode.SharpDevelop.WinForms.IWinFormsService"
+						 class="ICSharpCode.SharpDevelop.WinForms.WinFormsService" />
+    <Service id="ICSharpCode.SharpDevelop.WinForms.IWinFormsMenuService"
+						 class="ICSharpCode.SharpDevelop.WinForms.WinFormsMenuService" />
+    <Service id="ICSharpCode.SharpDevelop.WinForms.IWinFormsToolbarService"
+						 class="ICSharpCode.SharpDevelop.WinForms.WinFormsToolbarService" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/Ambiences">
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/DisplayBindings">
+    <DisplayBinding id    = "Browser"
+										title = "${res:Gui.ProjectBrowser.OpenWith.Bindings.WebBrowser}"
+										class = "ICSharpCode.SharpDevelop.BrowserDisplayBinding.BrowserDisplayBinding" />
+    <DisplayBinding id    = "AutoDetect"
+										title = "Auto-detect file type"
+										class = "ICSharpCode.SharpDevelop.Workbench.AutoDetectDisplayBinding" />
+    <DisplayBinding id    = "ShellExecute"
+										title = "${res:Gui.ProjectBrowser.OpenWith.Bindings.DefaultWindowsApplication}"
+										class = "ICSharpCode.SharpDevelop.Workbench.ShellExecuteDisplayBinding" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/FileFilter">
+    <FileFilter id         = "AllFiles"
+								name       = "${res:SharpDevelop.FileFilter.AllFiles}"
+								extensions = "*.*" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/Pads">
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/Combine/FileFilter">
+    <FileFilter id         = "Solution"
+								name       = "${res:SharpDevelop.FileFilter.SolutionFiles}"
+								extensions = "*.sln" />
+
+    <FileFilter id         = "AllFiles"
+								name       = "${res:SharpDevelop.FileFilter.AllFiles}"
+								extensions = "*.*" />
+  </Path>
+
+  <!-- Project browser Paths -->
+  <Path name = "/SharpDevelop/Pads/ProjectBrowser/ToolBar/Standard">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ProjectBrowser/ContextMenu/WebReferencesFolderNode">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ProjectBrowser/ContextMenu/WebReferenceNode">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ProjectBrowser/ContextMenu/ServiceReferencesFolderNode">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ProjectBrowser/ContextMenu/ServiceReferenceNode">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ProjectBrowser/ContextMenu/ReferenceNode">
+  </Path>
+
+  <!-- END Project Browser Paths-->
+
+  <Path name = "/SharpDevelop/Pads/CompilerMessageView/Toolbar">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/CompilerMessageView/ContextMenu">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ErrorList/Toolbar">
+  </Path>
+
+  <!-- ClassBrowser -->
+  <Path name = "/SharpDevelop/Pads/ClassBrowser/Toolbar">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ClassBrowser/Searchbar">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ClassBrowser/AssemblyContextMenu">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ClassBrowser/AssemblyReferencesContextMenu">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ClassBrowser/AssemblyReferenceContextMenu">
+  </Path>
+
+  <!-- end ClassBrowser -->
+
+  <!-- toolbars -->
+  <Path name = "/SharpDevelop/Workbench/ToolBar/Standard">
+
+    <Condition name = "VersionServer_SaveCommandVisibleCondition" action="Disable">
+      <ToolbarItem id      = "Save"
+                   icon    = "Save"
+                   tooltip = "${res:Zapisz}"
+                   class   = "ICSharpCode.SharpDevelop.Commands.SaveFile"
+                   largeicon="Save32"
+                   ribbonlabel ="${res:Zapisz}"
+                   group="GroupGeneral" />
+    </Condition>
+
+    <Condition name = "VersionServer_SaveVersionAsCommandCondition" action="Disable">
+      <Condition name = "ActiveWindowState" windowstate="None" nowindowstate="ViewOnly" action="Disable">
+        <ToolbarItem id          = "SaveAs"
+										 icon        = "SaveAss"
+										 tooltip     = "${res:ZapiszJako}"
+										 class       = "ICSharpCode.SharpDevelop.Commands.SaveFileAs"
+										 largeicon   = "SaveAs32"
+										 ribbonlabel ="${res:ZapiszJako}"
+										 group="GroupGeneral" />
+      </Condition>
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Pads/BreakpointPad/Toolbar">
+  </Path>
+  <!-- end toolbars -->
+
+  <Path name = "/SharpDevelop/Workbench/OpenFileTab/ContextMenu">
+    <MenuItem id = "Close"
+							label = "${res:OpenFileTabEventHandler.ContextMenu.Close}"
+							icon  = "Icons.16x16.CloseFileIcon"
+							class = "ICSharpCode.SharpDevelop.Commands.TabStrip.CloseFileTab" />
+    <MenuItem id    = "CloseAll"
+							icon  = "Icons.16x16.CloseAllDocuments"
+							label = "${res:XML.MainMenu.FileMenu.CloseAll}"
+							class = "ICSharpCode.SharpDevelop.Commands.CloseAllWindows" />
+    <MenuItem id    = "CloseAllButThis"
+							label = "${res:OpenFileTabEventHandler.ContextMenu.CloseAllButThis}"
+							class = "ICSharpCode.SharpDevelop.Commands.TabStrip.CloseAllButThisFileTab" />
+
+    <MenuItem id = "CloseSeparator" type = "Separator" />
+
+    <Condition name = "VersionServer_SaveCommandVisibleCondition" action="Disable">
+      <ComplexCondition action="Disable">
+        <And>
+          <Condition name = "Ownerstate" ownerstate="FileDirty" />
+          <Not>
+            <Condition name = "Ownerstate" ownerstate="FileUntitled" />
+          </Not>
+        </And>
+        <MenuItem id = "Save"
+									label = "${res:OpenFileTabEventHandler.ContextMenu.Save}"
+									icon  = "Save"
+									class = "ICSharpCode.SharpDevelop.Commands.TabStrip.SaveFileTab" />
+      </ComplexCondition>
+    </Condition>
+
+    <Condition name = "ActiveWindowState" windowstate="None" nowindowstate="ViewOnly" action="Disable">
+      <MenuItem id = "SaveAs"
+									icon  = "SaveAss"
+								label = "${res:OpenFileTabEventHandler.ContextMenu.SaveAs}"
+								class = "ICSharpCode.SharpDevelop.Commands.TabStrip.SaveFileAsTab" />
+      <MenuItem id = "SaveSeparator" type = "Separator" />
+    </Condition>
+    <ComplexCondition action="Disable">
+      <Not>
+        <Condition name = "Ownerstate" ownerstate="FileUntitled,ViewContentWithoutFile" />
+      </Not>
+      <MenuItem id = "CopyPathName"
+								label = "${res:OpenFileTabEventHandler.CopyPathName}"
+								class = "ICSharpCode.SharpDevelop.Commands.TabStrip.CopyPathName" />
+    </ComplexCondition>
+  </Path>
+
+  <Path name = "/SharpDevelop/Views/PropertyPad/ContextMenu">
+  </Path>
+
+  <Path name = "/SharpDevelop/Dialogs/OptionsDialog">
+    <OptionPanel id    = "UIOptions"
+								 label = "${res:Dialog.Options.TreeViewOptions.SharpDevelopOptionsText}">
+      <OptionPanel id    = "LoadSave"
+									 label = "${res:Dialog.Options.IDEOptions.LoadSaveOptions.PanelName}"
+									 class = "ICSharpCode.SharpDevelop.OptionPanels.LoadSaveOptions" />
+    </OptionPanel>
+    <OptionPanel id    = "ToolsOptions"
+								 label = "${res:Dialog.Options.IDEOptions.ToolsOptionsText}">
+
+      <OptionPanel id    = "ExternalTools"
+									 label = "${res:Dialog.Options.ExternalToolsText}"
+									 class = "ICSharpCode.SharpDevelop.Gui.OptionPanels.ExternalToolPanel" />
+    </OptionPanel>
+  </Path>
+
+  <!-- Main Menu -->
+  <Path name = "/SharpDevelop/Workbench/MainMenu">
+
+    <MenuItem id = "File" label = "${res:XML.MainMenu.FileMenu}" type="Menu">
+
+      <MenuItem id = "CloseSeparator" type = "Separator" />
+
+      <Condition name = "WindowActive" activewindow="*" action="Disable">
+        <MenuItem id = "Close" label = "${res:XML.MainMenu.FileMenu.CloseWindow}" type="Menu" icon="CloseAll">
+          <MenuItem id = "ContentBuilder" type="Builder" class="ICSharpCode.SharpDevelop.Commands.OpenContentsToCloseMenuBuilder" />
+        </MenuItem>
+      </Condition>
+
+      <MenuItem id = "SaveSeparator" type = "Separator" />
+
+      <Condition name = "VersionServer_SaveCommandVisibleCondition" action="Disable">
+        <MenuItem id = "Save"
+                  label = "${res:XML.MainMenu.FileMenu.Save}"
+                  icon = "Save"
+                  shortcut = "Control|S"
+                  class = "ICSharpCode.SharpDevelop.Commands.SaveFile" />
+      </Condition>
+
+      <Condition name = "ActiveWindowState" windowstate="None" nowindowstate="ViewOnly" action="Disable">
+        <MenuItem id = "SaveAs"
+									icon = "SaveAss"
+							label = "${res:XML.MainMenu.FileMenu.SaveAs}"
+							class = "ICSharpCode.SharpDevelop.Commands.SaveFileAs" />
+      </Condition>
+
+      <MenuItem id="ExitWorkbenchSeperator" type = "Separator" />
+      <MenuItem id="ExitWorkbenchMenuItem"
+								label="${res:XML.MainMenu.FileMenu.ExitWorkbench}"
+								icon="Exit"
+								class="ICSharpCode.SharpDevelop.Commands.ExitWorkbenchCommand" />
+    </MenuItem>
+    <!-- END File menu -->
+
+    <MenuItem id = "Edit" label = "${res:XML.MainMenu.EditMenu}" type="Menu">
+      <!-- Do not specify shortcuts for built-in commands, those are bound automatically by WPF.
+					 The shortcuts work correctly in WinForms pads (e.g. label edit in tree view in WinForms project pad)
+					 only if they are not explicitly specified in the menu.
+			-->
+      <MenuItem id = "Undo"
+								label = "${res:XML.MainMenu.EditMenu.Undo}"
+								icon = "Undo"
+								type = "Item"
+								loadclasslazy="false"
+								command = "Undo" />
+      <MenuItem id = "Redo"
+								label = "${res:XML.MainMenu.EditMenu.Redo}"
+								icon = "Repeat"
+								type = "Item"
+								loadclasslazy="false"
+								command = "Redo" />
+      <MenuItem id = "Separator1" type = "Separator" />
+      <MenuItem id = "Cut"
+								label = "${res:XML.MainMenu.EditMenu.Cut}"
+								icon = "Cut"
+								type = "Item"
+								loadclasslazy="false"
+								command = "Cut" />
+      <MenuItem id = "Copy"
+								label = "${res:XML.MainMenu.EditMenu.Copy}"
+								icon = "Copy"
+								type = "Item"
+								loadclasslazy="false"
+								command = "Copy" />
+      <MenuItem id = "Paste"
+								label = "${res:XML.MainMenu.EditMenu.Paste}"
+								icon = "Paste"
+								type = "Item"
+								loadclasslazy="false"
+								command = "Paste" />
+      <MenuItem id = "Delete"
+								label = "${res:XML.MainMenu.EditMenu.Delete}"
+								icon = "Delete"
+								type = "Item"
+								loadclasslazy="false"
+								command = "Delete" />
+
+      <MenuItem id = "Separator2" type = "Separator" />
+      <MenuItem id = "SelectAll"
+								label = "${res:XML.MainMenu.EditMenu.SelectAll}"
+                icon = "SelectAll"
+                type = "Item"
+								loadclasslazy="false"
+								command = "SelectAll" />
+    </MenuItem>
+    <!-- end EDIT menu -->
+
+    <MenuItem id = "View" label = "${res:XML.MainMenu.ViewMenu}" type="Menu">
+      <MenuItem id    = "MainViewMenuBuilder"
+								type  = "Builder"
+								class = "ICSharpCode.SharpDevelop.Commands.MainViewMenuBuilder" />
+
+      <MenuItem id = "ViewItemsSeparator" type = "Separator" />
+      <MenuItem id = "FullScreen"
+								label         = "${res:XML.MainMenu.ViewMenu.FullScreen}"
+								icon        = "FullScreen"
+								class       = "ICSharpCode.SharpDevelop.Commands.ToggleFullscreenCommand"
+								shortcut = "SHIFT+ALT+ENTER" />
+    </MenuItem>
+    <!-- end VIEW menu -->
+
+    <MenuItem id = "Search" label = "${res:XML.MainMenu.SearchMenu}" type="Menu">
+    </MenuItem>
+
+    <MenuItem id = "Tools" label = "${res:XML.MainMenu.ToolMenu}" type="Menu">
+      <MenuItem id = "Separator0" type = "Separator" />
+      <MenuItem id = "Options"
+								label = "${res:XML.MainMenu.ToolMenu.Options}"
+								icon = "Settings"
+								class = "ICSharpCode.SharpDevelop.Commands.OptionsCommand" />
+      <MenuItem id = "ToolBuilder" type="Builder" class = "ICSharpCode.SharpDevelop.Commands.ToolMenuBuilder" />
+      <MenuItem id = "Separator1" type = "Separator" />
+      <Include id = "ToolList" path = "/SharpDevelop/Workbench/Tools" />
+    </MenuItem>
+    <!-- end TOOLS menu -->
+
+    <MenuItem id = "Window" label = "${res:XML.MainMenu.WindowMenu}" type="Menu">
+      <Condition name = "WindowActive" activewindow="*"  action="Disable">
+        <MenuItem id  = "NextWindow"
+									label = "${res:XML.MainMenu.WindowMenu.NxtWindow}"
+									icon = "NextWindow"
+									shortcut = "Control|Tab"
+									class = "ICSharpCode.SharpDevelop.Commands.SelectNextWindow" />
+        <MenuItem id = "PrevWindow"
+									label = "${res:XML.MainMenu.WindowMenu.PrvWindow}"
+									icon = "PrevWindow"
+									shortcut = "Shift|Control|Tab"
+									class = "ICSharpCode.SharpDevelop.Commands.SelectPrevWindow" />
+        <MenuItem id ="NxtPrvSeparator" type = "Separator" />
+        <MenuItem id    = "CloseAll"
+									label = "${res:XML.MainMenu.FileMenu.CloseAll}"
+									icon  = "CloseAllWindows"
+									class = "ICSharpCode.SharpDevelop.Commands.CloseAllWindows" />
+      </Condition>
+      <MenuItem id = "ContentBuilder" icon  = "StartPage"  type="Builder" class="ICSharpCode.SharpDevelop.Commands.OpenContentsMenuBuilder" />
+    </MenuItem>
+    <!-- end WINDOW menu -->
+    <MenuItem id = "Help" label = "${res:XML.MainMenu.Help}" type="Menu">
+      <MenuItem id = "About"
+                icon = "Information"
+                label = "${res:XML.MainMenu.Help.About}"
+                class = "ICSharpCode.SharpDevelop.Commands.AboutSharpDevelop" />
+    </MenuItem>
+  </Path>
+  <!-- end Main Menu -->
+
+  <!-- create empty /SharpDevelop/Workbench/Tools path - it's included by the main menu -->
+  <Path name = "/SharpDevelop/Workbench/Tools" />
+
+  <!-- TEXT EDITOR -->
+
+  <Path name = "/SharpDevelop/EntityContextMenu">
+  </Path>
+
+  <Path name = "/SharpDevelop/ViewContent/TextEditor/ContextMenu">
+    <Condition name="SymbolTypeAtCaret" type="member,type,local" action="Exclude">
+      <Include id="EntityContextMenu" path="/SharpDevelop/EntityContextMenu" />
+      <MenuItem id="Separator1" type="Separator" />
+    </Condition>
+
+    <Condition name="VersionServer_ViewContentIsNotReadOnly" action="Disable">
+      <Include id = "Cut" item = "/SharpDevelop/Workbench/MainMenu/Edit/Cut" />
+    </Condition>
+
+    <Include id = "Copy" item = "/SharpDevelop/Workbench/MainMenu/Edit/Copy" />
+    <Include id = "Paste" item = "/SharpDevelop/Workbench/MainMenu/Edit/Paste" />
+
+    <Condition name="VersionServer_ViewContentIsNotReadOnly" action="Disable">
+      <Include id = "Delete" item = "/SharpDevelop/Workbench/MainMenu/Edit/Delete" />
+    </Condition>
+
+    <Condition name="VersionServer_ViewContentIsNotReadOnly">
+      <MenuItem id = "Separator1" type = "Separator" />
+      <MenuItem id = "Comment"
+								icon  = "Comment"
+								label = "${res:XML.TextAreaContextMenu.CommentUncommentSelection}"
+								shortcut="Control|OemQuestion"
+								class = "ICSharpCode.SharpDevelop.Editor.Commands.CommentRegion" />
+      <MenuItem id = "Indent"
+								label = "${res:XML.TextAreaContextMenu.Indent}"
+								shortcut = "Control|I"
+								class = "ICSharpCode.SharpDevelop.Editor.Commands.IndentSelection" />
+      <MenuItem id = "Reformat"
+								label = "Reformat"
+								shortcut = "Control|Shift|I"
+								class = "ICSharpCode.SharpDevelop.Editor.Commands.ReformatSelection" />
+    </Condition>
+  </Path>
+
+  <Path name = "/SharpDevelop/ViewContent/TextEditor/ToolTips">
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/ToolBar/Standard">
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/MainMenu/Edit">
+  </Path>
+
+  <Path name = "/SharpDevelop/ViewContent/Browser/Toolbar">
+  </Path>
+
+  <Path name = "/SharpDevelop/Dialogs/OptionsDialog/TextEditorOptions">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/BookmarkPad/Toolbar">
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/SearchResultPad/Toolbar">
+  </Path>
+
+  <Path name = "/Workspace/Icons">
+    <!-- Resources -->
+    <Icon id         = "ResourceFileIcon"
+					extensions = ".resources;.resx"
+					resource   = "Icons.16x16.ResourceFileIcon" />
+
+    <!-- XML -->
+    <Icon id         = "XmlFileIcon"
+					extensions = ".xml"
+					resource   = "FileIcons.XmlIcon" />
+
+    <Icon id         = "DtdFileIcon"
+					extensions = ".dtd"
+					resource   = "Icons.16x16.DTDIcon" />
+
+    <Icon id         = "XsdFileIcon"
+					extensions = ".xsd"
+					resource   = "Icons.16x16.XSDIcon" />
+
+    <Icon id         = "XslFileIcon"
+					extensions = ".xsl"
+					resource   = "Icons.16x16.XSLIcon" />
+
+    <Icon id         = "HtmlFileIcon"
+					extensions = ".html;.htm"
+					resource   = "Icons.16x16.HTMLIcon" />
+
+    <Icon id         = "AspFileIcon"
+					extensions = ".asp;.aspx"
+					resource   = "Icons.16x16.ASPFileIcon" />
+
+    <Icon id         = "AddInFileIcon"
+					extensions = ".addin"
+					resource   = "Icons.16x16.AddInIcon" />
+
+    <!-- TextFiles -->
+    <Icon id         = "TextFileIcon"
+					extensions = ".txt;.doc"
+					resource   = "Icons.16x16.TextFileIcon" />
+
+    <Icon id= "CssFileIcon"
+					extensions = ".css"
+					resource   = "Icons.16x16.CSSIcon" />
+    <Icon id         = "StrongNameKeyFileIcon"
+					extensions = ".snk"
+					resource   = "Icons.16x16.StrongNameKeyFileIcon" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/MainMenu/View">
+  </Path>
+
+  <Path name = "/SharpDevelop/Views/ProjectBrowser/NodeBuilders">
+  </Path>
+
+  <Path name = "/SharpDevelop/Views/ClassBrowser/ProjectNodeBuilders">
+  </Path>
+
+  <Path name="/SharpDevelop/TreeNodeFactories">
+  </Path>
+
+  <Path name = "/SharpDevelop/Views/ClassBrowser/ClassNodeBuilders">
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/DependentFileExtensions">
+  </Path>
+
+  <Path name="/SharpDevelop/BackendBindings/ProjectOptions/AllManaged">
+    <!-- put project option panels valid for all .NET projects here -->
+  </Path>
+
+  <Path name="/SharpDevelop/Pads/ErrorList/TaskContextMenu">
+  </Path>
+
+  <Path name="/SharpDevelop/Pads/TaskList/Toolbar">
+  </Path>
+
+  <Path name="/SharpDevelop/Pads/TaskList/TaskContextMenu">
+  </Path>
+
+  <Path name="/SharpDevelop/Pads/CommonConsole/ToolBar">
+  </Path>
+
+  <Path name = "/SharpDevelop/BackendBindings/Templates">
+    <TemplateFile path="../../data/templates" />
+  </Path>
+</AddIn>

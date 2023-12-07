@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<object type="VSoft.BusinessPlatform.Application.Contracts.LocalizedEntry, VSoft.BusinessPlatform.Application.Contracts">
+	<LocalizedValues>
+		<KeyValuePair_x0060_2>
+			<Key>
+				<IsoName>pl</IsoName>
+			</Key>
+			<Value>Proces został anulowany z powodu błędu.</Value>
+		</KeyValuePair_x0060_2>
+		<KeyValuePair_x0060_2>
+			<Key>
+				<IsoName>en</IsoName>
+			</Key>
+			<Value>Workflow has been cancelled due to error.</Value>
+		</KeyValuePair_x0060_2>
+	</LocalizedValues>
+</object>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<object type="VSoft.BusinessPlatform.Rights.Contracts.RightDefinition, VSoft.BusinessPlatform.Rights">
+	<Description />
+	<Info>
+		<Id>363bb0d5-0c37-42f8-b027-9b228aec6c4e</Id>
+		<Name>Full access</Name>
+	</Info>
+	<IsGroup>false</IsGroup>
+	<ParentId isNull="true" />
+	<Roles />
+</object>

@@ -1,0 +1,30 @@
+﻿@using VSoft.BusinessPlatform.Application.Contracts;
+
+@model VSoft.Framework.Authorization.Providers.Base.BaseIdentityPrincipal
+
+<div class="k-widget k-window k-state-focused" data-role="draggable" style="visibility: visible; display: flex; min-width: 90px; min-height: 50px; width: 800px; height: 423px; z-index: 10003; left: 551.5px;">
+  <div class="k-window-titlebar k-header">
+    <span class="k-window-title">@Localization.UserRoles</span>
+    <div class="k-window-actions">
+      <a role="button" href="#" class="k-button k-bare k-button-icon k-window-action" aria-label="Close" id="roleModelCloseBtn"><span class="k-icon k-i-close"></span></a>
+    </div>
+  </div>
+  <div data-role="window" class="k-window-content k-content" tabindex="0">
+    @{
+      Html.Kendo().Grid(Model.FormattedRoles)
+      .Name("UserRoles")
+      .Columns(columns =>
+      {
+        columns.Bound(e => e).Width(140).Title(Localization.Name);
+      })
+      .DataSource(dataSource => dataSource.Server().PageSize(1000))
+      .Sortable()
+      .Render();
+    }
+  </div>
+</div>
+<script>
+  $("#roleModelCloseBtn").click(function () {
+    $('#roleModalContent').empty();
+  });
+</script>

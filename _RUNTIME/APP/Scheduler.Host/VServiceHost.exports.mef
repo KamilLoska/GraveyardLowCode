@@ -1,0 +1,3504 @@
+[
+  {
+    "Assembly": "VSoft.archITekt.Core",
+    "Parts": [
+      {
+        "Type": "VSoft.archITekt.Core.BusinessParameters.BoolBusinessParameter",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.BusinessParameters.BusinessParametersApiGenerator",
+        "Exports": [
+          {
+            "ContractName": "VSoft.archITekt.Core.TemplateGeneration.ITextTemplateGenerator",
+            "Metadata": {
+              "VersionType|System.String, mscorlib": "BusinessParameters"
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.BusinessParameters.BusinessParametersServiceComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "Services"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "BusinessParameters",
+              "Dependencies|System.String[], mscorlib": []
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.BusinessParameters.DateTimeBusinessParameter",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.BusinessParameters.LongBusinessParameter",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.BusinessParameters.NumericBusinessParameter",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.BusinessParameters.StringBusinessParameter",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Configuration.ConfigurationServicesComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "Services"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "Configuration",
+              "Dependencies|System.String[], mscorlib": []
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.CoreInProcComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "InProc"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "Core",
+              "Dependencies|System.String[], mscorlib": []
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.CoreRemoteComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "Remote"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "Core",
+              "Dependencies|System.String[], mscorlib": []
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.CoreServicesComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "Services"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "Core",
+              "Dependencies|System.String[], mscorlib": []
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.CSharpCode.CSharpCodeBaseComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.DictionaryServiceComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "Services"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "Dictionaries",
+              "Dependencies|System.String[], mscorlib": []
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Constans.DictionaryAttributeConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Constans.DictionaryCategoryConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Constans.DictionaryElementConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Constans.DictionaryObjectConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Constans.DictionaryViewConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryAttribute2DictionaryStateObject",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryAttribute2Guid",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryCategory2DictionaryStateObject",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryCategory2Guid",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryCategory2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryElement2DictionaryStateObject",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryElement2Guid",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryElement2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryObject2Guid",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryObject2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryView2DictionaryStateObject",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryView2Guid",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Converter.DictionaryView2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.Functions.EqualDictionaryObjectFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.ReturnType.DictionaryAttributeReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.ReturnType.DictionaryCategoryReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.ReturnType.DictionaryElementReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.ReturnType.DictionaryObjectReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.ReturnType.DictionaryStateReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.Formula.ReturnType.DictionaryViewReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Dictionaries.TemplateGeneration.DictionaryTextTemplateGenerator",
+        "Exports": [
+          {
+            "ContractName": "VSoft.archITekt.Core.TemplateGeneration.ITextTemplateGenerator",
+            "Metadata": {
+              "VersionType|System.String, mscorlib": "dict.db"
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Formula.Converters.Guid2IVersionId",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Formula.Converters.VersionId2Guid",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Formula.Functions.ReturnTypeAny.ExecuteVersionedFormula",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Formula.Functions.ReturnTypeString.archITektVersionFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Formula.Functions.ReturnTypeString.GetConfigurationVariableFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Formula.ReturnTypes.VersionReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Formula.TemplateGeneration.VersionedFormulaTextTemplateGenerator",
+        "Exports": [
+          {
+            "ContractName": "VSoft.archITekt.Core.TemplateGeneration.ITextTemplateGenerator",
+            "Metadata": {
+              "VersionType|System.String, mscorlib": "formula"
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Formula.Variables.VersionVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.License.LicenseServiceComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "Services"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "LicenseService",
+              "Dependencies|System.String[], mscorlib": []
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Security.AuthorizationContextPermissionReader",
+        "Exports": [
+          {
+            "ContractName": "System.Object",
+            "Metadata": {
+              "Targets|System.String[][], mscorlib": [
+                [
+                  "Services"
+                ]
+              ],
+              "ServiceType|System.Type[], mscorlib": [
+                "VSoft.archITekt.Core.Security.IPermissionReader, VSoft.archITekt.Core"
+              ],
+              "Name|System.String[], mscorlib": [
+                "GenericIdentity"
+              ],
+              "Scope|VSoft.Framework.Scope[], VSoft.Framework": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Security.AuthorizationInProcComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "InProc"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "Authorization",
+              "Dependencies|System.String[], mscorlib": [
+                "Core"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Security.AuthorizationRemoteComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "Remote"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "Authorization",
+              "Dependencies|System.String[], mscorlib": [
+                "Core"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Security.AuthorizationServicesComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "Services"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "Authorization",
+              "Dependencies|System.String[], mscorlib": [
+                "Core"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Security.OwinAuthorizationServiceComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.Security.WindowsPermissionReader",
+        "Exports": [
+          {
+            "ContractName": "System.Object",
+            "Metadata": {
+              "Targets|System.String[][], mscorlib": [
+                [
+                  "Services"
+                ]
+              ],
+              "ServiceType|System.Type[], mscorlib": [
+                "VSoft.archITekt.Core.Security.IPermissionReader, VSoft.archITekt.Core"
+              ],
+              "Name|System.String[], mscorlib": [
+                "WindowsIdentity"
+              ],
+              "Scope|VSoft.Framework.Scope[], VSoft.Framework": [
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.VersionServer.VersionServerServicesComponent",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Composition.IApplicationComponent",
+            "Metadata": {
+              "Targets|System.String[], mscorlib": [
+                "Services"
+              ],
+              "ComponentSource|VSoft.Framework.Composition.ApplicationComponentSource, VSoft.Framework.Base": 0,
+              "ComponentName|System.String, mscorlib": "VersionServer",
+              "Dependencies|System.String[], mscorlib": [
+                "Core",
+                "Authorization",
+                "LicenseService"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.archITekt.Core.VersionServer.VersionServerTextTemplateGenerator",
+        "Exports": [
+          {
+            "ContractName": "VSoft.archITekt.Core.TemplateGeneration.ITextTemplateGenerator",
+            "Metadata": {
+              "VersionType|System.String, mscorlib": "vs"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Assembly": "VSoft.Framework.Formula.Impl",
+    "Parts": [
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.AnyConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.BoolConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.CharConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.DateTimeConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.DirectionConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.GuidConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.IntConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.LongConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.NumericConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.StringConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConstant.VoidConstant",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConstant.IFormulaConstant",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Bool2Direction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Bool2NumericString",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Bool2Object",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Bool2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Char2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.DateTime2Object",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.DateTime2ShortString",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.DateTime2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Direction2BoolFormulaConverter",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Direction2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Guid2Object",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Guid2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Int2Long",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Int2Numeric",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Int2Object",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Int2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Long2Int",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Long2Numeric",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Long2Object",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Long2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Numeric2Int",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Numeric2Long",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Numeric2Object",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Numeric2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Object2Bool",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Object2DateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Object2Int",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Object2Long",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Object2Numeric",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Object2String",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.Object2Void",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.String2Bool",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.String2DateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.String2Int",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.String2Long",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.String2Numeric",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaConverter.String2Object",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaConverter.IFormulaConverter",
+            "Metadata": {}
+          },
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNotNullValueBoolFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNotNullValueDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNotNullValueFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNotNullValueGuidFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNotNullValueIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNotNullValueNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNotNullValueObjectFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNotNullValueStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullGuidFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullObjectFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullValueBoolFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullValueDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullValueFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullValueGuidFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullValueIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullValueObjectFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNullValueStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.IsNValueNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.NullCoalescingBinaryFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.NullCoalescingBoolFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.NullCoalescingDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.NullCoalescingGuidFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.NullCoalescingIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.NullCoalescingLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.NullCoalescingNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.NullCoalescingObjectFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.NullCoalescingStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyAdd2SetFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyAddFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyDivFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyEqualFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyEqualsFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyExceptSetFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyGreaterFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyGreaterOrEqualFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyIntersectSetFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyInWordsFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyLessFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyLessOrEqualFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyMultiplyFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyNotEqualFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyNullCoalescingFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyPowerFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyRemoveFromSetFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnySubsetSetFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnySubstractFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeAny.AnyUnionSetFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.AndLogicFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.MultiAndLogicFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.MultiOrLogicFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.NotLogicFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.OrLogicFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeBool.EqualBoolFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeBool.EqualsBoolFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.EqualDateFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.EqualDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.EqualsDateFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.EqualsDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.GreaterDateFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.GreaterDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.GreaterOrEqualDateFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.GreaterOrEqualDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.LessDateFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.LessDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.LessOrEqualDateFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.LessOrEqualDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.NotEqualDateFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeDateTime.NotEqualDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeGuid.EqualGuidFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeGuid.EqualsGuidFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeGuid.NotEqualGuidFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.EqualsIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.GreaterIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.GreaterOrEqualIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.LessIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.LessOrEqualIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeInt.NotEqualIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeLong.EqualLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeLong.EqualsLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeLong.GreaterLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeLong.GreaterOrEqualLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeLong.LessLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeLong.LessOrEqualLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeLong.NotEqualLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeNumeric.EqualNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeNumeric.EqualsNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeNumeric.GreaterNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeNumeric.GreaterOrEqualNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeNumeric.LessNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeNumeric.LessOrEqualNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeNumeric.NotEqualNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeString.ContainsStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeString.EndsWithFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeString.EqualsStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeString.EqualStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeString.IsIdentityCardNumberValidFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeString.IsNotNullAndNotEmptyStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeString.IsNullOrEmptyStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeString.NotEqualStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeString.RegexMatchFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeBool.ReturnTypeString.StartsWithFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.AddDays2DateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.AddHours2DateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.AddMinutes2DateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.AddMonths2DateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.AddSeconds2DateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.AddWorkDaysToDate",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.AddWorkDaysWithWeekendsToDate",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.AddYears2DateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.CreateDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.DaysBetweenDates",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetCurrentDateFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetDateFromDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetDateTimeNow",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetDateTimeToday",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetDateTimeUtcNow",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetDateTimeUtcToday",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetDayFromDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetHourFromDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetMinuteFromDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetMonthFromDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetSecondFromDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.GetYearFromDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.MaxDate",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.MinDate",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.MonthsBetweenDates",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.SubtractDays",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.SubtractHoursFromDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.SubtractMinutesFromDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.SubtractMonths",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.SubtractSecondsFromDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.SubtractYears",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.ToLocalDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeDateTime.ToUniversalDateTime",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.AbsIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.AddIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.DaysInMonthFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.DivIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.GenerateRandomIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.GetDayOfWeekFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.GetWorkDaysBetweenDatesFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.ModIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.MultiAddIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.MultiDivIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.MultiMultipleIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.MultipleIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.MultiSubstractIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.NegateIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.PowerIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.Round2Function",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.RoundFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeInt.SubstractIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.AndListFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.AvgIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.AvgLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.AvgNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.ListIntAddFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.ListLongAddFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.ListNumericAddFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.ListStringConcatenateFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.ListStringConcatenateWithSeparatorFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.MaxDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.MaxIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.MaxLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.MaxNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.MinDateTimeFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.MinIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.MinLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.MinNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeList.OrListFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.AbsLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.AddLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.DivLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.ModLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.MultiAddLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.MultiDivLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.MultiMultipleLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.MultipleLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.MultiSubstractLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.NegateLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.PowerLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeLong.SubstractLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.AbsNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.AddNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.DivNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.MaxNumeric",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.MinNumeric",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.MultiAddNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.MultiAvgNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.MultiDivNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.MultiMaxNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.MultiMinNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.MultiMultipleNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.MultipleNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.MultiSubstractNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.NegateNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.PowerNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.RoundDownNumeric",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.RoundUpNumeric",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.SqrtNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeNumeric.SubstractNumericFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeObject.InvokeMethodFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeObject.InvokeVoidMethodFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.ConcatenateStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.DateTime2StringWithPattern",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.FillUpStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.IndexOfFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.InWordsIntFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.InWordsLongFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.MultiConcatenateStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.Numeric2StringFixedPoint",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.Numeric2StringWithPattern",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.ReplaceStringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.StringLengthFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.SubstringFromFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.SubstringFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaFunction.ReturnTypeString.SubstringToFunction",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaFunction.IFormulaFunction",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaVariable.ConfigurationFormulaBinaryVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaVariable.ConfigurationFormulaBoolVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaVariable.ConfigurationFormulaCharVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaVariable.ConfigurationFormulaDateTimeVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaVariable.ConfigurationFormulaGuidVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaVariable.ConfigurationFormulaIntVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaVariable.ConfigurationFormulaLongVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaVariable.ConfigurationFormulaNumericVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaVariable.ConfigurationFormulaObjectVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.FormulaVariable.ConfigurationFormulaStringVariable",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.FormulaVariable.IFormulaVariable",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.AnyReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.BinaryReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.BoolReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.CharReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.DateTimeReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.DictionaryReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.DirectionReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.GuidReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.IntReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.LongReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.NumericReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.ObjectReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.StringReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      },
+      {
+        "Type": "VSoft.Framework.Formula.Impl.ReturnType.VoidReturnType",
+        "Exports": [
+          {
+            "ContractName": "VSoft.Framework.Formula.ReturnType.IReturnedType",
+            "Metadata": {}
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,152 @@
+﻿<Edmx xmlns:v="http://vsoft.pl" Version="3.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+	<Runtime>
+		<ConceptualModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Namespace="VSoft.BusinessPlatform.DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+				<EntityType Name="HistoryLogPropertyChange" v:Prefix="PC" v:IsTable="false">
+					<Documentation>
+						<Summary>History log property change</Summary>
+						<LongDescription>Table that stores information about changes in individual fields of an object</LongDescription>
+					</Documentation>
+					<Key>
+						<PropertyRef Name="Id" />
+					</Key>
+					<Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" v:Order="0">
+						<Documentation>
+							<Summary>Id</Summary>
+							<LongDescription>Primary key</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="FieldType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="true" v:Order="3">
+						<Documentation>
+							<Summary>Field type</Summary>
+							<LongDescription>The type of data stored in the field</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" v:Order="2">
+						<Documentation>
+							<Summary>Name</Summary>
+							<LongDescription>Name of the field in which the change occurred</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="NewValue" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="true" v:Order="4">
+						<Documentation>
+							<Summary>New value</Summary>
+							<LongDescription>New value</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ObjectInfoId" Type="Int64" Nullable="false" v:Order="0">
+						<Documentation>
+							<Summary>Object info Id</Summary>
+							<LongDescription>Relation (foreign key) to table containing information about object for which the change occurred</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="OldValue" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="true" v:Order="5">
+						<Documentation>
+							<Summary>Old value</Summary>
+							<LongDescription>Old value</LongDescription>
+						</Documentation>
+					</Property>
+					<NavigationProperty Name="ObjectInfo" Relationship="Self.HistoryLogPropertyChange_ObjectInfo" FromRole="HistoryLogPropertyChange_ObjectInfo_Source" ToRole="HistoryLogPropertyChange_ObjectInfo_Target" v:RelationStructure="08f1869e-23d6-4f0c-90ab-a913f7175f3e" v:DictionaryStructure="00000000-0000-0000-0000-000000000000" v:DictionaryCollection="00000000-0000-0000-0000-000000000000" v:Order="6">
+						<Documentation>
+							<Summary>Object info</Summary>
+							<LongDescription>Information about object for which the change occurred</LongDescription>
+						</Documentation>
+					</NavigationProperty>
+				</EntityType>
+				<Association Name="HistoryLogPropertyChange_ObjectInfo">
+					<End Role="HistoryLogPropertyChange_ObjectInfo_Source" Type="Self.HistoryLogPropertyChange" Multiplicity="*" />
+					<End Role="HistoryLogPropertyChange_ObjectInfo_Target" Type="Self.HistoryLogObjectInfo" Multiplicity="1">
+						<OnDelete Action="Cascade" />
+					</End>
+					<ReferentialConstraint>
+						<Principal Role="HistoryLogPropertyChange_ObjectInfo_Target">
+							<PropertyRef Name="Id" />
+						</Principal>
+						<Dependent Role="HistoryLogPropertyChange_ObjectInfo_Source">
+							<PropertyRef Name="ObjectInfoId" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<EntityContainer Name="EntitiesContainer" annotation:LazyLoadingEnabled="false">
+					<EntitySet Name="HistoryLogPropertyChangeSet" EntityType="Self.HistoryLogPropertyChange" />
+					<AssociationSet Name="HistoryLogPropertyChange_ObjectInfo" Association="Self.HistoryLogPropertyChange_ObjectInfo">
+						<End Role="HistoryLogPropertyChange_ObjectInfo_Source" EntitySet="HistoryLogPropertyChangeSet" />
+						<End Role="HistoryLogPropertyChange_ObjectInfo_Target" EntitySet="HistoryLogObjectInfoSet" />
+					</AssociationSet>
+				</EntityContainer>
+			</Schema>
+		</ConceptualModels>
+		<Mappings>
+			<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+				<EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EntitiesContainer">
+					<EntitySetMapping Name="HistoryLogPropertyChangeSet">
+						<EntityTypeMapping TypeName="VSoft.BusinessPlatform.DataModel.HistoryLogPropertyChange">
+							<MappingFragment StoreEntitySet="HistoryLogPropertyChange">
+								<ScalarProperty Name="Id" ColumnName="PC_ID" />
+								<ScalarProperty Name="FieldType" ColumnName="PC_TYPE" />
+								<ScalarProperty Name="Name" ColumnName="PC_NAME" />
+								<ScalarProperty Name="NewValue" ColumnName="PC_NEW_VALUE" />
+								<ScalarProperty Name="ObjectInfoId" ColumnName="PC_OBJECT_INFO_ID" />
+								<ScalarProperty Name="OldValue" ColumnName="PC_OLD_VALUE" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+				</EntityContainerMapping>
+			</Mapping>
+		</Mappings>
+		<StorageModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" Namespace="VSoft.BusinessPlatform.StorageModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+				<EntityType Name="HistoryLogPropertyChange">
+					<Key>
+						<PropertyRef Name="PC_ID" />
+					</Key>
+					<Property Name="PC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+					<Property Name="PC_TYPE" Type="varchar" MaxLength="100" Nullable="true" />
+					<Property Name="PC_NAME" Type="varchar" MaxLength="255" Nullable="false" />
+					<Property Name="PC_NEW_VALUE" Type="nvarchar(max)" Nullable="true" />
+					<Property Name="PC_OBJECT_INFO_ID" Type="bigint" Nullable="false" />
+					<Property Name="PC_OLD_VALUE" Type="nvarchar(max)" Nullable="true" />
+				</EntityType>
+				<Association Name="HistoryLogPropertyChange_ObjectInfo">
+					<End Role="HistoryLogObjectInfo" Type="Self.HistoryLogObjectInfo" Multiplicity="1">
+						<OnDelete Action="Cascade" />
+					</End>
+					<End Role="HistoryLogPropertyChange" Type="Self.HistoryLogPropertyChange" Multiplicity="*" />
+					<ReferentialConstraint>
+						<Principal Role="HistoryLogObjectInfo">
+							<PropertyRef Name="OI_ID" />
+						</Principal>
+						<Dependent Role="HistoryLogPropertyChange">
+							<PropertyRef Name="PC_OBJECT_INFO_ID" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<EntityContainer Name="ModelStoreContainer">
+					<EntitySet Name="HistoryLogPropertyChange" EntityType="Self.HistoryLogPropertyChange" Schema="dbo" Table="HIS_PROPERTY_CHANGE" />
+					<AssociationSet Name="HistoryLogPropertyChange_ObjectInfo" Association="Self.HistoryLogPropertyChange_ObjectInfo">
+						<End Role="HistoryLogObjectInfo" EntitySet="HistoryLogObjectInfo" />
+						<End Role="HistoryLogPropertyChange" EntitySet="HistoryLogPropertyChange" />
+					</AssociationSet>
+				</EntityContainer>
+			</Schema>
+		</StorageModels>
+	</Runtime>
+	<Designer>
+		<Connection>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+			</DesignerInfoPropertySet>
+		</Connection>
+		<Options>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="ValidateOnBuild" Value="False" />
+				<DesignerProperty Name="EnablePluralization" Value="True" />
+				<DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+				<DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+				<DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="False" />
+				<DesignerProperty Name="UseLegacyProvider" Value="False" />
+			</DesignerInfoPropertySet>
+		</Options>
+		<Diagrams />
+	</Designer>
+</Edmx>

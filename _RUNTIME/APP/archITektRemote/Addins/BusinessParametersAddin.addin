@@ -1,0 +1,46 @@
+﻿<AddIn name        = "Business Parameters"
+       description = "${res:BusinessParametersModule}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+  <Manifest>
+    <Identity name = "VSoft.archITekt.BusinessParametersAddin" version = "@SharpDevelopCoreVersion" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly="VSoft.archITekt.BusinessParametersAddin.dll">
+      <ConditionEvaluator name="BusinessParameters_BusinessParametersCondition" class="VSoft.archITekt.BusinessParametersAddin.BusinessParametersCondition" />
+      <ConditionEvaluator name="BusinessParameters_ExportCommandCondition" class="VSoft.archITekt.BusinessParametersAddin.ExportCommandCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Console">
+    <Class id = "VSoft.archITekt.BusinessParametersAddin.Commands.GenerateSQLScriptForBusinessParametersCommand" class = "VSoft.archITekt.BusinessParametersAddin.Commands.GenerateSQLScriptForBusinessParametersCommand" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/Tools">
+    <MenuItem id = "BusinessParametersAddin"
+              icon ="BusinessParameters"
+              label       = "${res:XML.MainMenu.ToolsMenu.BusinessParametersAddin}"
+              class       = "VSoft.archITekt.BusinessParametersAddin.ShowCommand" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/ToolBar">
+    <ToolbarItem id = "Standard">
+      <Condition name = "BusinessParameters_BusinessParametersCondition" action="Exclude">
+        <Condition name = "BusinessParameters_ExportCommandCondition" action="Disable">
+          <ToolbarItem id = "Export"
+                       icon ="Svn.Export"
+                       ribbonlabel = "BusinessParameters"
+                       group   = "GroupGeneral"
+                       tooltip = "${res:XML.MainMenu.Toolbar.Export}"
+                       class = "VSoft.archITekt.BusinessParametersAddin.ExportCommand" />
+        </Condition>
+      </Condition>
+    </ToolbarItem>
+  </Path>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VSoft.archITekt.BusinessParametersAddin.Commands.StartCommand" class = "VSoft.archITekt.BusinessParametersAddin.Commands.StartCommand" />
+  </Path>
+</AddIn>

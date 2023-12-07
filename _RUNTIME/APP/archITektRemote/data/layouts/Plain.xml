@@ -1,0 +1,14 @@
+<DockingManager version="1.3.0">
+    <DocumentPaneResizingPanel ResizeWidth="*" ResizeHeight="*" EffectiveSize="790,509" Orientation="Vertical">
+        <DocumentPane IsMain="true" ResizeWidth="*" ResizeHeight="*" EffectiveSize="1910,949" />
+    </DocumentPaneResizingPanel>
+    <Hidden>
+        <DockableContent Name="VSoft_archITekt_Controls_ValidationLog_ValidationLogPad" FloatingWindowSize="250,400" ChildIndex="0" Width="378" Height="200" Anchor="Bottom" State="Docked" ContainerPaneID="495d6779-9528-4a5e-ad2b-c2121e07fe9f" />
+        <DockableContent Name="VSoft_archITekt_Controls_WpfToolbox_ToolboxPad" FloatingWindowSize="250,400" ChildIndex="0" Width="200" Height="509" Anchor="Left" State="Docked" ContainerPaneID="4ed594fc-40de-425f-9d73-7c60a9cb5103" />
+        <DockableContent Name="VSoft_archITekt_Controls_PropertyGrid_PropertyGridPad" FloatingWindowSize="250,400" ChildIndex="0" Width="200" Height="509" Anchor="Left" State="Docked" ContainerPaneID="4ed594fc-40de-425f-9d73-7c60a9cb5103" />
+        <DockableContent Name="VSoft_archITekt_Controls_DependenciesPad_DependenciesPad" FloatingWindowSize="250,400" ChildIndex="0" Width="200" Height="509" Anchor="Right" State="Docked" ContainerPaneID="ed33a8b6-51e9-4a23-8ce3-cf4cd07b6cf8" />
+        <DockableContent Name="VSoft_archITekt_VersionServer_Pads_VersionServerPad" FloatingWindowSize="250,400" ChildIndex="0" Width="200" Height="509" Anchor="Left" State="Docked" ContainerPaneID="4ed594fc-40de-425f-9d73-7c60a9cb5103" />
+        <DockableContent Name="VSoft_archITekt_VersionServer_Pads_PendingVersionServerChangesPad" FloatingWindowSize="250,400" ChildIndex="0" Width="200" Height="509" Anchor="Left" State="Docked" ContainerPaneID="4ed594fc-40de-425f-9d73-7c60a9cb5103" />
+    </Hidden>
+    <Windows />
+</DockingManager>

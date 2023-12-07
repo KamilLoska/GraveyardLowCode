@@ -1,0 +1,24 @@
+﻿<AddIn name        = "Logs"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl"
+       addInManagerHidden = "preinstalled">
+
+  <Manifest>
+    <Identity name="LogMonitor" version=":VSoft.Framework.Log" />
+  </Manifest>
+  <Runtime>
+    <Import assembly=":VSoft.BusinessPlatform.Log.Monitor.Addin" />
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VSoft.BusinessPlatform.Log.Monitor.Addin.Commands.StartCommand" class = "VSoft.BusinessPlatform.Log.Monitor.Addin.Commands.StartCommand" />
+  </Path>
+
+  <Path name ="/SharpDevelop/Workbench/MainMenu/Tools">
+    <MenuItem id ="ShowLogMonitor" icon="LogMonitor"
+          label = "${res:LogMonitorMenu}"
+          class ="VSoft.BusinessPlatform.Log.Monitor.Addin.Commands.ShowLogMonitor"
+              insertbefore="ShowProcessMonitor"
+          insertafter="ReCreateAllGroupsCommand" />
+  </Path>
+</AddIn>

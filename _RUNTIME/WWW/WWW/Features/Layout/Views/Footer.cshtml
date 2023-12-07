@@ -1,0 +1,35 @@
+﻿@if (FooterConfig > FooterItem.None)
+{
+  <div id="footer-wrapper">
+    @if (FooterConfig.HasFlag(FooterItem.Copyright))
+    {
+      <strong>Copyright</strong>@: VSoft SA &copy; 2016 - @DateTime.UtcNow.Year&ensp;
+    }
+    @if (FooterConfig.HasFlag(FooterItem.Version))
+    {
+      <strong>@VSoft.BusinessPlatform.Application.Contracts.Localization.Version</strong>@: @VSoft.BusinessPlatform.Web.AppProperties.Instance.AppVersion&ensp;
+    }
+    @if (FooterConfig.HasFlag(FooterItem.Environment))
+    {
+      <strong>@VSoft.BusinessPlatform.Application.Contracts.Localization.Environment</strong>@: @VSoft.Framework.Environment.Environment.Name @@ @VSoft.Framework.Environment.Environment.PhysicalMachineName&ensp;
+    }
+    @if (FooterConfig.HasFlag(FooterItem.User))
+    {
+      <strong>@BaseIdentityPrincipal.DisplayName&ensp;</strong>
+    }
+    @if (FooterConfig.HasFlag(FooterItem.Roles))
+    {
+      <span class="a-footer-user-role">
+        @string.Join("; ", TopRoles)
+        @if (TopRoles.Length < TotalRoles)
+        {
+          @:...
+        }
+      </span>
+    }
+    @if (FooterConfig.HasFlag(FooterItem.Browser))
+    {
+      <span id="footer-wrapper-browser"> @@ </span>
+    }
+  </div>
+}

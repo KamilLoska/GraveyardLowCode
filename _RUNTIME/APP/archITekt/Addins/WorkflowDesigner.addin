@@ -1,0 +1,120 @@
+﻿<AddIn name        = "Workflow"
+       description = "${res:WorkflowModule}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+  <Manifest>
+    <Identity name="WorkflowDesigner" version=":VSoft.WorkflowStateMachine" />
+    <Dependency addin="BusinessStudio" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":VSoft.BusinessPlatform.Workflow.Win">
+      <ConditionEvaluator name="RunWorkflowWithTrackingButtonCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.RunWorkflowWithTrackingCondition" />
+      <ConditionEvaluator name="CopyWorkflowCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.CopyWorkflowCondition" />
+      <ConditionEvaluator name="CutWorkflowCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.CutWorkflowCondition" />
+      <ConditionEvaluator name="PasteWorkflowCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.PasteWorkflowCondition" />
+      <ConditionEvaluator name="DuplicateWorkflowCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.DuplicateWorkflowCondition" />
+      <ConditionEvaluator name="ExportTrackingCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.ExportTrackingCondition" />
+      <ConditionEvaluator name="OpenDefinitionCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.OpenDefinitionCondition" />
+      <ConditionEvaluator name="ShowExecutionStatusDetailsCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.ShowExecutionStatusDetailsCondition" />
+      <ConditionEvaluator name="ShowErrorHandlingProcessTrackingCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.ShowErrorHandlingProcessTrackingCondition" />
+      <ConditionEvaluator name="ShowParentProcessTrackingCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.ShowParentProcessTrackingCondition" />
+      <ConditionEvaluator name="ShowExecutionIterationsCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.ShowExecutionIterationsCondition" />
+      <ConditionEvaluator name="IsNotTrackingCondition" class="VSoft.BusinessPlatform.Workflow.Win.Conditions.IsNotTrackingCondition" />
+    </Import>
+    <Import assembly = ":VSoft.BusinessStudio" />
+  </Runtime>
+
+  <Path name="/SharpDevelop/Workbench/MainMenu/Tools">
+    <MenuItem id="ShowExportedTrackingActionCommand" icon="ImportTracking" label="${res:Import}" class="VSoft.BusinessPlatform.Workflow.Win.Commands.ShowExportedTrackingActionCommand" insertafter="ShowProcessMonitor" />
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/DesignerToolBar/Standard">
+    <Condition name="RunWorkflowWithTrackingButtonCondition" action="Exclude">
+      <ToolbarItem id="RunWorkflowWithTrackingActionCommand" icon="RunProcess" tooltip="${res:UruchomProces}" class="VSoft.BusinessPlatform.Workflow.Win.Commands.RunWorkflowWithTrackingActionCommand" insertbefore="OpenInDefaultBrowserMenuCommand" />
+    </Condition>
+    <Condition name="IsNotTrackingCondition" action="Exclude">
+      <Condition name="CopyWorkflowCondition" action="Disable">
+        <ToolbarItem id="CopyWorkflowCommand" icon="Copy" tooltip="${res:Kopiuj}" class="VSoft.BusinessPlatform.Workflow.Win.Commands.CopyWorkflowCommand" />
+      </Condition>
+      <Condition name="CutWorkflowCondition" action="Disable">
+        <ToolbarItem id="CutWorkflowCommand" icon="Cut" tooltip="${res:Wytnij}" class="VSoft.BusinessPlatform.Workflow.Win.Commands.CutWorkflowCommand" />
+      </Condition>
+      <Condition name="DuplicateWorkflowCondition" action="Disable">
+        <ToolbarItem id="DuplicateWorkflowCommand" icon="Duplicate" tooltip="${res:Duplikuj}" class="VSoft.BusinessPlatform.Workflow.Win.Commands.DuplicateWorkflowCommand" />
+      </Condition>
+      <Condition name="PasteWorkflowCondition" action="Disable">
+        <ToolbarItem id="PasteWorkflowCommand" icon="Paste" tooltip="${res:Wklej}" class="VSoft.BusinessPlatform.Workflow.Win.Commands.PasteWorkflowCommand" />
+      </Condition>
+    </Condition>
+    <Condition name="ShowExecutionStatusDetailsCondition" action="Exclude">
+      <ToolbarItem id="ExecutionStatusDetailsToolBarItem" type="Custom" class="VSoft.BusinessPlatform.Workflow.Win.Controls.ToolBar.ExecutionStatusDetailsToolBarItem" />
+    </Condition>
+    <Condition name="ShowErrorHandlingProcessTrackingCondition" action="Exclude">
+      <ToolbarItem id="ShowErrorHandlingProcessTrackingCommand" type="Custom" class="VSoft.BusinessPlatform.Workflow.Win.Commands.ShowErrorHandlingProcessTrackingCommand" />
+    </Condition>
+    <Condition name="ShowParentProcessTrackingCondition" action="Exclude">
+      <ToolbarItem id="ShowParentProcessTrackingCommand" type="Custom" class="VSoft.BusinessPlatform.Workflow.Win.Commands.ShowParentProcessTrackingCommand" />
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/DesignerToolBar/VersionServer">
+    <Condition name="OpenDefinitionCondition" action="Exclude">
+      <ToolbarItem id="OpenInDefaultBrowserMenuCommand" icon="WebPreview24"  tooltip="${res:OtworzWDomyslejPrzegladarce}" class="VSoft.BusinessStudio.Commands.OpenInDefaultBrowserMenuCommand" />
+      <ToolbarItem id="OpenInDefaultBrowserMenuSeparator" type="Separator" />
+    </Condition>
+    <Condition name="ShowExecutionIterationsCondition" action="Exclude">
+      <ToolbarItem id="ExecutionIterationToolbarItem" type="Custom" class="VSoft.BusinessPlatform.Workflow.Win.Controls.ToolBar.ExecutionIterationToolbarItem" />
+    </Condition>
+    <Condition name="ExportTrackingCondition" action="Exclude">
+      <ToolbarItem id="ExportTrackingSeparator" type="Separator" />
+      <ToolbarItem id="ExportTrackingActionCommand" icon="ExportWorkflowTracking24" tooltip="${res:Eksport}" class="VSoft.BusinessPlatform.Workflow.Win.Commands.ExportTrackingActionCommand"
+                   />
+    </Condition>
+    <Condition name="OpenDefinitionCondition" action="Exclude">
+      <ToolbarItem id="OpenProcessDefinitionSeparator" type="Separator" />
+      <ToolbarItem id="OpenProcessDefinitionCommand" icon="OpenWorkflow24" tooltip="${res:PokazDefinicje}" class="VSoft.BusinessPlatform.Workflow.Win.Commands.OpenProcessDefinitionCommand"
+                    />
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Console">
+    <Class id="PrepareUpdateResumeInstancesScriptCommand"
+           class="VSoft.BusinessPlatform.Workflow.Win.Commands.PrepareUpdateResumeInstancesScriptCommand" />
+    <Class id="PrepareUpdateResumeInstancesAtScriptCommand"
+           class="VSoft.BusinessPlatform.Workflow.Win.Commands.PrepareUpdateResumeInstancesAtScriptCommand" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/Pads">
+    <Pad id      = "WorkflowVariablesPad"
+         category = "Main"
+         title    = "${res:Zmienne}"
+         icon     = "PadIcons.Architekt.Variables"
+         class    = "VSoft.BusinessPlatform.Workflow.Win.Designer.VariableList.WorkflowVariablesPad"
+         defaultPosition   = "Bottom"
+         group="workflow"
+         order="1"
+         shortcut = "Ctrl+W, V" />
+
+    <Pad id      = "WorkflowTrackingPad"
+         category = "Main"
+         title    = "${res:SzczegolyPrzebieguProcesu}"
+         icon     = "PadIcons.Architekt.PreviewDetails"
+         class    = "VSoft.BusinessPlatform.Workflow.Win.Designer.TrackingList.WorkflowTrackingPad"
+         defaultPosition = "Bottom"
+         group="workflow"
+         order="2"
+         shortcut = "Ctrl+W, T" />
+
+    <Pad id      = "WorkflowLogPad"
+         category = "Main"
+         title    = "${res:Logi}"
+         icon     = "PadIcons.Architekt.WorkflowLogs"
+         class    = "VSoft.BusinessPlatform.Workflow.Win.Designer.LogList.WorkflowLogPad"
+         defaultPosition = "Bottom"
+         group="workflow"
+         order="3"
+         shortcut = "Ctrl+W, L" />
+  </Path>
+</AddIn>

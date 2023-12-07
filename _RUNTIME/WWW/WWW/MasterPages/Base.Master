@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base.Master.cs" Inherits="VBP_WebUI.MasterPages.Base" %>
+
+<%@ Import Namespace="VSoft.BusinessPlatform.Common.Web.CustomTypes" %>
+<%@ Register TagPrefix="vbp" Namespace="VSoft.BusinessPlatform.Common.Web.Controls" Assembly="VSoft.BusinessPlatform.Common.Web" %>
+<!DOCTYPE html>
+<html lang="pl">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSoft archITekt</title>
+    <asp:PlaceHolder runat="server">
+        <link rel="SHORTCUT ICON" href="<%= ResolveUrl("~/favicon.ico") %>" />
+    </asp:PlaceHolder>
+    <asp:PlaceHolder ID="meta" runat="server" />
+    <asp:PlaceHolder ID="cssFiles" runat="server" />
+    <asp:PlaceHolder ID="javascriptFiles" runat="server" />
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+    <style id="antiClickjack">
+        #wrapper {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript">
+        var parentLocation = null;
+        if (window.parent != null && window.parent.document != null) {
+            parentLocation = window.parent.document.location.origin;
+        }
+        if (self === top || parentLocation === document.location.origin) {
+            var antiClickjack = document.getElementById("antiClickjack");
+            antiClickjack.parentNode.removeChild(antiClickjack);
+        } else {
+            top.location = self.location;
+        }
+    </script>
+</head>
+<body runat="server">
+    <div id="wrapper">
+        <asp:ContentPlaceHolder ID="Header" runat="server" />
+        <asp:ContentPlaceHolder ID="MainMenu" runat="server" />
+        <div id="content-wrapper">
+            <div class="container-fluid">
+                <div class="page-container">
+                    <div class="page-content">
+                        <div class="row">
+                            <div class="section-center <%--with-left-panel--%>">
+                                <vbp:UserMessagesControl ID="UserMessages" runat="server" />
+                                <form id="MasterForm" method="post" runat="server" class="form-horizontal">
+                                    <asp:ContentPlaceHolder ID="MC" runat="server" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="Footer" runat="server" />
+    </div>
+    <div id="fouc" style="display: flex; align-items: center; justify-content: center; align-content: center; height: 100vh;">
+        <h2>The site requires JavaScript enabled to function properly. Please check your JavaScript settings.
+        </h2>
+    </div>
+    <script type="text/javascript">
+        $('#fouc').hide();
+    </script>
+</body>
+</html>

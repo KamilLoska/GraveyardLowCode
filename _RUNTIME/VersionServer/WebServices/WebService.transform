@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageContext xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" TopDown="true" Culture="pl-PL" BaseVersion="18.1.0.0" CoreVersion="18.1.0.0" BaseInformationalVersion="18.1.311.110" CoreInformationalVersion="18.1.311.110">
+  <Blocks>
+    <BaseBlock xsi:type="RequestSendInputBlock" VisualMemento="229;100" GUID="80fc6f66-7e67-4302-becc-a976943a1ada" ThreadCount="1" Name="Method1">
+      <Schema>
+        <AllRecords>
+          <RecordSpec NamePath="Request1">
+            <Fields>
+              <FieldSpec Name="a">
+                <Type xsi:type="Vts2Decimal" />
+              </FieldSpec>
+              <FieldSpec Name="b">
+                <Type xsi:type="Vts2Decimal" />
+              </FieldSpec>
+            </Fields>
+          </RecordSpec>
+        </AllRecords>
+      </Schema>
+    </BaseBlock>
+    <BaseBlock xsi:type="MapInPlaceBlock" VisualMemento="234;235" GUID="053e1923-f1e6-4253-a3d1-59d2ac43ad6a" Name="Odwzorowanie - w miejscu">
+      <RequiredSchema>
+        <RequiredSchemaTemplate>
+          <AllRecords>
+            <RecordSpec NamePath="Korzeń" />
+          </AllRecords>
+        </RequiredSchemaTemplate>
+        <Check>false</Check>
+        <Config RootMustMatch="false" XmlMatch="false" CaseSensitive="false" TechnicalAsInvisible="false" NonRecursive="false" ExtraRecords="ERROR" ExtraFields="ERROR" SingleRecAsOneMultirec="ERROR">
+          <DontBuildGhosts>false</DontBuildGhosts>
+        </Config>
+      </RequiredSchema>
+      <GreedyValidation xsi:nil="true" />
+      <MapInPlace>
+        <Operations>
+          <SimpleSchemaOperation xsi:type="AddSchemaElementOperation">
+            <SchemaPath>\</SchemaPath>
+            <ObjectToAdd xsi:type="FieldSpec" Name="c">
+              <Type xsi:type="Vts2Decimal" />
+            </ObjectToAdd>
+            <Index>3</Index>
+            <OperationalIndex>3</OperationalIndex>
+          </SimpleSchemaOperation>
+          <SimpleSchemaOperation xsi:type="ResolveFieldValueOperation">
+            <SchemaPath>\c</SchemaPath>
+            <AnnotationsToSet>
+              <AnnotationBase xsi:type="AExpression">
+                <Value>a+b</Value>
+              </AnnotationBase>
+            </AnnotationsToSet>
+          </SimpleSchemaOperation>
+        </Operations>
+      </MapInPlace>
+      <QueryMapInPlace>
+        <Operations />
+      </QueryMapInPlace>
+    </BaseBlock>
+    <BaseBlock xsi:type="PutResponseBlock" VisualMemento="210;355" GUID="e9d137d9-9a43-490e-82d1-db76006efd62" Name="Odpowiedź" SkipDefaultValues="true">
+      <GreedyValidation xsi:nil="true" />
+      <MapInPlace>
+        <Operations />
+      </MapInPlace>
+    </BaseBlock>
+  </Blocks>
+  <Links>
+    <BlockLink InputID="0:Output" OutputID="1:Input" />
+    <BlockLink InputID="1:Output" OutputID="2:Input" />
+  </Links>
+  <OtherLinks />
+  <Annotations />
+  <ConversionPolicy DefaultPolicyName="Nowa polityka">
+    <Policies>
+      <NamedPolicy Name="Nowa polityka">
+        <Converters>
+          <anyType xsi:type="DecimalToDecimalParser" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+          </anyType>
+          <anyType xsi:type="NumericParser" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+          </anyType>
+          <anyType xsi:type="NumericParser" Direction="DoUnparse" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+          </anyType>
+          <anyType xsi:type="DoubleParser" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+          </anyType>
+          <anyType xsi:type="DoubleParser" Direction="DoUnparse" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+          </anyType>
+          <anyType xsi:type="DecimalParser" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+          </anyType>
+          <anyType xsi:type="DecimalParser" Direction="DoUnparse" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+          </anyType>
+          <anyType xsi:type="BinaryParser" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+          </anyType>
+          <anyType xsi:type="BinaryParser" Direction="DoUnparse" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+          </anyType>
+          <anyType xsi:type="BoolNumParser" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+          </anyType>
+          <anyType xsi:type="BoolNumParser" Direction="DoUnparse" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+          </anyType>
+          <anyType xsi:type="BoolParser" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+          </anyType>
+          <anyType xsi:type="BoolParser" Direction="DoUnparse" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+          </anyType>
+          <anyType xsi:type="DateTimeParser" ValueIsNull="EMPTY_DATA" Default="0001-01-01T00:00:00" MinDate="0001-01-01T00:00:00" MaxDate="9999-12-31T23:59:59.9999999">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+          </anyType>
+          <anyType xsi:type="DateTimeParser" Direction="DoUnparse" ValueIsNull="EMPTY_DATA" Default="0001-01-01T00:00:00" MinDate="0001-01-01T00:00:00" MaxDate="9999-12-31T23:59:59.9999999">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+          </anyType>
+          <anyType xsi:type="GuidBinaryParser" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <Default>00000000-0000-0000-0000-000000000000</Default>
+          </anyType>
+          <anyType xsi:type="GuidBinaryParser" Direction="DoUnparse" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <Default>00000000-0000-0000-0000-000000000000</Default>
+          </anyType>
+          <anyType xsi:type="GuidParser" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+            <Default>00000000-0000-0000-0000-000000000000</Default>
+          </anyType>
+          <anyType xsi:type="GuidParser" Direction="DoUnparse" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+            <Default>00000000-0000-0000-0000-000000000000</Default>
+          </anyType>
+          <anyType xsi:type="StringParser" ParseFailed="TRY_RECOVER" ValueIsNull="EMPTY_DATA">
+            <ReportError xsi:nil="true" />
+            <EmptyValues />
+            <PaddingChar>32</PaddingChar>
+          </anyType>
+        </Converters>
+      </NamedPolicy>
+    </Policies>
+    <NamedParsers />
+  </ConversionPolicy>
+  <Variables AllowScriptMod="true">
+    <AllRecords>
+      <RecordSpec NamePath="Zmienne" />
+    </AllRecords>
+  </Variables>
+  <DefaultDictKV />
+  <BlockGroups />
+  <GUID>556d7835-e667-48b9-a29c-a9624c616105</GUID>
+  <CallArguments>
+    <AllRecords>
+      <RecordSpec NamePath="ARG" />
+    </AllRecords>
+  </CallArguments>
+  <DictUsageDeclarations />
+  <PackageBusinessCounters />
+  <GreedyValidation>true</GreedyValidation>
+  <CustomCodeReference />
+</PackageContext>

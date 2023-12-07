@@ -1,0 +1,35 @@
+﻿<AddIn name        = "Lists"
+       description = "${res:ListsModuleName}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+  <Manifest>
+    <Identity name="ListDesigner" version=":VSoft.BusinessPlatform.Lists.Designer.Addin" />
+  </Manifest>
+
+
+  <Runtime>
+    <Import assembly=":VSoft.BusinessPlatform.Lists.Designer.Addin">
+      <ConditionEvaluator name="ShowListDesignerMenuCondition" class="VSoft.BusinessPlatform.Lists.Designer.Addin.Conditions.ShowDesignerCondition" />
+      <ConditionEvaluator name="ShowListDesignerToolbarCondition" class="VSoft.BusinessPlatform.Lists.Designer.Addin.Conditions.ShowListDesignerToolbarCondition" />
+      <ConditionEvaluator name="ShowListMenuCondition" class="VSoft.BusinessPlatform.Lists.Designer.Addin.Conditions.ShowListMenuCondition" />
+		<ConditionEvaluator name="NewListCondition" class="VSoft.BusinessPlatform.Lists.Designer.Addin.Conditions.NewListCondition" />
+      <ConditionEvaluator name="ListActionTreeCondition" class="VSoft.BusinessPlatform.Lists.Designer.Addin.Conditions.ListActionTreeCondition" />
+      <ConditionEvaluator name="AiModuleVisibiltyCondition" class="VSoft.BusinessPlatform.Lists.Designer.Addin.Conditions.AiModuleVisibiltyCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Workbench/DesignerToolBar/Standard">
+	  <Condition name="ListActionTreeCondition" action="Exclude">
+		  <ToolbarItem tooltip="${res:ExpandAll}" class="VSoft.BusinessPlatform.Lists.Designer.Addin.Commands.ExpandAllNodesOnActionTree" icon="ExpandTree" />
+		  <ToolbarItem tooltip="${res:CollapseAll}" class="VSoft.BusinessPlatform.Lists.Designer.Addin.Commands.CollapseAllNodesOnActionTree" icon="CollapseTree" />
+	  </Condition>
+    <Condition name="AiModuleVisibiltyCondition" action="Exclude">
+      <ToolbarItem tooltip="${res:AiAssistant}" type ="CheckBox" class="VSoft.BusinessPlatform.Lists.Designer.Addin.Commands.ToggleAiAssistant" icon="AiAssistant" />
+    </Condition>
+  </Path>
+
+	<Path name = "/SharpDevelop/Autostart">
+		<Class id = "VSoft.BusinessPlatform.Lists.Designer.Addin.Commands.StartCommand" class = "VSoft.BusinessPlatform.Lists.Designer.Addin.Commands.StartCommand" />
+	</Path>
+</AddIn>

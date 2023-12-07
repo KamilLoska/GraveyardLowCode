@@ -1,0 +1,11 @@
+﻿@using VSoft.Framework.Mvc.Features.Layout.ViewModels
+@using VSoft.BusinessPlatform.Web.Controls
+
+@model MenuViewModel
+
+<div id="nav-wrapper" class="menu-container">
+	<vsoft-menu ref="menu" id="horizontal-menu-id" items='@Html.Raw(Json.Encode(Model))' orientation='@Model.Orientation' :animation='{ open: { effects: "slideIn:down", duration: 110 }, close: { effects: "fadeIn", duration: 0 } }'></vsoft-menu>
+</div>
+<!-- Styles from vue lib -->
+<link href="~/dist/@VbpBasePage.ResourcesVersion/layout-horizontalmenu.css" rel="stylesheet">
+<script src="~/dist/@VbpBasePage.ResourcesVersion/layout-horizontalmenu.js"></script>

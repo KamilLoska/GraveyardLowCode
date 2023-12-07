@@ -1,0 +1,14 @@
+﻿<AddIn name        = "Autodocumentation"
+       author      = "VSoft"
+       url         = "http://www.vsoft.pl"
+       description = "Autodocumentation addin"
+       addInManagerHidden = "preinstalled">
+  <Manifest>
+    <Identity name="VSoft.Autodocumentation" />
+    <Dependency addin="VSoft.archITekt.VersionServer" requirePreload="true" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly = ":VSoft.Autodocumentation"/>
+  </Runtime>
+</AddIn>

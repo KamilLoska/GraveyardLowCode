@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost language="c#" Factory="VSoft.Framework.AuthorizationProviders.VIPProvider.Web.Services.TokenParserServiceHostFactory" %>

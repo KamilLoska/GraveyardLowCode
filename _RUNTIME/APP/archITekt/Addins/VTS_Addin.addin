@@ -1,0 +1,230 @@
+﻿<AddIn name        = "TransformationServices"
+       description = "${res:TransformationServicesModule}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+	<Manifest>
+		<Identity name="VTS_Addin" version=":VTS_Addin" />
+      <Dependency addin="VSoft.archITekt.Controls" requirePreload="true" />
+      <Dependency addin="VSoft.Autodocumentation" requirePreload="true" />
+	</Manifest>
+
+	<Runtime>
+		<Import assembly = "VTS_Addin.dll">
+			<ConditionEvaluator name="VtsToolCondition" class="VTS_Addin.Tools.ToolCondition"/>
+			<ConditionEvaluator name="VtsPackageCondition" class="VTS_Addin.VtsPackageCondition"/>
+			<ConditionEvaluator name="VtsPackageProcessingCondition" class="VTS_Addin.VtsPackageProcessingCondition"/>
+			<ConditionEvaluator name="VtsPackageNotProcessingCondition" class="VTS_Addin.VtsPackageNotProcessingCondition"/>
+			<ConditionEvaluator name="VtsPackageHasParamsOrArgsCondition" class="VTS_Addin.VtsPackageHasParamsOrArgsCondition"/>
+			<ConditionEvaluator name="VtsHierarchyCondition" class="VTS_Addin.VtsHierarchyCondition"/>
+			<ConditionEvaluator name="VtsHierarchyBoundCondition" class="VTS_Addin.VtsHierarchyBoundCondition"/>
+			<ConditionEvaluator name="VtsHierarchyNotBoundCondition" class="VTS_Addin.VtsHierarchyNotBoundCondition"/>
+			<ConditionEvaluator name="VtsHierarchyRunningCondition" class="VTS_Addin.VtsHierarchyRunningCondition"/>
+			<ConditionEvaluator name="VtsHierarchyNotRunningCondition" class="VTS_Addin.VtsHierarchyNotRunningCondition"/>
+			<ConditionEvaluator name="VtsHierarchyAnyDbAvailableCondition" class="VTS_Addin.VtsHierarchyAnyDbAvailableCondition"/>
+		</Import>
+	</Runtime>
+
+	<Path name="/SharpDevelop/Workbench/AutostartAfterWorkbenchInitialized">
+		<Class id="VTS_Addin.AutostartAfterWorkbenchInitialized" class="VTS_Addin.AutostartAfterWorkbenchInitialized" />
+		<Class id="VTS_Addin.RegisterGlobalShortcutsCommand" class="VTS_Addin.RegisterGlobalShortcutsCommand" />
+	</Path>
+
+	<Path name="/SharpDevelop/Autostart">
+		<Class id="VTS_Addin.SharpDevelopAutostart" class="VTS_Addin.SharpDevelopAutostart" />
+	</Path>
+
+	<Path name="/SharpDevelop/AutostartAsync">
+		<Class id="VTS_Addin.SharpDevelopAutostartDelayed" class="VTS_Addin.SharpDevelopAutostartDelayed" />
+	</Path>
+
+	<Path name = "/SharpDevelop/Workbench/MainMenu/Search">
+		<MenuItem name="VtsSearchSeparator" type="Separator" />
+		<MenuItem name="VtsSearch" label="${res:PadTitle_VtsFindPad}" icon="FindInPackage" class="VTS_Addin.FindCommand" shortcut = "Control|F" />
+	</Path>
+
+	<Path name = "/SharpDevelop/Workbench/MainMenu/Tools">
+		<Condition name = "VtsToolCondition" tool="RefreshDbSchemas" action="Exclude">
+			<MenuItem id ="VtsRefreshDbSchemasTool" label="${res:Tools_RefreshDBSchemas}" class="VTS_Addin.Tools.RefreshDbSchemasCommand" />
+		</Condition>
+		<Condition name = "VtsToolCondition" tool="RefreshDbSchemasTH" action="Exclude">
+			<MenuItem id ="VtsRefreshDbSchemasTHTool" label="${res:Tools_RefreshDBSchemas}" class="VTS_Addin.Tools.RefreshDbSchemasTHCommand" />
+		</Condition>
+		<Condition name = "VtsToolCondition" tool="DBOperationsReportTool" action="Exclude">
+			<MenuItem id ="VtsDBOperationsReportTool" label="${res:Tools_DBOperationsReportTool}" class="VTS_Addin.Tools.DBOperationsReportToolCommand" />
+		</Condition>
+		<MenuItem id ="VtsVtsProfileDBTool" label="${res:Tools_ProfileDBCommand}" class="VTS_Addin.Tools.ProfileDBCommand" />
+		<Condition name = "VtsToolCondition" tool="DataGeneratorTool" action="Exclude">
+			<MenuItem id ="VtsDataGeneratorTool" tool="DataGeneratorTool" label="${res:Tools_DataGenerator}" class="VTS_Addin.Tools.DataGeneratorToolCommand" />
+		</Condition>
+		<Condition name = "VtsToolCondition" tool="GenServiceMockTool" action="Exclude">
+			<MenuItem id ="GenServiceMockTool" tool="GenServiceMockTool" label="${res:Tools_GenServiceMock}" class="VTS_Addin.Tools.GenServiceMockCommand" />
+		</Condition>
+		<Condition name = "VtsToolCondition" tool="GenServiceMockTool" action="Exclude">
+			<MenuItem id ="DbMigrationToolCommand" tool="DbMigrationTool" label="${res:Tools_DbMigrationTool}" class="VTS_Addin.Tools.DbMigrationToolCommand" />
+		</Condition>
+	</Path>
+
+  <Path name="/SharpDevelop/Workbench/DesignerToolBar/Standard">
+    <Condition name="VtsPackageCondition" action="Exclude">
+        <ToolbarItem tooltip="${res:VtsAddin_Arguments}" class="VTS_Addin.VtsPackageArgumentsCommand" icon="ArgumentsDeclaration" />
+      <ToolbarItem tooltip="${res:VtsAddin_ConversionPolicy}" class="VTS_Addin.VtsPackageConversionPolicyCommand" icon="TypesConversionPolicy" />
+      <ToolbarItem tooltip="${res:VtsAddin_CustomCode}" class="VTS_Addin.VtsPackageCustomCodeCommand" icon="ExternalCodeNETCC" />
+      <ToolbarItem tooltip="${res:VtsAddin_BusinessStats}" class="VTS_Addin.VtsPackageBusinessStatsCommand" icon="ReportManagement" />
+      <ToolbarItem tooltip="${res:VtsAddin_Dictionaries}" class="VTS_Addin.VtsPackageDictionariesCommand" icon="Dictionary" />
+      <ToolbarItem type="Separator" />
+      <ToolbarItem tooltip="${res:VtsAddin_GenerateDocumentation}" class="VTS_Addin.VtsPackageGenerateDocumentationCommand" icon="GenerateDocumentation" />
+      <ToolbarItem tooltip="${res:VtsAddin_ReadLogsFromFile}" class="VTS_Addin.VtsPackageReadLogsFromFileCommand" icon="LoadLogs" />
+      <ToolbarItem tooltip="${res:VtsAddin_ReadLogsFromClipboard}" class="VTS_Addin.VtsPackageReadLogsFromClipboardCommand" icon="Paste" />
+      <ToolbarItem type="Separator" />
+      <!--<Condition name="VtsPackageHasParamsOrArgsCondition" action="Exclude">
+        <ToolbarItem tooltip="${res:VtsAddin_RuntimeParameters}" class="VTS_Addin.VtsPackageSetRuntimeParametersCommand" icon="RunningParameters" />
+      </Condition>-->
+      <Condition name="VtsPackageNotProcessingCondition" action="Exclude">
+        <Condition name="VtsPackageHasParamsOrArgsCondition" action="Exclude">
+          <ToolbarItem tooltip="${res:VtsAddin_SetParametersAndRun}" class="VTS_Addin.VtsPackageSetParametersAndRunCommand" icon="SetParametersAndRun" shortcut="F5" />
+        </Condition>
+        <ToolbarItem tooltip="${res:VtsAddin_Run}" class="VTS_Addin.VtsPackageRunCommand" icon="RunTaskManager" shortcut="F6" />
+      </Condition>
+      <Condition name="VtsPackageProcessingCondition" action="Exclude">
+        <ToolbarItem id="VtsPackageStopCommand" tooltip="${res:VtsAddin_Stop}" class="VTS_Addin.VtsPackageStopCommand" icon="Stop" />
+      </Condition>
+    </Condition>
+    <Condition name="VtsHierarchyCondition" action="Exclude">
+        <ToolbarItem tooltip="${res:VtsAddin_GenerateDocumentation}" class="VTS_Addin.VtsHierarchyGenerateDocumentationCommand" icon="GenerateDocumentation" />
+      <ToolbarItem tooltip="${res:VtsAddin_ReadLogs}" class="VTS_Addin.VtsHierarchyReadLogsCommand" icon="LoadLogs" />
+      <ToolbarItem tooltip="${res:VtsAddin_ReadLogsNoLogs}" class="VTS_Addin.VtsHierarchyAnalyzeNoLogsCommand" icon="DatabaseStatistics" />
+      <ToolbarItem type="Separator" />
+      <ToolbarItem tooltip="${res:VtsAddin_RuntimeSettings}" class="VTS_Addin.VtsHierarchyRuntimeSettingsCommand" icon="RunningParameters" />
+      <Condition name="VtsHierarchyNotBoundCondition" action="Exclude">
+        <Condition name="VtsHierarchyAnyDbAvailableCondition" action="Exclude">
+          <ToolbarItem id="VtsHierarchyBindDropDown" type="DropDownButton" tooltip="${res:VtsAddin_AttachToDatabase}" icon="AttachToDatabase" label="${res:VtsAddin_Attach}">
+            <MenuItem type="Builder" class="VTS_Addin.DbMenuItemsBuilder" action="bind"/>
+          </ToolbarItem>
+        </Condition>
+        <ToolbarItem id="VtsHierarchyRunDropDown" type="DropDownButton" tooltip="${res:VtsAddin_RunTaskManager}" icon="RunTaskManager" label="${res:VtsAddin_Run}">
+          <MenuItem label="${res:VtsAddin_Locally}" class="VTS_Addin.VtsHierarchyRunManagerLocallyCommand" />
+          <Condition name="VtsHierarchyAnyDbAvailableCondition" action="Exclude">
+            <MenuItem type="Menu" label="${res:VtsAddin_WithDB}">
+              <MenuItem type="Builder" class="VTS_Addin.DbMenuItemsBuilder" action="run"/>
+            </MenuItem>
+          </Condition>
+        </ToolbarItem>
+      </Condition>
+      <Condition name="VtsHierarchyBoundCondition" action="Exclude">
+        <Condition name="VtsHierarchyNotRunningCondition" action="Exclude">
+          <ToolbarItem tooltip="${res:VtsAddin_UnbindFromDb}" class="VTS_Addin.VtsHierarchyUnbindFromDbCommand" icon="DetachFromDatabase" />
+        </Condition>
+      </Condition>
+      <Condition name="VtsHierarchyRunningCondition" action="Exclude">
+        <ToolbarItem tooltip="${res:VtsAddin_StopTaskManager}" class="VTS_Addin.VtsHierarchyStopManagerCommand" icon="Stop" />
+      </Condition>
+    </Condition>
+  </Path>
+
+	<Path name = "/SharpDevelop/Workbench/Pads">
+		<Pad id = "DetailsEditorPad"
+			category = "Main"
+			title = "${res:PadTitle_DetailsEditor}"
+			icon = "PadIcons.Architekt.Details"
+			class = "VTS_Addin.Pads.DetailsEditorPad"
+			shortcut = "F3"
+			group = "VTS"
+			order = "1"
+			EscJumpsToDocument = "0"
+			defaultPosition = "Bottom" />
+
+		<Pad id = "SchemaSpecPad"
+			category = "Main"
+			title = "${res:PadTitle_Schemas}"
+			icon = "PadIcons.Architekt.Schemas"
+			class = "VTS_Addin.Pads.SchemaSpecPad"
+			group = "VTS"
+			order = "2"
+			defaultPosition = "Right" />
+		
+		<Pad id = "OutputLogPad"
+			category = "Main"
+			title = "${res:PadTitle_OutputLogPad}"
+			icon = "PadIcons.Architekt.Log"
+			class = "VTS_Addin.Pads.OutputLogPad"
+			group = "VTS"
+			order = "3"
+			defaultPosition = "Bottom" />
+
+		<Pad id = "PanelTextLookupPad"
+			category = "Main"
+			title = "${res:PadTitle_TextLookup}"
+			icon = "PadIcons.Architekt.Lookup"
+			class = "VTS_Addin.Pads.PanelTextLookupPad"
+			group = "VTS"
+			order = "4"
+			defaultPosition = "Right" />
+
+		<Pad id = "ProjectsPad"
+			category = "Main"
+			title = "${res:PadTitle_Projects}"
+			icon = "PadIcons.Architekt.Projects"
+			class = "VTS_Addin.Pads.ProjectsPad"
+			group = "VTS"
+			order = "5"
+			defaultPosition = "Right" />
+	
+		<!--<Pad id = "DependenciesPad"
+			category = "Main"
+			title = "${res:PadTitle_Dependencies}"
+			icon = "PadIcons.Architekt.Analysis"
+			class = "VTS_Addin.Pads.DependenciesPad"
+			group = "VTS"
+			order = "6"
+			defaultPosition = "Right" />-->
+
+		<Pad id = "TestCasesPad"
+			category = "Main"
+			title = "${res:PadTitle_TestCases}"
+			icon = "PadIcons.Architekt.Tests"
+			class = "VTS_Addin.Pads.TestCasesPad"
+			group = "VTS"
+			order = "7"
+			defaultPosition = "Right" />
+
+		<Pad id = "NavigationPad"
+			category = "Main"
+			title = "${res:PadTitle_Navigator}"
+			icon = "PadIcons.Architekt.Navigator"
+			class = "VTS_Addin.Pads.NavigationPad"
+			group = "VTS"
+			order = "8"
+			defaultPosition = "Right" />
+
+		<Pad id = "DatabasePad"
+			category = "Main"
+			title = "${res:PadTitle_Databases}"
+			icon = "PadIcons.Architekt.Database"
+			class = "VTS_Addin.Pads.DatabasePad"
+			group = "VTS"
+			order = "9"
+			defaultPosition = "Right" />
+
+      <!-- TODO: uwspólnić między narzędziami -->
+      <Pad id = "VtsFindPad"
+			category = "Main"
+			title = "${res:PadTitle_VtsFindPad}"
+			icon = "PadIcons.Architekt.Search"
+			class = "VTS_Addin.Pads.VtsFindPad"
+			group = "VTS"
+			order = "10"
+			defaultPosition = "Right" />
+
+      <Pad id = "VtsSearchResultsPad"
+			category = "Main"
+			title = "${res:PadTitle_VtsSearchResultsPad}"
+			icon = "PadIcons.Architekt.PackageSearchResults"
+			class = "VTS_Addin.Pads.VtsSearchResultsPad"
+			group = "VTS"
+			order = "11"
+			defaultPosition = "Bottom" />
+		
+	</Path>
+
+</AddIn>

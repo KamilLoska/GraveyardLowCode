@@ -1,0 +1,429 @@
+2023-12-07 22:23:36.4711 INFO Set log path to file: 'C:\Users\Thinkpad\VSoft archITekt\Projects\AplikacjaCmentarz\_JOURNAL\deployment.20231207.222329.DeveloperCreate.db.log'
+2023-12-07 22:23:36.5350 INFO VSoft DbUpgrader version 21.12.0.0 (c) VSoft 2023
+2023-12-07 22:23:36.5529 DEBUG DbUpgrader was invoked with following execution parameters
+2023-12-07 22:23:36.5529 DEBUG Scripts folder:         C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER
+2023-12-07 22:23:36.5529 DEBUG WhatIf mode:            False
+2023-12-07 22:23:36.5529 DEBUG AppendLastVersion mode: False
+2023-12-07 22:23:36.5529 DEBUG Initialization mode:    True
+2023-12-07 22:23:36.5529 DEBUG Temporary folder:       C:\Users\Thinkpad\AppData\Local\Temp\DbUpgrader_20231207_222336cytxdepq.hrs
+2023-12-07 22:23:36.5529 DEBUG LogFile:                C:\Users\Thinkpad\VSoft archITekt\Projects\AplikacjaCmentarz\_JOURNAL\deployment.20231207.222329.DeveloperCreate.db.log
+2023-12-07 22:23:36.5529 DEBUG Log masking level:      MaskedPasswords
+2023-12-07 22:23:36.5529 DEBUG AccessToken status:     none
+2023-12-07 22:23:36.5529 DEBUG Database connections:   
+2023-12-07 22:23:36.5759 DEBUG * MASTER_RUNTIME (SQLServer):data source=(localdb)\ArchITektLocalDB;initial catalog=master;integrated security=true
+2023-12-07 22:23:36.5759 DEBUG Extensive mode: disabled
+2023-12-07 22:23:36.5759 DEBUG Variable ini file:         (none)
+2023-12-07 22:23:36.5759 DEBUG Variable database:         (none)
+2023-12-07 22:23:36.5759 DEBUG Variables in command line: 9 item(s) with following values:
+2023-12-07 22:23:36.5759 DEBUG *  DATA_DATABASE:aplikacjacmentarz_data
+2023-12-07 22:23:36.5759 DEBUG *  DBADMIN_LOGIN:aplikacjacmentarz_admin
+2023-12-07 22:23:36.5759 DEBUG *  ELASTIC_POOL:
+2023-12-07 22:23:36.5759 DEBUG *  VIP_DATABASE:aplikacjacmentarz_vip
+2023-12-07 22:23:36.5759 DEBUG *  SCHEDULER_DATABASE:aplikacjacmentarz_scheduler
+2023-12-07 22:23:36.5759 DEBUG *  DBUSER_LOGIN:aplikacjacmentarz_user
+2023-12-07 22:23:36.5759 DEBUG *  DBUSER_PASSWORD:***
+2023-12-07 22:23:36.5759 DEBUG *  DBADMIN_PASSWORD:***
+2023-12-07 22:23:36.5759 DEBUG *  CONFIG_DATABASE:aplikacjacmentarz_config
+2023-12-07 22:23:36.5759 DEBUG invoking user:          DESKTOP-80QUG7P\Thinkpad
+2023-12-07 22:23:36.5759 INFO Unpacking archive scripts (*.zip *.rar *.7z)
+2023-12-07 22:23:36.7314 DEBUG Extracting: no archives found, so no action performed
+2023-12-07 22:23:36.7314 INFO Performing verification of scripts folders (check access to files and UTF8 encoding).
+2023-12-07 22:23:36.8831 INFO Performing verification of variable sources.
+2023-12-07 22:23:36.9010 INFO Performing verification of database connection strings.
+2023-12-07 22:23:38.3744 DEBUG Connected to database: MASTER_RUNTIME. Database version: Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) 
+	Aug 22 2017 17:04:49 
+	Copyright (C) 2017 Microsoft Corporation
+	Express Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: )
+
+2023-12-07 22:23:38.3884 DEBUG Following scripts were identified to be executed during initalization:
+2023-12-07 22:23:38.3884 DEBUG 1 MASTER_RUNTIME 001_CreateLoginInMaster.sql
+2023-12-07 22:23:38.3884 DEBUG 2 MASTER_RUNTIME 002_CreateDatabaseCONFIG.sql
+2023-12-07 22:23:38.3884 DEBUG 3 MASTER_RUNTIME 003_CreateDatabaseDATA.sql
+2023-12-07 22:23:38.3884 DEBUG 4 MASTER_RUNTIME 004_CreateDatabaseSCHEDULER.sql
+2023-12-07 22:23:38.3884 DEBUG 5 MASTER_RUNTIME 005_CreateDatabaseVIP.sql
+2023-12-07 22:23:38.3884 INFO Starting execution of initialization scripts.
+2023-12-07 22:23:38.3884 INFO Executing initialization script on database: MASTER_RUNTIME, script name: 001_CreateLoginInMaster.sql
+2023-12-07 22:23:38.3884 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\MASTER_RUNTIME\SQLServer\!INITIALIZATION\001_CreateLoginInMaster.sql
+2023-12-07 22:23:38.4063 DEBUG This script will be executed with following variables:
+:SETVAR DBUSER_LOGIN "aplikacjacmentarz_user"
+:SETVAR DBUSER_PASSWORD "***"
+:SETVAR DBADMIN_LOGIN "aplikacjacmentarz_admin"
+:SETVAR DBADMIN_PASSWORD "***"
+
+2023-12-07 22:23:38.4552 INFO Changed database context to 'master'.
+2023-12-07 22:23:38.4552 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:38.5190 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:38.5190 INFO Script execution completed with result: OK
+2023-12-07 22:23:38.5190 INFO Executing initialization script on database: MASTER_RUNTIME, script name: 002_CreateDatabaseCONFIG.sql
+2023-12-07 22:23:38.5190 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\MASTER_RUNTIME\SQLServer\!INITIALIZATION\002_CreateDatabaseCONFIG.sql
+2023-12-07 22:23:38.5190 DEBUG This script will be executed with following variables:
+:SETVAR CONFIG_DATABASE "aplikacjacmentarz_config"
+:SETVAR ELASTIC_POOL ""
+
+2023-12-07 22:23:38.5190 INFO Changed database context to 'master'.
+2023-12-07 22:23:38.5190 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:38.5709 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:38.8284 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:38.8284 INFO Script execution completed with result: OK
+2023-12-07 22:23:38.8284 INFO Executing initialization script on database: MASTER_RUNTIME, script name: 003_CreateDatabaseDATA.sql
+2023-12-07 22:23:38.8284 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\MASTER_RUNTIME\SQLServer\!INITIALIZATION\003_CreateDatabaseDATA.sql
+2023-12-07 22:23:38.8284 DEBUG This script will be executed with following variables:
+:SETVAR DATA_DATABASE "aplikacjacmentarz_data"
+:SETVAR ELASTIC_POOL ""
+
+2023-12-07 22:23:38.8284 INFO Changed database context to 'master'.
+2023-12-07 22:23:38.8284 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:38.8483 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:39.0437 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:39.0437 INFO Script execution completed with result: OK
+2023-12-07 22:23:39.0437 INFO Executing initialization script on database: MASTER_RUNTIME, script name: 004_CreateDatabaseSCHEDULER.sql
+2023-12-07 22:23:39.0437 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\MASTER_RUNTIME\SQLServer\!INITIALIZATION\004_CreateDatabaseSCHEDULER.sql
+2023-12-07 22:23:39.0437 DEBUG This script will be executed with following variables:
+:SETVAR SCHEDULER_DATABASE "aplikacjacmentarz_scheduler"
+:SETVAR ELASTIC_POOL ""
+
+2023-12-07 22:23:39.0467 INFO Changed database context to 'master'.
+2023-12-07 22:23:39.0467 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:39.0736 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:39.3793 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:39.3793 INFO Script execution completed with result: OK
+2023-12-07 22:23:39.3793 INFO Executing initialization script on database: MASTER_RUNTIME, script name: 005_CreateDatabaseVIP.sql
+2023-12-07 22:23:39.3793 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\MASTER_RUNTIME\SQLServer\!INITIALIZATION\005_CreateDatabaseVIP.sql
+2023-12-07 22:23:39.3793 DEBUG This script will be executed with following variables:
+:SETVAR VIP_DATABASE "aplikacjacmentarz_vip"
+:SETVAR ELASTIC_POOL ""
+
+2023-12-07 22:23:39.3793 INFO Changed database context to 'master'.
+2023-12-07 22:23:39.3793 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:39.4002 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:39.6094 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:39.6094 INFO Script execution completed with result: OK
+2023-12-07 22:23:39.6094 INFO Database initialization process completed successfully.
+2023-12-07 22:23:41.7902 INFO Set log path to file: 'C:\Users\Thinkpad\VSoft archITekt\Projects\AplikacjaCmentarz\_JOURNAL\deployment.20231207.222329.DeveloperCreate.db.log'
+2023-12-07 22:23:41.8421 INFO VSoft DbUpgrader version 21.12.0.0 (c) VSoft 2023
+2023-12-07 22:23:41.8670 DEBUG DbUpgrader was invoked with following execution parameters
+2023-12-07 22:23:41.8670 DEBUG Scripts folder:         C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER
+2023-12-07 22:23:41.8670 DEBUG WhatIf mode:            False
+2023-12-07 22:23:41.8670 DEBUG AppendLastVersion mode: False
+2023-12-07 22:23:41.8670 DEBUG Initialization mode:    True
+2023-12-07 22:23:41.8670 DEBUG Temporary folder:       C:\Users\Thinkpad\AppData\Local\Temp\DbUpgrader_20231207_222341q1queba3.yql
+2023-12-07 22:23:41.8670 DEBUG LogFile:                C:\Users\Thinkpad\VSoft archITekt\Projects\AplikacjaCmentarz\_JOURNAL\deployment.20231207.222329.DeveloperCreate.db.log
+2023-12-07 22:23:41.8670 DEBUG Log masking level:      MaskedPasswords
+2023-12-07 22:23:41.8670 DEBUG AccessToken status:     none
+2023-12-07 22:23:41.8670 DEBUG Database connections:   
+2023-12-07 22:23:41.8890 DEBUG * CONFIG (SQLServer):      data source=(localdb)\ArchITektLocalDB;initial catalog=aplikacjacmentarz_config;integrated security=true
+2023-12-07 22:23:41.8890 DEBUG * DATA (SQLServer):        data source=(localdb)\ArchITektLocalDB;initial catalog=aplikacjacmentarz_data;integrated security=true
+2023-12-07 22:23:41.8890 DEBUG * SCHEDULER (SQLServer):   data source=(localdb)\ArchITektLocalDB;initial catalog=aplikacjacmentarz_scheduler;integrated security=true
+2023-12-07 22:23:41.8890 DEBUG * VIP (SQLServer):         data source=(localdb)\ArchITektLocalDB;initial catalog=aplikacjacmentarz_vip;integrated security=true
+2023-12-07 22:23:41.8890 DEBUG Extensive mode: disabled
+2023-12-07 22:23:41.8890 DEBUG Variable ini file:         (none)
+2023-12-07 22:23:41.8890 DEBUG Variable database:         (none)
+2023-12-07 22:23:41.8890 DEBUG Variables in command line: 9 item(s) with following values:
+2023-12-07 22:23:41.8890 DEBUG *  DATA_DATABASE:aplikacjacmentarz_data
+2023-12-07 22:23:41.8890 DEBUG *  DBADMIN_LOGIN:aplikacjacmentarz_admin
+2023-12-07 22:23:41.8890 DEBUG *  ELASTIC_POOL:
+2023-12-07 22:23:41.8890 DEBUG *  VIP_DATABASE:aplikacjacmentarz_vip
+2023-12-07 22:23:41.8890 DEBUG *  SCHEDULER_DATABASE:aplikacjacmentarz_scheduler
+2023-12-07 22:23:41.8890 DEBUG *  DBUSER_LOGIN:aplikacjacmentarz_user
+2023-12-07 22:23:41.8890 DEBUG *  DBUSER_PASSWORD:***
+2023-12-07 22:23:41.8890 DEBUG *  DBADMIN_PASSWORD:***
+2023-12-07 22:23:41.8890 DEBUG *  CONFIG_DATABASE:aplikacjacmentarz_config
+2023-12-07 22:23:41.8890 DEBUG invoking user:          DESKTOP-80QUG7P\Thinkpad
+2023-12-07 22:23:41.8890 INFO Unpacking archive scripts (*.zip *.rar *.7z)
+2023-12-07 22:23:41.9049 DEBUG Extracting: no archives found, so no action performed
+2023-12-07 22:23:41.9069 INFO Performing verification of scripts folders (check access to files and UTF8 encoding).
+2023-12-07 22:23:42.1499 INFO Performing verification of variable sources.
+2023-12-07 22:23:42.1698 INFO Performing verification of database connection strings.
+2023-12-07 22:23:42.2367 DEBUG Connected to database: CONFIG. Database version: Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) 
+	Aug 22 2017 17:04:49 
+	Copyright (C) 2017 Microsoft Corporation
+	Express Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: )
+
+2023-12-07 22:23:42.2367 DEBUG Connected to database: DATA. Database version: Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) 
+	Aug 22 2017 17:04:49 
+	Copyright (C) 2017 Microsoft Corporation
+	Express Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: )
+
+2023-12-07 22:23:42.2516 DEBUG Connected to database: SCHEDULER. Database version: Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) 
+	Aug 22 2017 17:04:49 
+	Copyright (C) 2017 Microsoft Corporation
+	Express Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: )
+
+2023-12-07 22:23:42.2516 DEBUG Connected to database: VIP. Database version: Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) 
+	Aug 22 2017 17:04:49 
+	Copyright (C) 2017 Microsoft Corporation
+	Express Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: )
+
+2023-12-07 22:23:42.2516 DEBUG Following scripts were identified to be executed during initalization:
+2023-12-07 22:23:42.2516 DEBUG 1 CONFIG 002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.2516 DEBUG 2 CONFIG 010_CreateJournalTable.sql
+2023-12-07 22:23:42.2516 DEBUG 3 CONFIG 020_CONFIG_KEYS.sql
+2023-12-07 22:23:42.2516 DEBUG 4 CONFIG 021_EnsureConfigKey.sql
+2023-12-07 22:23:42.2516 DEBUG 5 CONFIG 022_GetConfigKey.sql
+2023-12-07 22:23:42.2516 DEBUG 6 CONFIG 023_SetConfigKey.sql
+2023-12-07 22:23:42.2516 DEBUG 7 DATA 002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.2516 DEBUG 8 DATA 010_CreateJournalTable.sql
+2023-12-07 22:23:42.2516 DEBUG 9 SCHEDULER 002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.2516 DEBUG 10 SCHEDULER 010_CreateJournalTable.sql
+2023-12-07 22:23:42.2516 DEBUG 11 VIP 002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.2516 DEBUG 12 VIP 010_CreateJournalTable.sql
+2023-12-07 22:23:42.2516 INFO Starting execution of initialization scripts.
+2023-12-07 22:23:42.2516 INFO Executing initialization script on database: CONFIG, script name: 002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.2656 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\CONFIG\SQLServer\!INITIALIZATION\002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.2656 DEBUG This script will be executed with following variables:
+:SETVAR CONFIG_DATABASE "aplikacjacmentarz_config"
+:SETVAR DBADMIN_LOGIN "aplikacjacmentarz_admin"
+:SETVAR DBADMIN_PASSWORD "***"
+:SETVAR DBUSER_LOGIN "aplikacjacmentarz_user"
+:SETVAR DBUSER_PASSWORD "***"
+
+2023-12-07 22:23:42.3244 INFO Changed database context to 'aplikacjacmentarz_config'.
+2023-12-07 22:23:42.3304 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3304 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3304 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3304 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3304 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3304 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3304 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3304 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3493 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3493 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.3493 INFO Executing initialization script on database: CONFIG, script name: 010_CreateJournalTable.sql
+2023-12-07 22:23:42.3493 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\CONFIG\SQLServer\!INITIALIZATION\010_CreateJournalTable.sql
+2023-12-07 22:23:42.3493 DEBUG This script does not use any variables.
+2023-12-07 22:23:42.3493 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3493 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3593 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3753 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3753 INFO (1 row(s) affected)
+2023-12-07 22:23:42.3753 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3753 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.3753 INFO Executing initialization script on database: CONFIG, script name: 020_CONFIG_KEYS.sql
+2023-12-07 22:23:42.3753 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\CONFIG\SQLServer\!INITIALIZATION\020_CONFIG_KEYS.sql
+2023-12-07 22:23:42.3753 DEBUG This script does not use any variables.
+2023-12-07 22:23:42.3753 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3753 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3753 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3753 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3753 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3753 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3922 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3922 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3922 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.3922 INFO Executing initialization script on database: CONFIG, script name: 021_EnsureConfigKey.sql
+2023-12-07 22:23:42.3922 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\CONFIG\SQLServer\!INITIALIZATION\021_EnsureConfigKey.sql
+2023-12-07 22:23:42.3922 DEBUG This script does not use any variables.
+2023-12-07 22:23:42.3922 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3922 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.3922 INFO Executing initialization script on database: CONFIG, script name: 022_GetConfigKey.sql
+2023-12-07 22:23:42.3922 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\CONFIG\SQLServer\!INITIALIZATION\022_GetConfigKey.sql
+2023-12-07 22:23:42.3922 DEBUG This script does not use any variables.
+2023-12-07 22:23:42.3922 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3922 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.3922 INFO Executing initialization script on database: CONFIG, script name: 023_SetConfigKey.sql
+2023-12-07 22:23:42.3922 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\CONFIG\SQLServer\!INITIALIZATION\023_SetConfigKey.sql
+2023-12-07 22:23:42.3922 DEBUG This script does not use any variables.
+2023-12-07 22:23:42.3922 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.3922 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.3922 INFO Executing initialization script on database: DATA, script name: 002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.3922 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\DATA\SQLServer\!INITIALIZATION\002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.3922 DEBUG This script will be executed with following variables:
+:SETVAR DATA_DATABASE "aplikacjacmentarz_data"
+:SETVAR DBADMIN_LOGIN "aplikacjacmentarz_admin"
+:SETVAR DBADMIN_PASSWORD "***"
+:SETVAR DBUSER_LOGIN "aplikacjacmentarz_user"
+:SETVAR DBUSER_PASSWORD "***"
+
+2023-12-07 22:23:42.4062 INFO Changed database context to 'aplikacjacmentarz_data'.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4062 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.4222 INFO Executing initialization script on database: DATA, script name: 010_CreateJournalTable.sql
+2023-12-07 22:23:42.4222 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\DATA\SQLServer\!INITIALIZATION\010_CreateJournalTable.sql
+2023-12-07 22:23:42.4222 DEBUG This script does not use any variables.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4222 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4401 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO (1 row(s) affected)
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.4531 INFO Executing initialization script on database: SCHEDULER, script name: 002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.4531 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\SCHEDULER\SQLServer\!INITIALIZATION\002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.4531 DEBUG This script will be executed with following variables:
+:SETVAR SCHEDULER_DATABASE "aplikacjacmentarz_scheduler"
+:SETVAR DBADMIN_LOGIN "aplikacjacmentarz_admin"
+:SETVAR DBADMIN_PASSWORD "***"
+:SETVAR DBUSER_LOGIN "aplikacjacmentarz_user"
+:SETVAR DBUSER_PASSWORD "***"
+
+2023-12-07 22:23:42.4531 INFO Changed database context to 'aplikacjacmentarz_scheduler'.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4531 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4710 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4710 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.4710 INFO Executing initialization script on database: SCHEDULER, script name: 010_CreateJournalTable.sql
+2023-12-07 22:23:42.4710 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\SCHEDULER\SQLServer\!INITIALIZATION\010_CreateJournalTable.sql
+2023-12-07 22:23:42.4710 DEBUG This script does not use any variables.
+2023-12-07 22:23:42.4710 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4710 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4710 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4710 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4710 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4710 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4710 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4710 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4710 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4850 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4850 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4850 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4850 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4850 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4850 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4850 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4850 INFO (1 row(s) affected)
+2023-12-07 22:23:42.4850 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4850 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.4850 INFO Executing initialization script on database: VIP, script name: 002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.4850 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\VIP\SQLServer\!INITIALIZATION\002_CreateDatabaseRolesAndUser.sql
+2023-12-07 22:23:42.4999 DEBUG This script will be executed with following variables:
+:SETVAR VIP_DATABASE "aplikacjacmentarz_vip"
+:SETVAR DBADMIN_LOGIN "aplikacjacmentarz_admin"
+:SETVAR DBADMIN_PASSWORD "***"
+:SETVAR DBUSER_LOGIN "aplikacjacmentarz_user"
+:SETVAR DBUSER_PASSWORD "***"
+
+2023-12-07 22:23:42.4999 INFO Changed database context to 'aplikacjacmentarz_vip'.
+2023-12-07 22:23:42.4999 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4999 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4999 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4999 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4999 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4999 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4999 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4999 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4999 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.4999 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.4999 INFO Executing initialization script on database: VIP, script name: 010_CreateJournalTable.sql
+2023-12-07 22:23:42.4999 DEBUG Script is loaded from file: C:\Program Files\VSoft\archITekt\Images\21\Database\ScriptsMASTER\VIP\SQLServer\!INITIALIZATION\010_CreateJournalTable.sql
+2023-12-07 22:23:42.4999 DEBUG This script does not use any variables.
+2023-12-07 22:23:42.4999 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5169 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5319 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5319 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5319 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5319 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5319 INFO (1 row(s) affected)
+2023-12-07 22:23:42.5319 INFO Batch command(s) completed successfully.
+2023-12-07 22:23:42.5319 INFO Script execution completed with result: OK
+2023-12-07 22:23:42.5319 INFO Database initialization process completed successfully.
+2023-12-07 22:23:43.3876 INFO Set log path to file: 'C:\Users\Thinkpad\VSoft archITekt\Projects\AplikacjaCmentarz\_JOURNAL\deployment.20231207.222329.DeveloperCreate.db.log'
+2023-12-07 22:23:43.4432 INFO VSoft DbUpgrader version 21.12.0.0 (c) VSoft 2023
+2023-12-07 22:23:43.4651 DEBUG DbUpgrader was invoked with following execution parameters
+2023-12-07 22:23:43.4651 DEBUG Scripts folder:         C:\Program Files\VSoft\archITekt\Images\21\Database\Scripts
+2023-12-07 22:23:43.4651 DEBUG WhatIf mode:            False
+2023-12-07 22:23:43.4651 DEBUG AppendLastVersion mode: False
+2023-12-07 22:23:43.4651 DEBUG Initialization mode:    True
+2023-12-07 22:23:43.4651 DEBUG Temporary folder:       C:\Users\Thinkpad\AppData\Local\Temp\DbUpgrader_20231207_222343t5bsm3yg.m5a
+2023-12-07 22:23:43.4651 DEBUG LogFile:                C:\Users\Thinkpad\VSoft archITekt\Projects\AplikacjaCmentarz\_JOURNAL\deployment.20231207.222329.DeveloperCreate.db.log
+2023-12-07 22:23:43.4651 DEBUG Log masking level:      MaskedPasswords
+2023-12-07 22:23:43.4651 DEBUG AccessToken status:     none
+2023-12-07 22:23:43.4651 DEBUG Database connections:   
+2023-12-07 22:23:43.4871 DEBUG * CONFIG (SQLServer):      data source=(localdb)\ArchITektLocalDB;initial catalog=aplikacjacmentarz_config;user id=aplikacjacmentarz_admin;password=*******
+2023-12-07 22:23:43.4871 DEBUG * DATA (SQLServer):        data source=(localdb)\ArchITektLocalDB;initial catalog=aplikacjacmentarz_data;user id=aplikacjacmentarz_admin;password=*******
+2023-12-07 22:23:43.4871 DEBUG * SCHEDULER (SQLServer):   data source=(localdb)\ArchITektLocalDB;initial catalog=aplikacjacmentarz_scheduler;user id=aplikacjacmentarz_admin;password=*******
+2023-12-07 22:23:43.4871 DEBUG * VIP (SQLServer):         data source=(localdb)\ArchITektLocalDB;initial catalog=aplikacjacmentarz_vip;user id=aplikacjacmentarz_admin;password=*******
+2023-12-07 22:23:43.4871 DEBUG Extensive mode: disabled
+2023-12-07 22:23:43.4871 DEBUG Variable ini file:         (none)
+2023-12-07 22:23:43.4871 DEBUG Variable database:         (none)
+2023-12-07 22:23:43.4871 DEBUG Variables in command line: (none)
+2023-12-07 22:23:43.4871 DEBUG invoking user:          DESKTOP-80QUG7P\Thinkpad
+2023-12-07 22:23:43.4871 INFO Unpacking archive scripts (*.zip *.rar *.7z)
+2023-12-07 22:23:43.5439 DEBUG Extracting: no archives found, so no action performed
+2023-12-07 22:23:43.5439 INFO Performing verification of scripts folders (check access to files and UTF8 encoding).
+2023-12-07 22:23:48.2006 INFO Performing verification of variable sources.
+2023-12-07 22:23:48.2126 INFO Performing verification of database connection strings.
+2023-12-07 22:23:48.2614 DEBUG Connected to database: CONFIG. Database version: Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) 
+	Aug 22 2017 17:04:49 
+	Copyright (C) 2017 Microsoft Corporation
+	Express Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: )
+
+2023-12-07 22:23:48.2684 DEBUG Connected to database: DATA. Database version: Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) 
+	Aug 22 2017 17:04:49 
+	Copyright (C) 2017 Microsoft Corporation
+	Express Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: )
+
+2023-12-07 22:23:48.2684 DEBUG Connected to database: SCHEDULER. Database version: Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) 
+	Aug 22 2017 17:04:49 
+	Copyright (C) 2017 Microsoft Corporation
+	Express Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: )
+
+2023-12-07 22:23:48.2684 DEBUG Connected to database: VIP. Database version: Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) 
+	Aug 22 2017 17:04:49 
+	Copyright (C) 2017 Microsoft Corporation
+	Express Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: )
+
+2023-12-07 22:23:48.2684 WARN No initialization scripts found in !INITIALIZATION folder.
+2023-12-07 22:23:48.2684 INFO Database initialization process completed successfully.

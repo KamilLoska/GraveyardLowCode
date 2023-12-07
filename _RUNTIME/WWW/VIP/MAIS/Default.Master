@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="VSoft.Framework.AuthorizationProviders.VIPProvider.Web.Default" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+	<asp:PlaceHolder runat="server">
+		<link rel="SHORTCUT ICON" href="<%= ResolveUrl("~/favicon.ico") %>"/>
+	</asp:PlaceHolder>
+	<asp:ContentPlaceHolder ID="_headContentPlaceHolder" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%
+           Response.WriteFile(string.Format("App_Themes/{0}/Includes/Start.htm",ThemeName));
+        %>
+
+    <div>
+        <asp:ContentPlaceHolder ID="_mainContentPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <%
+           Response.WriteFile(string.Format("App_Themes/{0}/Includes/End.htm",ThemeName));
+        %>
+    </form>
+</body>
+</html>

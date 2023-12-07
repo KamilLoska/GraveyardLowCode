@@ -1,0 +1,47 @@
+﻿<AddIn name        = "BusinessStudio"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl"
+       addInManagerHidden = "preinstalled">
+
+  <Manifest>
+    <Identity name = "BusinessStudio" version = ":VSoft.BusinessStudio" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":ICSharpCode.SharpDevelop">
+      <ConditionEvaluator name="ShowPreviewCondition" class="VSoft.BusinessStudio.Commands.ShowPreviewCondition" />
+    </Import>
+    <Import assembly = ":VSoft.BusinessStudio" />
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VSoft.BusinessStudio.Commands.StartCommand" class = "VSoft.BusinessStudio.Commands.StartCommand" />
+  </Path>
+
+  <Path name = "/VSoft"></Path>
+  <Path name = "/VSoft/EnvironmentManager">
+    <Class id ="EnvironmentManager" class = "VSoft.BusinessStudio.Addins.EnvironmentManager" />
+  </Path>>
+
+  <Path name="/SharpDevelop/Workbench/DesignerToolBar/Standard">
+    <Condition name = "ShowPreviewCondition" action="Exclude">
+      <ToolbarItem id = "OpenInDefaultBrowserMenuCommand"
+				icon	="Preview"
+				tooltip = "${res:OtworzWDomyslejPrzegladarce}"
+				class   = "VSoft.BusinessStudio.Commands.OpenInDefaultBrowserMenuCommand"
+        shortcut= "Ctrl+F5" />
+    </Condition>
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/MainMenu/File">
+    <Condition name = "ShowPreviewCondition" action="Exclude">
+      <MenuItem id = "PrevievSeparator" type = "Separator"
+        insertafter="SaveAs" />
+      <MenuItem id = "OpenInDefaultBrowserMenuCommand"
+                icon	="Preview"
+                label = "${res:OtworzWDomyslejPrzegladarce}"
+                class   = "VSoft.BusinessStudio.Commands.OpenInDefaultBrowserMenuCommand"
+                shortcut= "Ctrl+F5" />
+    </Condition>
+  </Path>
+</AddIn>

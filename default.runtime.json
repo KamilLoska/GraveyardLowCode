@@ -1,0 +1,13 @@
+{
+    "RuntimeType":  "Developer",
+    "DatabaseNameDATA":  "aplikacjacmentarz_data",
+    "SecurityMode":  "NONE",
+    "Config_EnvironmentName":  "Aplikacja Cmentarz",
+    "DatabaseNameVIP":  "aplikacjacmentarz_vip",
+    "DatabaseServerInstance":  "(localdb)\\ArchITektLocalDB",
+    "ReservedPortsBlockBegin":  "40110",
+    "RuntimeFolder":  "C:\\Users\\Thinkpad\\VSoft archITekt\\Projects\\AplikacjaCmentarz\\_RUNTIME",
+    "FeatureSSO":  "Off",
+    "DatabaseNameSCHEDULER":  "aplikacjacmentarz_scheduler",
+    "DatabaseNameCONFIG":  "aplikacjacmentarz_config"
+}

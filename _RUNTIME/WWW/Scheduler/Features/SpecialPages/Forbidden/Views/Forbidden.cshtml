@@ -1,0 +1,16 @@
+﻿@model VSoft.Framework.Mvc.Features.SpecialPages.Forbidden.Models.ForbiddenViewModel
+
+@{ PageTitle = "Nie znaleziono strony"; }
+
+<div class="error-page">
+  <h1>403</h1>
+  <h3>Nie masz uprawnień do oglądania wybranej strony</h3>
+
+  <div>
+    <form action="@Url.Action("Index", "~Home")" method="GET">
+      Nie posiadasz wystarczających uprawnień do odwiedzenia strony znajdującej się pod adresem <b>@Html.ValueFor(m => m.RestrictedUrl)</b>.
+      <br><br><br>
+      <button type="submit" class="k-button k-primary">Powrót na ekran startowy</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+﻿.VEH_Control_
+{
+   border: #6699CC 1px solid;
+   padding-right: 2px;
+   padding-left: 2px;
+   padding-bottom: 2px;
+   clip: rect(auto auto auto auto);
+   padding-top: 2px;
+   background-color: #AFD0F2;
+}
+.VEH_LabelError_
+{
+   font-weight: bold;
+   font-size: 11px;
+   color: #ee4444;
+   padding: 2px;
+   border: #006699 1px solid;
+   background-color: #DEEDFE;
+   vertical-align: top;
+}
+.VEH_Text_
+{
+   padding: 2px;
+   border: #006699 1px solid;
+   background-color: #FCF9E8;
+   font-weight: bold;
+   font-size: 11px;
+   color: #000000;
+   letter-spacing: 0.3pt;
+   vertical-align: baseline;
+}
+
+.VEH_Error_
+{
+   padding-right: 2px;
+   padding-left: 2px;
+   font-weight: bold;
+   font-size: 9pt;
+   padding-bottom: 2px;
+   width: 100%;
+   color: #ffffcc;
+   padding-top: 2px;
+   background-color: #ff6666;
+   text-align: center;
+}
+.VEH_LEGEND
+{
+   padding: 7px;
+   border: #006699 1px solid;
+   background-color: #DEEDFE;
+   font-weight: bold;
+   font-size: 9px;
+   color: #3362A6;
+   vertical-align: baseline
+}
+.VEH_TitleWOPadding_
+{
+   padding-right: 0px;
+   padding-left: 05px;
+   font-weight: bold;
+   font-family: Verdana;
+   font-size: 10px;
+   padding-bottom: 2px;
+   text-transform: uppercase;
+   color: #FFFFFF;
+   padding-top: 2px;
+   border: #000000 1px solid;
+   background-color: #6699CC;   
+}
+
+.VEH_TextBox_
+{
+   font-weight: bold;
+   font-family: Verdana;
+   width: 100%;
+   font-size: 11px;   
+   color: #000000;
+   border: 1px solid;
+   background-color: #ffffff;
+}

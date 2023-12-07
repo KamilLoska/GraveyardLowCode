@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ListDefinition>
+	<DontAttachPrimaryKeyToOrderBy>false</DontAttachPrimaryKeyToOrderBy>
+	<ListActionPanelPosition>UnderForm</ListActionPanelPosition>
+	<Id>860e1df7-fca6-4f45-8d34-2ecf9b7d8636</Id>
+	<ParentStructure isNull="true" />
+	<ShowToggleBtn>false</ShowToggleBtn>
+	<ShowBottomPanel>false</ShowBottomPanel>
+	<RefreshList isNull="true" />
+	<ActionPanel>
+		<Buttons>
+			<ActionDataButtonDefinition>
+				<ActionColumnsSelected type="List[Guid]">
+					<Guid>ffffffff-ffff-ffff-ffff-ffffffffffff</Guid>
+				</ActionColumnsSelected>
+				<ReloadKind>AsynchronousContainer</ReloadKind>
+				<Name type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>1dc32c96-39dd-4e2d-aadf-8e41b3514d6b</Id>
+					</LocalizedEntryId>
+				</Name>
+				<ToolTip type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>661be99f-f7dd-4a3e-8ee4-b3f6c490b0de</Id>
+					</LocalizedEntryId>
+				</ToolTip>
+				<Id>67a97afc-50d0-40eb-be6d-a1e232b1b40e</Id>
+				<CssClass type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+					<Constant>ButtonPrimary,ButtonIcon_ListUl</Constant>
+				</CssClass>
+				<IconId isNull="true" />
+				<OnClick type="VSoft.BusinessPlatform.Common.ActionFramework.ActionDynamicHandler, VSoft.BusinessPlatform.Common">
+					<ActionData type="VSoft.BusinessPlatform.Lists.ActionData.NavigateToFormActionData, VSoft.BusinessPlatform.Lists">
+						<Form type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.VersionServer.VersionId, VSoft.VersionServer]], VSoft.BusinessPlatform.Common">
+							<Constant>
+								<Id>6f47cc19-866d-4fb0-9230-5997c42a716e</Id>
+							</Constant>
+						</Form>
+						<Mode type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.BusinessPlatform.Common.Navigation.DisplayMode, VSoft.BusinessPlatform.Common]], VSoft.BusinessPlatform.Common">
+							<Constant>NORMAL</Constant>
+						</Mode>
+						<DestinationElementId type="VSoft.BusinessPlatform.Lists.ActionData.ListSelectedDynamicValue, VSoft.BusinessPlatform.Lists" />
+						<Condition type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+						<ConditionNotSatisfiedMessage type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+						<ElementDontExistMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>c2270d05-b570-4d42-8f4a-d643d46a9ed8</Id>
+							</LocalizedEntryId>
+						</ElementDontExistMessage>
+						<Id>d0fa5ef7-7bdf-43d6-a2d9-c63210fa1990</Id>
+						<CssClass isNull="true" />
+						<ToolTip isNull="true" />
+						<DisplayName>Navigate to the form</DisplayName>
+						<ObjectToRefresh>WholePage</ObjectToRefresh>
+						<FormOpenType>PopupElement</FormOpenType>
+						<PopupType>JQuery</PopupType>
+						<WindowWidth>1000</WindowWidth>
+						<WindowHeight>250</WindowHeight>
+						<Title type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>1411b224-a8ad-49e7-ab10-68cd585182db</Id>
+							</LocalizedEntryId>
+						</Title>
+						<OpenFunction isNull="true" />
+						<CloseFunction isNull="true" />
+						<NameOfContainerToRefresh isNull="true" />
+						<ReadOnlyEnabled>false</ReadOnlyEnabled>
+						<Right type="VSoft.BusinessPlatform.Rights.DynamicValues.RightVersionIdConstantValue, VSoft.BusinessPlatform.Rights">
+							<Constant>
+								<Id>4469f32a-27e5-48a3-8528-77a34007b8ab</Id>
+							</Constant>
+						</Right>
+						<RightsUnavailableMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>2bc00c68-0d9f-4a12-bd36-82ed9ce318cd</Id>
+							</LocalizedEntryId>
+						</RightsUnavailableMessage>
+						<RefreshData>NONE</RefreshData>
+						<DisplayConfirmation type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[Bool], VSoft.BusinessPlatform.Common">
+							<Constant>false</Constant>
+						</DisplayConfirmation>
+						<ConfirmationText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>c726d81a-266e-4bfd-8495-de0c3448eba4</Id>
+							</LocalizedEntryId>
+						</ConfirmationText>
+						<MapInPlace isNull="true" />
+					</ActionData>
+					<ReloadKind>AsynchronousContainer</ReloadKind>
+					<NameOfContainerToRefresh />
+				</OnClick>
+				<HideOnActionList>false</HideOnActionList>
+				<ReadOnlyVisibility>false</ReadOnlyVisibility>
+				<IsVisible isNull="true" />
+			</ActionDataButtonDefinition>
+			<ActionDataButtonDefinition>
+				<ActionColumnsSelected type="List[Guid]">
+					<Guid>ffffffff-ffff-ffff-ffff-ffffffffffff</Guid>
+				</ActionColumnsSelected>
+				<ReloadKind>AsynchronousContainer</ReloadKind>
+				<Name type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>5d40bf0d-0eb5-4485-aaa2-d4c30b6492b3</Id>
+					</LocalizedEntryId>
+				</Name>
+				<ToolTip type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				<Id>09650f91-f060-486e-ba66-d5af3529566d</Id>
+				<CssClass type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+					<Constant>ButtonPrimary,ButtonIcon_Plus</Constant>
+				</CssClass>
+				<IconId isNull="true" />
+				<OnClick type="VSoft.BusinessPlatform.Common.ActionFramework.ActionDynamicHandler, VSoft.BusinessPlatform.Common">
+					<ActionData type="VSoft.BusinessPlatform.Lists.ActionData.AddElementActionData, VSoft.BusinessPlatform.Lists">
+						<CreateElement>false</CreateElement>
+						<CreateElementStructure type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.VersionServer.VersionId, VSoft.VersionServer]], VSoft.BusinessPlatform.Common">
+							<Constant>
+								<Id>b0bc2412-088f-4cd1-89e6-7442ebb0c6d2</Id>
+							</Constant>
+						</CreateElementStructure>
+						<ForceElementSelection>false</ForceElementSelection>
+						<Form type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.VersionServer.VersionId, VSoft.VersionServer]], VSoft.BusinessPlatform.Common">
+							<Constant>
+								<Id>02e583b2-c398-45a5-ada7-2b0faa9b2ced</Id>
+							</Constant>
+						</Form>
+						<DsVersion type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[[VSoft.VersionServer.VersionId, VSoft.VersionServer]], VSoft.BusinessPlatform.Common" />
+						<PrecedentElementRelationPath isNull="true" />
+						<NameOfContainerToRefresh isNull="true" />
+						<Condition type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+						<ConditionNotSatisfiedMessage type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+						<ElementDontExistMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>c2270d05-b570-4d42-8f4a-d643d46a9ed8</Id>
+							</LocalizedEntryId>
+						</ElementDontExistMessage>
+						<Id>52565549-d02a-45bb-8770-de9d7491b7ee</Id>
+						<CssClass isNull="true" />
+						<ToolTip isNull="true" />
+						<DisplayName>Add element</DisplayName>
+						<Mappings isNull="true" />
+						<PopupArgs type="VSoft.BusinessPlatform.Common.Navigation.PopupArgs, VSoft.BusinessPlatform.Common">
+							<PopupType>JQuery</PopupType>
+							<OpenFunction isNull="true" />
+							<CloseFunction isNull="true" />
+							<NameOfContainerToRefresh isNull="true" />
+							<ObjectToRefresh>WholePage</ObjectToRefresh>
+							<WindowWidth>1000</WindowWidth>
+							<WindowHeight>310</WindowHeight>
+							<Title type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+								<LocalizedEntryId>
+									<Id>d5064f51-c696-4de1-ae23-4f28ee0284f4</Id>
+								</LocalizedEntryId>
+							</Title>
+						</PopupArgs>
+						<FormOpenType>PopupElement</FormOpenType>
+						<ReadOnlyEnabled>true</ReadOnlyEnabled>
+						<Right type="VSoft.BusinessPlatform.Rights.DynamicValues.RightVersionIdConstantValue, VSoft.BusinessPlatform.Rights">
+							<Constant>
+								<Id>4469f32a-27e5-48a3-8528-77a34007b8ab</Id>
+							</Constant>
+						</Right>
+						<RightsUnavailableMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>2bc00c68-0d9f-4a12-bd36-82ed9ce318cd</Id>
+							</LocalizedEntryId>
+						</RightsUnavailableMessage>
+						<RefreshData>NONE</RefreshData>
+						<DisplayConfirmation type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[Bool], VSoft.BusinessPlatform.Common">
+							<Constant>false</Constant>
+						</DisplayConfirmation>
+						<ConfirmationText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>c726d81a-266e-4bfd-8495-de0c3448eba4</Id>
+							</LocalizedEntryId>
+						</ConfirmationText>
+						<MapInPlace isNull="true" />
+					</ActionData>
+					<ReloadKind>AsynchronousContainer</ReloadKind>
+					<NameOfContainerToRefresh />
+				</OnClick>
+				<HideOnActionList>false</HideOnActionList>
+				<ReadOnlyVisibility>true</ReadOnlyVisibility>
+				<IsVisible isNull="true" />
+			</ActionDataButtonDefinition>
+			<ActionDataButtonDefinition>
+				<ActionColumnsSelected type="List[Guid]">
+					<Guid>ffffffff-ffff-ffff-ffff-ffffffffffff</Guid>
+				</ActionColumnsSelected>
+				<ReloadKind>AsynchronousContainer</ReloadKind>
+				<Name type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>f7751738-cee0-46f6-bc61-2c014a6c0b60</Id>
+					</LocalizedEntryId>
+				</Name>
+				<ToolTip type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				<Id>7dcc5144-d252-4e28-a70f-ca2370db62b3</Id>
+				<CssClass type="VSoft.BusinessPlatform.Common.DynamicValues.CSSValues.CSSStyleConstantValue, VSoft.BusinessPlatform.Common">
+					<Constant>ButtonPrimary,ButtonNegation</Constant>
+				</CssClass>
+				<IconId isNull="true" />
+				<OnClick type="VSoft.BusinessPlatform.Common.ActionFramework.ActionDynamicHandler, VSoft.BusinessPlatform.Common">
+					<ActionData type="VSoft.BusinessPlatform.Lists.ActionData.DeleteActionData, VSoft.BusinessPlatform.Lists">
+						<ElementDeletedMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>c6853dd1-dbba-4535-a457-3112bd83609d</Id>
+							</LocalizedEntryId>
+						</ElementDeletedMessage>
+						<ElementsDeletedMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>e8378b68-8c7d-41c1-85d8-d0e76d54ff67</Id>
+							</LocalizedEntryId>
+						</ElementsDeletedMessage>
+						<ElementReferencedMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>c2ef97f8-bad6-4807-a3c3-c758723a3586</Id>
+							</LocalizedEntryId>
+						</ElementReferencedMessage>
+						<Version type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[[VSoft.VersionServer.VersionId, VSoft.VersionServer]], VSoft.BusinessPlatform.Common">
+							<Constant>
+								<Id>b0bc2412-088f-4cd1-89e6-7442ebb0c6d2</Id>
+							</Constant>
+						</Version>
+						<Condition type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+						<ConditionNotSatisfiedMessage type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+						<ElementDontExistMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>c2270d05-b570-4d42-8f4a-d643d46a9ed8</Id>
+							</LocalizedEntryId>
+						</ElementDontExistMessage>
+						<Id>f4dcbd4c-1249-4399-8d7e-c48dfc6d817b</Id>
+						<CssClass isNull="true" />
+						<ToolTip isNull="true" />
+						<DisplayName>Remove element</DisplayName>
+						<ReadOnlyEnabled>true</ReadOnlyEnabled>
+						<Right type="VSoft.BusinessPlatform.Rights.DynamicValues.RightVersionIdConstantValue, VSoft.BusinessPlatform.Rights">
+							<Constant>
+								<Id>4469f32a-27e5-48a3-8528-77a34007b8ab</Id>
+							</Constant>
+						</Right>
+						<RightsUnavailableMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>2bc00c68-0d9f-4a12-bd36-82ed9ce318cd</Id>
+							</LocalizedEntryId>
+						</RightsUnavailableMessage>
+						<RefreshData>NONE</RefreshData>
+						<DisplayConfirmation type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[Bool], VSoft.BusinessPlatform.Common">
+							<Constant>true</Constant>
+						</DisplayConfirmation>
+						<ConfirmationText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+							<LocalizedEntryId>
+								<Id>c726d81a-266e-4bfd-8495-de0c3448eba4</Id>
+							</LocalizedEntryId>
+						</ConfirmationText>
+						<MapInPlace isNull="true" />
+					</ActionData>
+					<ReloadKind>AsynchronousContainer</ReloadKind>
+					<NameOfContainerToRefresh />
+				</OnClick>
+				<HideOnActionList>false</HideOnActionList>
+				<ReadOnlyVisibility>true</ReadOnlyVisibility>
+				<IsVisible isNull="true" />
+			</ActionDataButtonDefinition>
+		</Buttons>
+		<PanelPosition>BELOW</PanelPosition>
+	</ActionPanel>
+	<Title type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+		<LocalizedEntryId>
+			<Id>001ad73b-7857-4728-ade2-4dcf50c261e4</Id>
+		</LocalizedEntryId>
+	</Title>
+	<ToolbarTitle type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+	<PageSize>10</PageSize>
+	<Height>0</Height>
+	<AllowPaging>false</AllowPaging>
+	<AllowScrolling>false</AllowScrolling>
+	<IsHorizontalLayout>true</IsHorizontalLayout>
+	<FillOnStart>true</FillOnStart>
+	<JavaScriptOnPage isNull="true" />
+	<FilterColumnNumber>2</FilterColumnNumber>
+	<ResetListVisible>false</ResetListVisible>
+	<RowCss type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+	<AutoFitColumn>true</AutoFitColumn>
+	<VerticalOnMobile>false</VerticalOnMobile>
+	<SelectionType>SingleLine</SelectionType>
+	<DataLoader>
+		<Type type="VSoft.BusinessPlatform.Lists.Sql.SqlDataLoader, VSoft.BusinessPlatform.Lists">
+			<Sql>SELECT BP_ID, BP_KEY, BP_NAME, BP_CATEGORY, DisplayName BP_DATA_TYPE, BP_LAST_MODIFIED, BP_LAST_MODIFIER,
+	BP_VALUE = CASE BP_DATA_TYPE
+	WHEN 'STRING' THEN CASE WHEN (LEN(BP_VALUE_STRING) &gt; 30) THEN LEFT(BP_VALUE_STRING, 30) + '...' ELSE BP_VALUE_STRING END
+	WHEN 'DECIMAL' THEN CONVERT(VARCHAR(30), BP_VALUE_DECIMAL)
+	WHEN 'BOOL' THEN CONVERT(VARCHAR(1), BP_VALUE_BOOL)
+	WHEN 'LONG' THEN CONVERT(VARCHAR(20), BP_VALUE_LONG)
+	WHEN 'DATE_TIME' THEN CONVERT(VARCHAR(20), BP_VALUE_DATETIME, 120)
+	END
+FROM dbo.vwBusinessParameters
+	INNER JOIN dbo.vwBusinessParameterDataTypes ON BP_DATA_TYPE = Code
+WHERE @Filter
+      </Sql>
+			<DataSourceName />
+			<ReadUncommited>true</ReadUncommited>
+			<PrimaryKey>BP_ID</PrimaryKey>
+		</Type>
+	</DataLoader>
+	<Config>
+		<FilterFields>
+			<Filter type="VSoft.BusinessPlatform.Lists.Filters.StandardFields.TextFieldSpecificFlavour, VSoft.BusinessPlatform.Lists">
+				<AddColumnWhenNotEmpty>false</AddColumnWhenNotEmpty>
+				<ConvertToInputType>true</ConvertToInputType>
+				<CompareOperator>LIKE</CompareOperator>
+				<DecimalPrecision isNull="true" />
+				<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+				<PrefferedSize>HalfRow</PrefferedSize>
+				<ColumnName>BP_NAME</ColumnName>
+				<ColumnListNames />
+				<FilterName>NameFlavour</FilterName>
+				<DefaultInputText isNull="true" />
+				<GroupId>00000000-0000-0000-0000-000000000000</GroupId>
+				<WildcardSearch>FRAGMENT</WildcardSearch>
+				<MaximumLength>255</MaximumLength>
+				<MinimumLength>0</MinimumLength>
+				<InputType>Any</InputType>
+				<Id>046be4f6-74e6-4bcf-ad2a-82a5495cb1ac</Id>
+				<InputCellCssClass>CSS_Text</InputCellCssClass>
+				<InputFieldCssClass>CSS_TextBox</InputFieldCssClass>
+				<Title type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>dfabc3c4-29bf-44de-ac9f-fc1471c8bb4c</Id>
+					</LocalizedEntryId>
+				</Title>
+				<AutoRun isNull="true" />
+			</Filter>
+			<Filter type="VSoft.BusinessPlatform.Lists.Filters.StandardFields.TextFieldSpecificFlavour, VSoft.BusinessPlatform.Lists">
+				<AddColumnWhenNotEmpty>false</AddColumnWhenNotEmpty>
+				<ConvertToInputType>true</ConvertToInputType>
+				<CompareOperator>LIKE</CompareOperator>
+				<DecimalPrecision isNull="true" />
+				<IsVisible type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Bool], VSoft.BusinessPlatform.Common" />
+				<PrefferedSize>HalfRow</PrefferedSize>
+				<ColumnName>BP_CATEGORY</ColumnName>
+				<ColumnListNames />
+				<FilterName>CategoryFlavour</FilterName>
+				<DefaultInputText isNull="true" />
+				<GroupId>00000000-0000-0000-0000-000000000000</GroupId>
+				<WildcardSearch>FRAGMENT</WildcardSearch>
+				<MaximumLength>255</MaximumLength>
+				<MinimumLength>0</MinimumLength>
+				<InputType>Any</InputType>
+				<Id>34dd7cc3-ac81-4610-98fd-0d46c8550f7d</Id>
+				<InputCellCssClass>CSS_Text</InputCellCssClass>
+				<InputFieldCssClass>CSS_TextBox</InputFieldCssClass>
+				<Title type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>e420040b-93d2-427f-8445-dc761c7df71a</Id>
+					</LocalizedEntryId>
+				</Title>
+				<AutoRun isNull="true" />
+			</Filter>
+		</FilterFields>
+		<Columns>
+			<Column type="VSoft.BusinessPlatform.Lists.Columns.WebColumnDefinition, VSoft.BusinessPlatform.Lists">
+				<Horizontal>NotSet</Horizontal>
+				<HeaderHorizontalAlign>NotSet</HeaderHorizontalAlign>
+				<Hidden>false</Hidden>
+				<Id>06cfe4f5-0587-4775-93b1-5d68799d9d74</Id>
+				<IsSorted>true</IsSorted>
+				<HeaderWidth>14.29</HeaderWidth>
+				<HeaderWidthAuto>true</HeaderWidthAuto>
+				<HeaderText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>3a517637-bae9-4652-b504-7f4c3d03d74d</Id>
+					</LocalizedEntryId>
+				</HeaderText>
+				<ColumnName>BP_KEY</ColumnName>
+				<DataFormatString />
+			</Column>
+			<Column type="VSoft.BusinessPlatform.Lists.Columns.WebColumnDefinition, VSoft.BusinessPlatform.Lists">
+				<Horizontal>NotSet</Horizontal>
+				<HeaderHorizontalAlign>NotSet</HeaderHorizontalAlign>
+				<Hidden>false</Hidden>
+				<Id>d65e68af-6932-402e-98d5-cf4e57fc4e74</Id>
+				<IsSorted>true</IsSorted>
+				<HeaderWidth>14.29</HeaderWidth>
+				<HeaderWidthAuto>true</HeaderWidthAuto>
+				<HeaderText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>e420040b-93d2-427f-8445-dc761c7df71a</Id>
+					</LocalizedEntryId>
+				</HeaderText>
+				<ColumnName>BP_CATEGORY</ColumnName>
+				<DataFormatString />
+			</Column>
+			<Column type="VSoft.BusinessPlatform.Lists.Columns.WebColumnDefinition, VSoft.BusinessPlatform.Lists">
+				<Horizontal>NotSet</Horizontal>
+				<HeaderHorizontalAlign>NotSet</HeaderHorizontalAlign>
+				<Hidden>false</Hidden>
+				<Id>402f18cc-72ac-4fa9-a114-dad613157987</Id>
+				<IsSorted>true</IsSorted>
+				<HeaderWidth>14.29</HeaderWidth>
+				<HeaderWidthAuto>true</HeaderWidthAuto>
+				<HeaderText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>dfabc3c4-29bf-44de-ac9f-fc1471c8bb4c</Id>
+					</LocalizedEntryId>
+				</HeaderText>
+				<ColumnName>BP_NAME</ColumnName>
+				<DataFormatString />
+			</Column>
+			<Column type="VSoft.BusinessPlatform.Lists.Columns.WebColumnDefinition, VSoft.BusinessPlatform.Lists">
+				<Horizontal>NotSet</Horizontal>
+				<HeaderHorizontalAlign>NotSet</HeaderHorizontalAlign>
+				<Hidden>false</Hidden>
+				<Id>170215fa-cdf0-4d52-aa6c-e72b7a68fee9</Id>
+				<IsSorted>true</IsSorted>
+				<HeaderWidth>14.29</HeaderWidth>
+				<HeaderWidthAuto>true</HeaderWidthAuto>
+				<HeaderText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>53a7ec63-cb4a-42c5-938b-a73f57d26dd6</Id>
+					</LocalizedEntryId>
+				</HeaderText>
+				<ColumnName>BP_VALUE</ColumnName>
+				<DataFormatString />
+			</Column>
+			<Column type="VSoft.BusinessPlatform.Lists.Columns.WebColumnDefinition, VSoft.BusinessPlatform.Lists">
+				<Horizontal>NotSet</Horizontal>
+				<HeaderHorizontalAlign>NotSet</HeaderHorizontalAlign>
+				<Hidden>false</Hidden>
+				<Id>6772e492-261a-454c-931e-588060a37691</Id>
+				<IsSorted>true</IsSorted>
+				<HeaderWidth>14.29</HeaderWidth>
+				<HeaderWidthAuto>true</HeaderWidthAuto>
+				<HeaderText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>ec27b34d-abee-4db4-a2ed-12af802cdae3</Id>
+					</LocalizedEntryId>
+				</HeaderText>
+				<ColumnName>BP_DATA_TYPE</ColumnName>
+				<DataFormatString />
+			</Column>
+			<Column type="VSoft.BusinessPlatform.Lists.Columns.WebColumnDefinition, VSoft.BusinessPlatform.Lists">
+				<Horizontal>NotSet</Horizontal>
+				<HeaderHorizontalAlign>NotSet</HeaderHorizontalAlign>
+				<Hidden>false</Hidden>
+				<Id>fd08b233-38ac-45f9-9a4a-030e388b0f61</Id>
+				<IsSorted>true</IsSorted>
+				<HeaderWidth>14.29</HeaderWidth>
+				<HeaderWidthAuto>true</HeaderWidthAuto>
+				<HeaderText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>45d7c379-0adf-4a7b-aaca-6e2fb82cb921</Id>
+					</LocalizedEntryId>
+				</HeaderText>
+				<ColumnName>BP_LAST_MODIFIED</ColumnName>
+				<DataFormatString />
+			</Column>
+			<Column type="VSoft.BusinessPlatform.Lists.UserColumn.UserNameColumnDefinition, VSoft.BusinessPlatform.Lists">
+				<UserName>true</UserName>
+				<UserLogin>false</UserLogin>
+				<UserEmail>false</UserEmail>
+				<UserPhone>false</UserPhone>
+				<UserAllowEmpty>false</UserAllowEmpty>
+				<Horizontal>Left</Horizontal>
+				<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+				<Hidden>false</Hidden>
+				<Id>d3307e48-978a-484b-baaa-6362293dbfd3</Id>
+				<IsSorted>true</IsSorted>
+				<HeaderWidth>14.260000000000005</HeaderWidth>
+				<HeaderWidthAuto>true</HeaderWidthAuto>
+				<HeaderText type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+					<LocalizedEntryId>
+						<Id>fefa67b7-5f15-4a29-9155-a48e29cb7653</Id>
+					</LocalizedEntryId>
+				</HeaderText>
+				<ColumnName>BP_LAST_MODIFIER</ColumnName>
+				<DataFormatString />
+			</Column>
+		</Columns>
+		<Groups>
+			<Group>
+				<Id>00000000-0000-0000-0000-000000000000</Id>
+				<Title type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				<Collapsed>false</Collapsed>
+				<FilterColumnNumber>2</FilterColumnNumber>
+				<VisibleAsGroup>false</VisibleAsGroup>
+			</Group>
+		</Groups>
+		<DataColumns>
+			<DataColumn type="VSoft.BusinessPlatform.Lists.Sql.SqlColumn, VSoft.BusinessPlatform.Lists">
+				<DataBindingDataField>BP_ID</DataBindingDataField>
+				<Name>BP_ID</Name>
+				<Description />
+				<DataType>System.Int64</DataType>
+				<IsSortable>true</IsSortable>
+				<DataFormatString />
+			</DataColumn>
+			<DataColumn type="VSoft.BusinessPlatform.Lists.Sql.SqlColumn, VSoft.BusinessPlatform.Lists">
+				<DataBindingDataField>BP_KEY</DataBindingDataField>
+				<Name>BP_KEY</Name>
+				<Description />
+				<DataType>System.String</DataType>
+				<IsSortable>true</IsSortable>
+				<DataFormatString />
+			</DataColumn>
+			<DataColumn type="VSoft.BusinessPlatform.Lists.Sql.SqlColumn, VSoft.BusinessPlatform.Lists">
+				<DataBindingDataField>BP_NAME</DataBindingDataField>
+				<Name>BP_NAME</Name>
+				<Description />
+				<DataType>System.String</DataType>
+				<IsSortable>true</IsSortable>
+				<DataFormatString />
+			</DataColumn>
+			<DataColumn type="VSoft.BusinessPlatform.Lists.Sql.SqlColumn, VSoft.BusinessPlatform.Lists">
+				<DataBindingDataField>BP_CATEGORY</DataBindingDataField>
+				<Name>BP_CATEGORY</Name>
+				<Description />
+				<DataType>System.String</DataType>
+				<IsSortable>true</IsSortable>
+				<DataFormatString />
+			</DataColumn>
+			<DataColumn type="VSoft.BusinessPlatform.Lists.Sql.SqlColumn, VSoft.BusinessPlatform.Lists">
+				<DataBindingDataField>BP_DATA_TYPE</DataBindingDataField>
+				<Name>BP_DATA_TYPE</Name>
+				<Description />
+				<DataType>System.String</DataType>
+				<IsSortable>true</IsSortable>
+				<DataFormatString />
+			</DataColumn>
+			<DataColumn type="VSoft.BusinessPlatform.Lists.Sql.SqlColumn, VSoft.BusinessPlatform.Lists">
+				<DataBindingDataField>BP_LAST_MODIFIED</DataBindingDataField>
+				<Name>BP_LAST_MODIFIED</Name>
+				<Description />
+				<DataType>System.DateTime</DataType>
+				<IsSortable>true</IsSortable>
+				<DataFormatString />
+			</DataColumn>
+			<DataColumn type="VSoft.BusinessPlatform.Lists.Sql.SqlColumn, VSoft.BusinessPlatform.Lists">
+				<DataBindingDataField>BP_LAST_MODIFIER</DataBindingDataField>
+				<Name>BP_LAST_MODIFIER</Name>
+				<Description />
+				<DataType>System.String</DataType>
+				<IsSortable>true</IsSortable>
+				<DataFormatString />
+			</DataColumn>
+			<DataColumn type="VSoft.BusinessPlatform.Lists.Sql.SqlColumn, VSoft.BusinessPlatform.Lists">
+				<DataBindingDataField>BP_VALUE</DataBindingDataField>
+				<Name>BP_VALUE</Name>
+				<Description />
+				<DataType>System.String</DataType>
+				<IsSortable>true</IsSortable>
+				<DataFormatString />
+			</DataColumn>
+		</DataColumns>
+	</Config>
+	<DefaultAction type="VSoft.BusinessPlatform.Common.DynamicValues.ConstantValue`1[Guid], VSoft.BusinessPlatform.Common">
+		<Constant>67a97afc-50d0-40eb-be6d-a1e232b1b40e</Constant>
+	</DefaultAction>
+	<DefaultSort>
+		<OrderAsc>true</OrderAsc>
+		<ColumnName>BP_KEY</ColumnName>
+	</DefaultSort>
+	<MultiSortsMapper>
+		<Mappings />
+	</MultiSortsMapper>
+	<CustomEvents />
+	<RawTitle>BusinessParameters</RawTitle>
+	<RefreshInterval>0</RefreshInterval>
+	<RowNotSelectedMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+		<LocalizedEntryId>
+			<Id>fa03c375-7c26-4e10-bead-b88dcfc000de</Id>
+		</LocalizedEntryId>
+	</RowNotSelectedMessage>
+	<EmptyListMessage type="VSoft.BusinessPlatform.Application.Contracts.DynamicValues.LocalizedConstantValue, VSoft.BusinessPlatform.Application.Contracts">
+		<LocalizedEntryId>
+			<Id>90e0499e-b708-47b8-ab53-08f4b0965e41</Id>
+		</LocalizedEntryId>
+	</EmptyListMessage>
+	<RowNotSelectedMessageType>Warning</RowNotSelectedMessageType>
+	<ListPreRenderStart type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyDynamicHandler, VSoft.BusinessPlatform.Common" />
+	<ResetStart type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyDynamicHandler, VSoft.BusinessPlatform.Common" />
+	<ResetEnd type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyDynamicHandler, VSoft.BusinessPlatform.Common" />
+	<Right type="VSoft.BusinessPlatform.Rights.DynamicValues.RightVersionIdConstantValue, VSoft.BusinessPlatform.Rights">
+		<Constant>
+			<Id>4469f32a-27e5-48a3-8528-77a34007b8ab</Id>
+		</Constant>
+	</Right>
+</ListDefinition>

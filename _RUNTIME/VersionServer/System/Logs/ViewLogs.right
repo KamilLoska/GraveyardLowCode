@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<object type="VSoft.BusinessPlatform.Rights.Contracts.RightDefinition, VSoft.BusinessPlatform.Rights">
+	<Description />
+	<Info>
+		<Id>cad33c02-dd5b-411b-8cdb-6118ee3abef2</Id>
+		<Name>View logs</Name>
+	</Info>
+	<IsGroup>false</IsGroup>
+	<ParentId>1948b9bc-47da-4bc7-ab86-ea67df7780ea</ParentId>
+	<Roles>
+		<String>Administrators</String>
+	</Roles>
+</object>

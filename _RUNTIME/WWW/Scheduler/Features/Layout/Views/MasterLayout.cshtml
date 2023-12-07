@@ -1,0 +1,18 @@
+﻿@using VSoft.Framework.Mvc.Extensions
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>VSoft Scheduler - @System.Web.Configuration.WebConfigurationManager.AppSettings["ApplicationName"]</title>
+  <link rel="SHORTCUT ICON" href="~/favicon.ico" />
+  <link href="~/dist/@GetHashFile("main.css")" rel="stylesheet">
+</head>
+<body>
+  @RenderBody()
+  <script src="~/dist/@GetHashFile("vendors.js")"></script>
+  <script src="~/dist/@GetHashFile("main.js")"></script>
+</body>
+</html>

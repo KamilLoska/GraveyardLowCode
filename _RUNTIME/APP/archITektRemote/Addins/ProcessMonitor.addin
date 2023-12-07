@@ -1,0 +1,36 @@
+﻿<AddIn name        = "Workflow Monitor"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl"
+       addInManagerHidden = "preinstalled">
+
+  <Manifest>
+    <Identity name="ProcessMonitor" version=":VSoft.BusinessPlatform.Workflow.Win" />
+    <Dependency addin="DataModule" />
+    <Dependency addin="FormsModule" />
+  </Manifest>
+  <Runtime>
+    <Import assembly=":VSoft.BusinessPlatform.Workflow.Win">
+      <ConditionEvaluator name="ShowProcessMonitorCondition" class="VSoft.BusinessPlatform.Workflow.Win.ProcessMonitor.Addin.Conditions.ShowProcessMonitorCondition" />
+      <ConditionEvaluator name="ShowProcessMonitorForWorkflowCondition" class="VSoft.BusinessPlatform.Workflow.Win.ProcessMonitor.Addin.Conditions.ShowProcessMonitorForWorkflowCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name="/SharpDevelop/Workbench/MainMenu/Tools">
+    <Condition name = "ShowProcessMonitorCondition" action="Exclude">
+      <MenuItem id="ToolsMenuSeparator1" type="Separator" />
+      <MenuItem id="ShowProcessMonitor" icon="ProcessManager" label="${res:ProcessMonitorMenu}" class="VSoft.BusinessPlatform.Workflow.Win.ProcessMonitor.Addin.Commands.ShowProcessMonitor" />
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/DesignerToolBar/VersionServer">
+    <Condition name="ShowProcessMonitorForWorkflowCondition" action="Exclude">
+      <ToolbarItem id="ShowProcessMonitorForWorkflowActionCommand" insertafter="OpenProcessDefinitionCommand" icon="OpenWorkflowProcessManager24" tooltip="${res:SzukajWMenedzerzeProcesow}" class="VSoft.BusinessPlatform.Workflow.Win.ProcessMonitor.Addin.Commands.ShowProcessMonitorForWorkflowActionCommand"
+                  />
+      <ToolbarItem id="ShowProcessMonitorForWorkflowActionSeparator" type="Separator" insertbefore="VersionServer_CheckOutCommand" />
+    </Condition>
+  </Path>
+
+  <Path name="/SharpDevelop/Autostart">
+    <Class id="VSoft.BusinessPlatform.Workflow.Win.ProcessMonitor.Addin.Commands.StartCommand" class="VSoft.BusinessPlatform.Workflow.Win.ProcessMonitor.Addin.Commands.StartCommand" />
+  </Path>
+</AddIn>

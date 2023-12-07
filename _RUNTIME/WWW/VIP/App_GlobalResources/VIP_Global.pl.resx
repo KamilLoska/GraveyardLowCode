@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MenuXml" xml:space="preserve">
+    <value>&lt;WebMenuItems&gt;
+   &lt;WebMenuItem&gt;
+      &lt;Text&gt;Konta i role&lt;/Text&gt;
+      &lt;ChildItems&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Nowy użytkownik&lt;/Text&gt;
+            &lt;ToolTip&gt;Zakładanie nowego użytkownika&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Wizard/NewUserWizard.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_USER_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Konta użytkowników&lt;/Text&gt;
+            &lt;ToolTip&gt;Konta użytkowników&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Account/UserAccounts.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_USER_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Konta aplikacji&lt;/Text&gt;
+            &lt;ToolTip&gt;Konta aplikacji&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Account/SystemAccounts.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_USER_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Uprawnienia kont&lt;/Text&gt;
+            &lt;ToolTip&gt;Uprawnienia kont&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Role/DefaultProfile.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_USER_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Role w systemie&lt;/Text&gt;
+            &lt;ToolTip&gt;Role w systemie&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Role/DefaultRole.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_USER_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Przypisanie profilu do jednostki&lt;/Text&gt;
+            &lt;ToolTip&gt;Przypisanie profilu do jednostki&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/ProfileToHierarchy/Default.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_USER_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Zmiana hasła&lt;/Text&gt;
+            &lt;ToolTip&gt;Zmiana hasła&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Account/ChangePassword.aspx&lt;/Url&gt;
+         &lt;/WebMenuItem&gt;
+      &lt;/ChildItems&gt;
+   &lt;/WebMenuItem&gt;
+   &lt;WebMenuItem&gt;
+      &lt;Text&gt;Aplikacje&lt;/Text&gt;
+      &lt;ChildItems&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Aplikacje w systemie&lt;/Text&gt;
+            &lt;ToolTip&gt;Aplikacje w systemie&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Application/Default.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_USER_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Przypisanie ról do aplikacji&lt;/Text&gt;
+            &lt;ToolTip&gt;Przypisanie ról do aplikacji&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Role/DefaultApp.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_USER_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Przypisanie hierarchii do aplikacji&lt;/Text&gt;
+            &lt;ToolTip&gt;Przypisanie hierarchii do aplikacji&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/HierarchyToApplication/Default.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_USER_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+      &lt;/ChildItems&gt;
+      &lt;Roles&gt;VIP_USER_EDT&lt;/Roles&gt;
+   &lt;/WebMenuItem&gt;
+   &lt;WebMenuItem&gt;
+      &lt;Text&gt;Struktura&lt;/Text&gt;
+      &lt;ChildItems&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Typy jednostek&lt;/Text&gt;
+            &lt;ToolTip&gt;Typy jednostek&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Hierarchy/UnitDictionary/Default.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_HUNT_EDT,VIP_HUNT_LCL_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Jednostki&lt;/Text&gt;
+            &lt;ToolTip&gt;Jednostki&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Hierarchy/Unit/Default.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_HUNT_EDT,VIP_HUNT_LCL_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Hierarchie jednostek&lt;/Text&gt;
+            &lt;ToolTip&gt;Hierarchie jednostek&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Hierarchy/HierarchyUnit/Default.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_HUNT_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Miejsca pracy&lt;/Text&gt;
+            &lt;ToolTip&gt;Miejsca pracy&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Hierarchy/WorkPlace/Default.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_HUNT_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Hierarchie personalne&lt;/Text&gt;
+            &lt;ToolTip&gt;Hierarchie personalne&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Hierarchy/HierarchyPerson/Default.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_HPER_EDT,VIP_HPER_LCL_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+      &lt;/ChildItems&gt;
+      &lt;Roles&gt;VIP_HUNT_EDT,VIP_HUNT_LCL_EDT,VIP_HPER_EDT,VIP_HPER_LCL_EDT&lt;/Roles&gt;
+   &lt;/WebMenuItem&gt;
+   &lt;WebMenuItem&gt;
+      &lt;Text&gt;Atrybuty&lt;/Text&gt;
+      &lt;ChildItems&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Atrybuty&lt;/Text&gt;
+            &lt;ToolTip&gt;Atrybuty dodatkowe&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Attribute/Default.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_ATTR_EDT&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+      &lt;/ChildItems&gt;
+      &lt;Roles&gt;VIP_ATTR_EDT&lt;/Roles&gt;
+   &lt;/WebMenuItem&gt;
+   &lt;!--&lt;WebMenuItem&gt;
+      &lt;Text&gt;Raporty&lt;/Text&gt;
+      &lt;ChildItems&gt;
+         &lt;WebMenuItem&gt;
+            &lt;Text&gt;Zdarzenia systemowe&lt;/Text&gt;
+            &lt;ToolTip&gt;Przegląd błędów systemowych&lt;/ToolTip&gt;
+            &lt;Url&gt;Pages/Report/Events.aspx&lt;/Url&gt;
+            &lt;Roles&gt;VIP_REP_VIEW&lt;/Roles&gt;
+         &lt;/WebMenuItem&gt;
+      &lt;/ChildItems&gt;
+      &lt;Roles&gt;VIP_REP_VIEW&lt;/Roles&gt;
+   &lt;/WebMenuItem&gt;--&gt;
+&lt;/WebMenuItems&gt;</value>
+  </data>
+</root>

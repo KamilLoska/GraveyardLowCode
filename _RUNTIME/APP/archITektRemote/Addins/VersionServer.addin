@@ -1,0 +1,180 @@
+﻿<AddIn name        = "Version Server"
+       description = "${res:VersionServerModule}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+  <Manifest>
+    <Identity name="VSoft.archITekt.VersionServer" version=":VSoft.VersionServer" />
+    <Dependency addin="ICSharpCode.AvalonEdit" />
+    <Dependency addin="VSoft.archITekt.Controls" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly = ":VSoft.archITekt.VersionServer">
+      <ConditionEvaluator name="VersionServer_VersionServerCondition"              class="VSoft.archITekt.VersionServer.Conditions.VersionServerCondition" />
+      <ConditionEvaluator name="VersionServer_CheckInCommandCondition"             class="VSoft.archITekt.VersionServer.Conditions.CheckInCommandCondition" />
+      <ConditionEvaluator name="VersionServer_CheckOutCommandCondition"            class="VSoft.archITekt.VersionServer.Conditions.CheckOutCommandCondition" />
+      <ConditionEvaluator name="VersionServer_CheckedOutElsewhereCommandCondition" class="VSoft.archITekt.VersionServer.Conditions.CheckedOutElsewhereCommandCondition" />
+      <ConditionEvaluator name="VersionServer_UndoCheckOutCommandCondition"        class="VSoft.archITekt.VersionServer.Conditions.UndoCheckOutCommandCondition" />
+      <ConditionEvaluator name="VersionServer_CheckIntegrityCommandCondition"      class="VSoft.archITekt.VersionServer.Conditions.CheckIntegrityCommandCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Workbench/Pads">
+    <Pad id = "VersionServerPad"
+      category = "Main"
+      title = "${res:VersionServerPadTitle}"
+      icon = "PadIcons.Architekt.VersionServer"
+      class = "VSoft.archITekt.VersionServer.Pads.VersionServerPad"
+      group="architekt"
+      order="1"
+      shortcut = "Ctrl+W, S"
+      defaultPosition = "Left" />
+
+    <Pad id = "PendingVersionServerChangesPad"
+     category = "Main"
+     title = "${res:VersionServerPendingChanges}"
+     icon = "PadIcons.Architekt.PendingChanges"
+     class = "VSoft.archITekt.VersionServer.Pads.PendingVersionServerChangesPad"
+     group="architekt"
+     order="2"
+     shortcut = "Ctrl+P, S"
+     defaultPosition = "Left" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/ToolBar">
+    <ToolbarItem id = "Standard">
+
+      <!--   komendy "Zapisz/ZapiszJako" i "Zapisz wszystkie" są obsługiwane standardowo, należy ich szukać w ICSharpCode.SharpDevelop.addin-->
+      <Condition name = "VersionServer_VersionServerCondition" action="Exclude">
+
+        <ToolbarItem id="VersionServerToolbarSeparator0" type="Separator" group="GroupGeneral" insertafter="SaveAs" />
+
+        <Condition name = "VersionServer_CheckOutCommandCondition" action="Exclude">
+
+          <ToolbarItem id = "VersionServer_CheckOutCommand"
+                       icon = "Checkout"
+                       largeicon="Unlock32"
+                       ribbonlabel = "${res:ToolbarCommonCheckOut}"
+                       group   = "GroupGeneral"
+                       tooltip = "${res:RozpocznijEdycje}"
+                       class = "VSoft.archITekt.VersionServer.Commands.CheckOutCommand" />
+        </Condition>
+
+        <Condition name = "VersionServer_CheckInCommandCondition" action="Exclude">
+          <ToolbarItem id = "VersionServer_CheckInCommand"
+                       icon = "Checkin"
+                       largeicon="Lock32"
+                       group   = "GroupGeneral"
+                       ribbonlabel = "${res:ToolbarCommonCheckIn}"
+                       tooltip = "${res:ZakonczEdycje}"
+                       class = "VSoft.archITekt.VersionServer.Commands.CheckInCommand" />
+        </Condition>
+
+        <Condition name = "VersionServer_UndoCheckOutCommandCondition" action="Exclude">
+          <ToolbarItem id = "VersionServer_UndoCheckOutCommand"
+                       icon = "UndoCheckout"
+                       largeicon="UndoChanges32"
+                       group   = "GroupGeneral"
+                       ribbonlabel = "${res:ToolbarCommonUndoChanges}"
+                       tooltip = "${res:WycofajEdycje}"
+                       class = "VSoft.archITekt.VersionServer.Commands.UndoCheckOutCommand" />
+        </Condition>
+
+        <ToolbarItem id="VersionServerToolbarSeparator1" type="Separator" />
+
+        <ToolbarItem id = "VersionServer_FindVersionCommand"
+                     icon = "FindFileInVersionServer"
+                     tooltip = "${res:ZlokalizujWSerwerzeWersji}"
+                     class = "VSoft.archITekt.VersionServer.Commands.FindVersionCommand" />
+
+        <ToolbarItem id = "VersionServer_ShowVersionInfoCommand"
+                     icon = "InformationOnFile"
+                     group   = "GroupGeneral"
+                     tooltip = "${res:Informacje}"
+                     ribbonlabel = "${res:Informacje}"
+                     class = "VSoft.archITekt.VersionServer.Commands.ShowVersionInfoCommand" />
+
+        <Condition name = "VersionServer_CheckIntegrityCommandCondition" action="Exclude">
+          <ToolbarItem id = "VersionServerAddinCheckIntegrityCommand"
+                 icon = "Validate"
+                 tooltip = "${res:SprawdzPoprawnosc}"
+                 group   = "GroupGeneral"
+                 class = "VSoft.archITekt.VersionServer.Commands.CheckIntegrityCommand" 
+                 shortcut="F10"/>
+        </Condition>
+      </Condition>
+    </ToolbarItem>
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/DesignerToolBar">
+    <ToolbarItem id = "VersionServer">
+
+      <!--   komendy "Zapisz/ZapiszJako" i "Zapisz wszystkie" są obsługiwane standardowo, należy ich szukać w ICSharpCode.SharpDevelop.addin-->
+      <Condition name = "VersionServer_VersionServerCondition" action="Exclude">
+
+        <Condition name = "VersionServer_CheckedOutElsewhereCommandCondition" action="Exclude">
+
+          <ToolbarItem id = "VersionServer_CheckedOutElsewhereCommand"
+                       icon = "VersionServerCheckedOutElsewhere"
+                       largeicon="VersionServerCheckedOutElsewhere"
+                       ribbonlabel = "${res:ToolbarCommonCheckOut}"
+                       group   = "GroupGeneral"
+                       tooltip = "${res:WersjaJestZablokowanaPrzezInnegoUzytkownika}"
+                       class = "VSoft.archITekt.VersionServer.Commands.CheckOutCommand"
+                       backgroundcolor="#1F9ACD" />
+        </Condition>
+
+        <Condition name = "VersionServer_CheckOutCommandCondition" action="Exclude">
+
+          <ToolbarItem id = "VersionServer_CheckOutCommand"
+                       icon = "VersionServerEditOpen"
+                       largeicon="VersionServerEditOpen"
+                       ribbonlabel = "${res:ToolbarCommonCheckOut}"
+                       group   = "GroupGeneral"
+                       tooltip = "${res:RozpocznijEdycje}"
+                       class = "VSoft.archITekt.VersionServer.Commands.CheckOutCommand"
+                        />
+        </Condition>
+
+        <Condition name = "VersionServer_CheckInCommandCondition" action="Exclude">
+          <ToolbarItem id = "VersionServer_CheckInCommand"
+                       icon = "VersionServerEditApply"
+                       largeicon="VersionServerEditApply"
+                       group   = "GroupGeneral"
+                       ribbonlabel = "${res:ToolbarCommonCheckIn}"
+                       tooltip = "${res:ZakonczEdycje}"
+                       class = "VSoft.archITekt.VersionServer.Commands.CheckInCommand"
+                        />
+        </Condition>
+
+        <Condition name = "VersionServer_UndoCheckOutCommandCondition" action="Exclude">
+          <ToolbarItem id = "VersionServer_UndoCheckOutCommand"
+                       icon = "VersionServerEditExit"
+                       largeicon="VersionServerEditExit"
+                       group   = "GroupGeneral"
+                       ribbonlabel = "${res:ToolbarCommonUndoChanges}"
+                       tooltip = "${res:WycofajEdycje}"
+                       class = "VSoft.archITekt.VersionServer.Commands.UndoCheckOutCommand"
+                        />
+        </Condition>
+      </Condition>
+    </ToolbarItem>
+  </Path>
+
+  <Path name ="/SharpDevelop/Workbench/MainMenu/Tools">
+    <MenuItem id ="MassValidation"
+             label = "${res:MasowaWalidacjaWersji}"
+             class ="VSoft.archITekt.VersionServer.Commands.MassIntegrityCheckCommand"
+             icon="ValidateAll" />
+  </Path>
+
+  <Path name="/SharpDevelop/AutostartAsync">
+    <Class id="VSoft.archITekt.VersionServer.Commands.OnStartCommand" class="VSoft.archITekt.VersionServer.Commands.OnStartCommand" />
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/AutostartAfterWorkbenchInitialized">
+    <Class id="VSoft.archITekt.VersionServer.Commands.RegisterGlobalShortcutsCommand" class="VSoft.archITekt.VersionServer.Commands.RegisterGlobalShortcutsCommand" />
+    <Class id="VSoft.archITekt.VersionServer.Commands.VersionServerIdTransactorCommand" class="VSoft.archITekt.VersionServer.Commands.VersionServerIdTransactorCommand" />
+  </Path>
+</AddIn>

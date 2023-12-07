@@ -1,0 +1,45 @@
+﻿<AddIn name        = "Menu"
+       description = "${res:MenuModuleName}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+  <Manifest>
+    <Identity name="MenuDesigner" version=":MenuDesignerAddin" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":MenuDesignerAddin">
+      <ConditionEvaluator name="DeleteSelectedMenuElementCondition" class="MenuDesignerAddin.Conditions.DeleteSelectedMenuElementCondition" />
+      <ConditionEvaluator name="NewMenuCondition" class="MenuDesignerAddin.Conditions.NewMenuCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name="/SharpDevelop/Workbench/MainMenu/File/New/VBP">
+    <Condition name="NewMenuCondition" action="Disable">
+      <MenuItem id="Menu"
+                icon="Menu"
+                label="${res:NazwaElementuTypuMenu}"
+                class="MenuDesignerAddin.Commands.NewMenuCommand" />
+    </Condition>
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/DesignerToolBar/Standard">
+    <Condition name = "DeleteSelectedMenuElementCondition" action="Exclude">
+      <ToolbarItem id  = "ElementDeleteMenu"
+						 icon = "Delete"
+						 tooltip = "${res:Usun}"
+						 label = ""
+						 class = "MenuDesignerAddin.Commands.DeleteSelectedElement" />
+    </Condition>
+    <ComplexCondition action="Exclude">
+      <Or>
+        <Condition name = "DeleteSelectedMenuElementCondition" />
+      </Or>
+      <ToolbarItem id = "PropertySeparator" type = "Separator" />
+    </ComplexCondition>
+  </Path>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "MenuDesignerAddin.Commands.StartCommand" class = "MenuDesignerAddin.Commands.StartCommand" />
+  </Path>
+</AddIn>

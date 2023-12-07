@@ -1,0 +1,107 @@
+﻿@using VSoft.BusinessPlatform.Application.Contracts;
+@using VSoft.Framework.Mvc.Features.Account.LogIn
+@using VSoft.Framework.Mvc.Helpers.OperationsSummary
+@using VSoft.Framework.Mvc.HttpHandlers
+@using VSoft.Framework.Mvc.Localization
+@using VSoft.Framework.Mvc.Routing
+
+@model VSoft.Framework.Mvc.Features.Account.LogIn.ViewModels.LogInViewModel
+
+@{ Layout = "~/Features/Layout/Views/EmptyLayout.cshtml"; }
+
+@{ var errors = ContextOperationMessages.GetCurrentAndClear();}
+
+<div class="arch-login-page">
+    <div>
+        <h2 class="k-text-center">@System.Web.Configuration.WebConfigurationManager.AppSettings["ApplicationName"]</h2>
+    </div>
+
+    <div class="portlet welcome">
+        <div class="portlet-wrapper">
+            <div class="portlet-title">
+                <span>@Localization.LoggingIn</span>
+            </div>
+            <div class="portlet-content">
+                @Html.OperationSummaryPanel()
+                <div id="summaryError"></div>
+
+                @using (Html.BeginForm("LogIn", "LogIn", FormMethod.Post, new Dictionary<string, object> { { "role", "form" }, { "autocomplete", "off" } }))
+                {
+                    <div class="form-horizontal">
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(vm => vm.RedirectTo)
+                        @Html.HiddenFor(vm => vm.EncodeParams)
+
+                        <div class='form-group'>
+                            @(Html.Kendo()
+                        .TextBoxFor(vm => vm.UserName)
+                        .Placeholder(Localization.Username))
+                        </div>
+
+                        <div class='form-group'>
+                            @(Html.Kendo()
+                  .TextBoxFor(vm => vm.Password)
+                  .HtmlAttributes(new {type = "password", id="passwordBox"})
+                  .Placeholder(Localization.Password))
+                        </div>
+
+                        @if (LocalizationHelper.SupportedLanguages.Count() > 1)
+                        {
+                            <div class='form-group'>
+                                @(Html.Kendo()
+                          .DropDownListFor(vm => vm.Culture)
+                          .BindTo(LocalizationHelper.SupportedLanguages)
+                          .DataTextField(nameof(SupportedLanguage.Name))
+                          .DataValueField(nameof(SupportedLanguage.Culture))
+                          .Template("<div class='flag'><div class='flag-img #: data.FlagCode #'></div></div><div class='flag'>#: data.Name #</div>")
+                          .ValueTemplate("<div class='flag'><div class='flag-img #: data.FlagCode #'></div></div><div class='flag'>#: data.Name #</div>")
+                          .SelectedIndex(LocalizationHelper.GetCurrentLanguageIndex(Request))
+                          .Events(e => e.Change("Mvc.Localization.onLanguageDropDownChange")))
+                            </div>
+                        }
+                        <div class="actions k-text-right">
+                            @Html.Kendo().Button().ThemeColor(ThemeColor.Primary).Name("submit-btn").Content(Localization.LogInUser).HtmlAttributes(new { type = "submit" })
+                        </div>
+                    </div>
+                }
+            </div>
+            @if (WindowsAuthExtensions.Enabled)
+            {
+
+                <div class='k-text-center'>
+                    @(Html.ActionLink(Localization.LogInUsingWindowsAuthentication, nameof(LogInController.Sso), typeof(LogInController).GetRoute(), new { redirectTo = Model.RedirectTo } , new {  @class = "btn btn-link" }))
+                </div>}
+        </div>
+    </div>
+    <div class="k-text-center">
+        <small><strong>Copyright</strong> VSoft SA &copy; 2016-@DateTime.UtcNow.Year</small>
+    </div>
+
+    @if (System.Web.Configuration.WebConfigurationManager.AppSettings["EnvironmentType"] == "Developer")
+    {
+        <div class="info-box">
+            <div>
+                <span class="k-icon k-icon-md k-i-info k-color-primary"></span>
+                <div>
+                    @Html.Raw(string.Format(Localization.LoginDocumentationInfo))
+                </div>
+            </div>
+
+        </div>
+    }
+
+    <script type="text/javascript">
+
+      $(document).ready(function () {
+            InitPasswordEye("passwordBox");
+            var error = @Html.Raw(Json.Encode(errors.ErrorMessages.ToArray()));
+            var shield = @Html.Raw(Json.Encode(errors.ShieldMessages.ToArray()));
+            var info = @Html.Raw(Json.Encode(errors.SuccessMessages.ToArray()));
+            var warning = @Html.Raw(Json.Encode(errors.WarningMessages.ToArray()));
+            ShowSummaryMessages('summaryError', 'E', error);
+            ShowSummaryMessages('summaryError', 'E', shield);
+            ShowSummaryMessages('summaryError', 'W', warning);
+            ShowSummaryMessages('summaryError','I',info)
+            });
+    </script>
+</div>

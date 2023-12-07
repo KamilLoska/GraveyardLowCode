@@ -1,0 +1,20 @@
+﻿@using VSoft.BusinessPlatform.Application.Contracts;
+@using VSoft.Framework.Mvc.Features.Home
+@using VSoft.Framework.Mvc.Routing
+@using VSoft.Framework.Mvc.Breadcrumbs
+
+@ClearBreadcrumbs()
+
+<div id="title-wrapper" class="page-head" data-breadcrumb-home-url="@(Url.Action("Index", typeof(HomeController).GetRoute()))" data-breadcrumb-home-title="@Localization.HomePage">
+  <div class="container-fluid">
+    <div class="page-title">
+      <span data-breadcrumb-container-back>
+        @Html.Kendo().Button().BreadcrumbBack("back").FillMode(ButtonFillMode.Flat).ThemeColor(ThemeColor.Primary).Content("")
+      </span>
+      <span data-breadcrumb-path-template><a data-breadcrumb-anchor></a><span class="separator">/</span></span>
+      <h2>
+        <span data-breadcrumb-page-title="@PageTitle">@PageTitle</span>
+      </h2>
+    </div>
+  </div>
+</div>

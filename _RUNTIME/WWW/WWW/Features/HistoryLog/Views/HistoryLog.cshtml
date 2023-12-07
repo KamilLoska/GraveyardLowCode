@@ -1,0 +1,35 @@
+﻿@model IEnumerable<VSoft.Framework.Mvc.Features.HistoryLog.ViewModels.HistoryLogObjectInfoViewModel>
+
+@{ Html.Kendo().Grid(Model)
+  .Name("HistoryLogs")
+  .Columns(columns =>
+  {
+    columns.Bound(e => e.ChangesetDate).Width(140).Title("Data zmiany").Format("{0:yyyy-MM-dd HH:mm:ss.fff}");
+    columns.Bound(e => e.UserName).Width(140).Title("Osoba modyfikująca");
+    columns.Bound(e => e.ObjectType).Width(140).Title("Modyfikowany obiekt");
+    columns.Bound(e => e.Modification).Width(140).Title("Rodzaj zmiany");
+  })
+  .DetailTemplate(
+@<text>
+  @(Html.Kendo().Grid(item.PropertyChanges)
+                       .Name("HistoryLog_" + item.Id)
+                       .Columns(columns =>
+                       {
+                          columns.Bound(o => o.Name).Width(140).Title("Nazwa pola");
+                          columns.Bound(o => o.FieldType).Width(140).Title("Typ pola");
+                          columns.Bound(o => o.OldValue).Width(140).Title("Stara wartość");
+                          columns.Bound(o => o.NewValue).Width(140).Title("Nowa wartość");
+                       })
+                    .DataSource(dataSource => dataSource.Server())
+                    .Pageable()
+                    .Sortable()
+                    .Filterable()
+  )
+</text>
+)
+
+.Pageable()
+.DataSource(dataSource => dataSource.Server().PageSize(5))
+.Sortable()
+.Render();
+}

@@ -1,0 +1,53 @@
+﻿.CSS_TextBox, .CSS_Text input[type="text"], .CSS_Label input[type="text"] {
+  background-color: #EBEFF1;
+  color: #174C70;
+  border: #174C70 1px solid;
+  padding: 2px;
+  font-family: Verdana, Tahoma, Arial;
+  height: 21px;
+  font-size: 11px;
+}
+
+.CssFlexigrid div.hDiv th.thOver {
+	border-bottom: 0;
+}
+
+.CssFlexigrid div.hDiv th div.sasc, .CssFlexigrid div.hDiv th div.sdesc {
+	background-position: right;
+}
+
+.CssFlexigrid div.hDivBox {
+	padding-right: 0;
+}
+
+.CssFlexigrid div.hDivBox table thead {
+	table-layout: fixed;
+}
+
+.CssFlexigrid div.hDivBox {
+	float: none;
+}
+
+.CssFlexigrid div.hDiv table {
+	width: 100%;
+}
+
+.CssFlexigrid div.bDiv td:last-child {
+	border-right: 0;
+}
+
+.CssFlexigrid div.hDiv th:last-child {
+	border-right: 0;
+}
+
+.CssFlexigrid div.bDiv table {
+	width: 100%;
+}
+
+.CssFlexigrid table tr:hover td {
+	border-right: 0 !important;
+}
+
+.CssDropDownList {
+   min-width: 80px;
+}

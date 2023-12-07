@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="UserIntegration.Web.Default" %>
+<%@ Register assembly="VSoft.Framework.Web" namespace="VSoft.Framework.Web.WebControls" tagprefix="vfw" %>
+<%@ Register assembly="VSoft.Identity.Provider.WebUI" namespace="VSoft.Identity.Provider.WebUI.Components" tagprefix="cc" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+	<asp:PlaceHolder runat="server">
+		<link rel="SHORTCUT ICON" href="<%= ResolveUrl("~/favicon.ico") %>"/>
+	</asp:PlaceHolder>
+	<asp:ContentPlaceHolder ID="_headContentPlaceHolder" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <!--#include virtual ="Css/WebBlue/Layout/Includes/Start.htm" -->
+    <vfw:WebMenuControl ID="_mWmWebMenu" runat="server" />
+    <div>
+		<cc:UserMessageComponent ID="m_comUserMessage" runat="server"></cc:UserMessageComponent>
+        <asp:ContentPlaceHolder ID="_mainContentPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    
+   </td>
+<td class="CSS_LaoyutMiddle1">&nbsp;</td>
+<td class="CSS_LaoyutMiddle2">&nbsp;</td>
+</tr>
+<tr> 
+<td class="CSS_LaoyutBottom_2">&nbsp;</td>
+<td class="CSS_LaoyutBottom_1">&nbsp;</td>
+<td class="CSS_LaoyutBottom0">
+    <table style="word-break:break-all" width="750px" border="0" cellspacing="0" cellpadding="0" class="CSS_FooterTable">
+          <tr>
+            <td width="25%" align="left"><%= UserFullName%><br>
+              <%= UserLogin%></td>
+            <td width="50%" align="center"><%= UserRoles%></td>
+            <td width="25%" align="right"><%= UserLoginDate%><br><%= VersionNumber %></td>
+          </tr>
+    </table></td>
+<td class="CSS_LaoyutBottom1">&nbsp;</td>
+<td class="CSS_LaoyutBottom2">&nbsp;</td>
+</tr>
+</table>  
+<BR><BR><BR><BR>
+    </form>
+</body>
+</html>

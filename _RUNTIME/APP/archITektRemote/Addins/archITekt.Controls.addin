@@ -1,0 +1,79 @@
+﻿<AddIn name        = "ArchITektControls"
+       author      = "VSoft"
+       description = "Kontrolki archITekta"
+       addInManagerHidden="preinstalled">
+
+  <Manifest>
+    <Identity name = "VSoft.archITekt.Controls" />
+  </Manifest>
+
+  <Runtime>
+     <Import assembly="VSoft.archITekt.Controls.dll">
+        <ConditionEvaluator name="ShowAzureDeployCondition" class="VSoft.archITekt.Controls.DeployControl.ShowAzureDeployCondition" />
+     </Import>
+  </Runtime>
+
+  <Path name = "/SharpDevelop/Workbench/Pads">
+    <Pad id       = "ValidationLog"
+       category = "Main"
+       title    = "${res:Window_ValidationLog}"
+       icon     = "PadIcons.Architekt.ErrorList"
+       class    = "VSoft.archITekt.Controls.ValidationLog.ValidationLogPad"
+       defaultPosition = "Bottom"
+       group="architekt"
+       order="3"
+       shortcut = "Ctrl+W, E" />
+
+    <Pad id      = "ToolboxPad"
+      category = "Main"
+      title    = "${res:Window_Toolbox}"
+      icon     = "PadIcons.Architekt.Toolbox"
+      class    = "VSoft.archITekt.Controls.WpfToolbox.ToolboxPad"
+      defaultPosition   = "Left"
+      group="architekt"
+      order="2"
+      shortcut = "Ctrl+W, X" />
+
+    <Pad id ="PropertyGridPad"
+			  category="Main"
+			  icon  = "PadIcons.Architekt.Properties"
+			  title="${res:MainWindow.Windows.PropertyGrid}"
+			  class ="VSoft.archITekt.Controls.PropertyGrid.PropertyGridPad"
+			  defaultPosition="Left"
+        group="architekt"
+        order="4"
+			  shortcut= "F4" />
+
+	  <Pad id = "DependenciesPad"
+		category = "Main"
+		title = "${res:Window_DependencyGraph}"
+		icon = "PadIcons.Architekt.Dependencies"
+		class = "VSoft.archITekt.Controls.DependenciesPad.DependenciesPad"
+		group = "architekt"
+		order = "6"
+		defaultPosition = "Right" />
+  </Path>
+
+  <Path name="/SharpDevelop/Services">
+    <Service id="VSoft.archITekt.Controls.PropertyGrid.IPropertyGridService"
+		         class="VSoft.archITekt.Controls.PropertyGrid.PropertyGridService" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Pads/ProjectBrowser/ToolBar/Standard">
+
+    <ToolbarItem id      = "Show ValidationLog"
+                 icon    = "PadIcons.ErrorList"
+                 tooltip = "${res:MainWindow.Windows.PropertiesScoutLabel}"
+                 class   = "VSoft.archITekt.Controls.ValidationLog.OpenValidationLogPadCommand" />
+    <ToolbarItem id = "PropertySeparator" type = "Separator" />
+  </Path>
+
+  <Path name="/SharpDevelop/Autostart">
+    <Class id="VSoft.archITekt.Controls.Commands.OnStartCommand" class="VSoft.archITekt.Controls.Commands.OnStartCommand" />
+  </Path>
+
+  <Path name="/SharpDevelop/Workbench/AutostartAfterWorkbenchInitialized">
+    <Class id="VSoft.archITekt.Controls.Commands.OnAfterWorkbenchInitializedStartCommand" class="VSoft.archITekt.Controls.Commands.OnAfterWorkbenchInitializedStartCommand" />
+    <Class id="VSoft.archITekt.Controls.Commands.RegisterGlobalShortcutsCommand" class="VSoft.archITekt.Controls.Commands.RegisterGlobalShortcutsCommand" />
+  </Path>
+</AddIn>

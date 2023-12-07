@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<object type="VSoft.BusinessPlatform.Application.Contracts.LocalizedEntry, VSoft.BusinessPlatform.Application.Contracts">
+	<LocalizedValues>
+		<KeyValuePair_x0060_2>
+			<Key>
+				<IsoName>pl</IsoName>
+			</Key>
+			<Value>Przekroczono dozwoloną liczbę nieudanych prób logowania z tego konta. Konto zostało zablokowane. Skontaktuj się z administratorem aplikacji w celu odblokowania konta i ustawienia nowego hasła.</Value>
+		</KeyValuePair_x0060_2>
+		<KeyValuePair_x0060_2>
+			<Key>
+				<IsoName>en</IsoName>
+			</Key>
+			<Value>User account has been locked out due to the exceeded limit of failed login attempts. Contact your system administrator in order to unlock the account and set a new password.</Value>
+		</KeyValuePair_x0060_2>
+	</LocalizedValues>
+</object>

@@ -1,0 +1,142 @@
+﻿<Edmx xmlns:v="http://vsoft.pl" Version="3.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+	<Runtime>
+		<ConceptualModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Namespace="VSoft.BusinessPlatform.DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+				<EntityType Name="DictionaryLocalization" v:Prefix="L" v:IsTable="false">
+					<Documentation>
+						<Summary>Dictionary localization</Summary>
+						<LongDescription>A table containing localized information about dictionary items</LongDescription>
+					</Documentation>
+					<Key>
+						<PropertyRef Name="ItemId" />
+						<PropertyRef Name="Language" />
+					</Key>
+					<Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" v:Order="4">
+						<Documentation>
+							<Summary>Description</Summary>
+							<LongDescription>Description in the language</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="ItemId" Type="Guid" Nullable="false" v:Order="0">
+						<Documentation>
+							<Summary>Item Id</Summary>
+							<LongDescription>Primary key (Dictionary item Id)</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" v:Order="2">
+						<Documentation>
+							<Summary>Language</Summary>
+							<LongDescription>Primary key (Language)</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" v:Order="3">
+						<Documentation>
+							<Summary>Name</Summary>
+							<LongDescription>Name in the language</LongDescription>
+						</Documentation>
+					</Property>
+					<Property Name="StructureId" Type="Guid" Nullable="false" v:Order="0">
+						<Documentation>
+							<Summary>Structure Id</Summary>
+							<LongDescription>Primary key (Structure Id)</LongDescription>
+						</Documentation>
+					</Property>
+					<NavigationProperty Name="Item" Relationship="Self.FK_DIC_LOCALIZATION_DIC_ITEM" FromRole="DIC_LOCALIZATION" ToRole="DIC_ITEM" v:RelationStructure="a7d0e75e-2619-49ae-b9fd-797cb6ceb7d0" v:DictionaryStructure="00000000-0000-0000-0000-000000000000" v:DictionaryCollection="00000000-0000-0000-0000-000000000000" v:Order="1">
+						<Documentation>
+							<Summary>Item</Summary>
+							<LongDescription>Dictionary item</LongDescription>
+						</Documentation>
+					</NavigationProperty>
+				</EntityType>
+				<Association Name="FK_DIC_LOCALIZATION_DIC_ITEM">
+					<End Role="DIC_ITEM" Type="Self.DictionaryItem" Multiplicity="1" />
+					<End Role="DIC_LOCALIZATION" Type="Self.DictionaryLocalization" Multiplicity="*" />
+					<ReferentialConstraint>
+						<Principal Role="DIC_ITEM">
+							<PropertyRef Name="ItemId" />
+						</Principal>
+						<Dependent Role="DIC_LOCALIZATION">
+							<PropertyRef Name="ItemId" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<EntityContainer Name="EntitiesContainer" annotation:LazyLoadingEnabled="false">
+					<EntitySet Name="DictionaryLocalizationSet" EntityType="Self.DictionaryLocalization" />
+					<AssociationSet Name="FK_DIC_LOCALIZATION_DIC_ITEM" Association="Self.FK_DIC_LOCALIZATION_DIC_ITEM">
+						<End Role="DIC_ITEM" EntitySet="DictionaryItemSet" />
+						<End Role="DIC_LOCALIZATION" EntitySet="DictionaryLocalizationSet" />
+					</AssociationSet>
+				</EntityContainer>
+			</Schema>
+		</ConceptualModels>
+		<Mappings>
+			<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+				<EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EntitiesContainer">
+					<EntitySetMapping Name="DictionaryLocalizationSet">
+						<EntityTypeMapping TypeName="VSoft.BusinessPlatform.DataModel.DictionaryLocalization">
+							<MappingFragment StoreEntitySet="DictionaryLocalization">
+								<ScalarProperty Name="StructureId" ColumnName="DIL_DICSTR_ID" />
+								<ScalarProperty Name="ItemId" ColumnName="DIL_DICT_OBJECT_ID" />
+								<ScalarProperty Name="Language" ColumnName="DIL_LANGUAGE" />
+								<ScalarProperty Name="Name" ColumnName="DIL_NAME" />
+								<ScalarProperty Name="Description" ColumnName="DIL_DESCRIPTION" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+				</EntityContainerMapping>
+			</Mapping>
+		</Mappings>
+		<StorageModels>
+			<Schema xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" Namespace="VSoft.BusinessPlatform.StorageModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+				<EntityType Name="DictionaryLocalization">
+					<Key>
+						<PropertyRef Name="DIL_DICT_OBJECT_ID" />
+						<PropertyRef Name="DIL_LANGUAGE" />
+					</Key>
+					<Property Name="DIL_DICSTR_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIL_DICT_OBJECT_ID" Type="uniqueidentifier" Nullable="false" />
+					<Property Name="DIL_LANGUAGE" Type="varchar" MaxLength="10" Nullable="false" />
+					<Property Name="DIL_NAME" Type="varchar" MaxLength="256" Nullable="false" />
+					<Property Name="DIL_DESCRIPTION" Type="varchar" MaxLength="256" Nullable="false" />
+				</EntityType>
+				<Association Name="FK_DIC_LOCALIZATION_DIC_ITEM">
+					<End Role="DictionaryItem" Type="Self.DictionaryItem" Multiplicity="1" />
+					<End Role="DictionaryLocalization" Type="Self.DictionaryLocalization" Multiplicity="*" />
+					<ReferentialConstraint>
+						<Principal Role="DictionaryItem">
+							<PropertyRef Name="DII_ID" />
+						</Principal>
+						<Dependent Role="DictionaryLocalization">
+							<PropertyRef Name="DIL_DICT_OBJECT_ID" />
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<EntityContainer Name="ModelStoreContainer">
+					<EntitySet Name="DictionaryLocalization" EntityType="Self.DictionaryLocalization" Schema="dbo" Table="DIC_LOCALIZATION" />
+					<AssociationSet Name="FK_DIC_LOCALIZATION_DIC_ITEM" Association="Self.FK_DIC_LOCALIZATION_DIC_ITEM">
+						<End Role="DictionaryItem" EntitySet="DictionaryItem" />
+						<End Role="DictionaryLocalization" EntitySet="DictionaryLocalization" />
+					</AssociationSet>
+				</EntityContainer>
+			</Schema>
+		</StorageModels>
+	</Runtime>
+	<Designer>
+		<Connection>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+			</DesignerInfoPropertySet>
+		</Connection>
+		<Options>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="ValidateOnBuild" Value="False" />
+				<DesignerProperty Name="EnablePluralization" Value="True" />
+				<DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+				<DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+				<DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="False" />
+				<DesignerProperty Name="UseLegacyProvider" Value="False" />
+			</DesignerInfoPropertySet>
+		</Options>
+		<Diagrams />
+	</Designer>
+</Edmx>

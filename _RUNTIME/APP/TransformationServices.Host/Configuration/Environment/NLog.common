@@ -1,0 +1,154 @@
+﻿<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--
+    Działanie targetów zdefiniowanych w tym pliku wymaga skonfigurowania w pliku NLog.config następujacych zmiennych.
+    Dla czytelności zapisu nazwy wszystkich zmiennych są zapisywane WIELKIMI LITERAMI. Poniżej przykładowa konfiguracja wymaganych zmiennych:
+
+      1) ścieżka do katalogu logów.
+      <variable name="LOGS_FOLDER" value="${whenEmpty:whenEmpty=${basedir}/???:inner=${appsetting:item=LOGS_FOLDER:default=???}}" />
+
+      Sposób działania:
+      * jak nie ma w appSettings zmiennej LOGS_FOLDER to będzie logował do EventLog
+      * jak w appSettings jest niepoprawny katalog (np. brak prawa zapisu) to będzie logował do EventLog
+
+      2) nazwa komponentu. Używana do określenia nazwy pliku i przy wpisach do EventLog.
+      Najlepiej by nazwa komponentu zaczynała się od "VSoft." (w celu spójności nazewnictwa, sortowania plików i łatwej identyfikacji wpisów w EventLog)
+      <variable name="COMPONENT_NAME" value="VSoft.TransformationServices" />
+
+      3) Layout zapisu do plików logu. Może zawierać specyficzne informacje dla różnych komponentów
+      <variable name="MESSAGE_LAYOUT_FILE" value="~${level:uppercase=true}@${longdate}@${gdc:item=node}:${threadid}@${componentAndLogger}: ${message} ~ ~ ${exception:format=tostring}~~." />
+
+      4) Layout zapisu na kolorowaną konsolę
+      <variable name="MESSAGE_LAYOUT_CONSOLE" value="[${level:uppercase=true}]&#x9;${date:format=HH\:mm\:ss.fff}  ${logger} - ${message} ${exception:format=tostring}" />
+
+      5) Layout zapisu do EventLog
+      <variable name="MESSAGE_LAYOUT_EVENT_LOG" value="${var:COMPONENT_NAME} (${basedir})${newline}${level:uppercase=true} (node: ${gdc:item=node}, thread: ${threadid}, component: ${componentAndLogger})${newline}${message}${newline}${exception:format=tostring}" />
+
+      6) Zmienne używane w logowaniu do bazy danych
+      * zmiena MESSAGE_LOG_CONTEXT wpisywana do bazy danych
+      <variable name="MESSAGE_LOG_CONTEXT" value="${mdlc:item=webContext}${mdlc:item=wflContext}" />
+      * zmiena MESSAGE_LOG_CONTEXT_DATA wpisywana do bazy danych
+      <variable name="MESSAGE_LOG_CONTEXT_DATA" value="${webContextData}" />
+
+      7) UWAGA! Zmienne muszą być zadeklarowane w pliku NLog.Config PRZED operacją include pliku "NLog.common" (inaczej NLog ich nie rozpozna)
+      <include file="NLog.common" />
+
+      Ze względu na szybkość działania samego NLoga stsowany jest zapis ${var:ZMIENNA} zamiast ${var:ZMIENNA}, co powoduje, że zmienne są "readonly" (ustawiane na starcie i niezmienne w czasie życia apkikacji)
+    -->
+  <!-- https://github.com/NLog/NLog/wiki/Time-Source -->
+  <time type="FastUtc" />   
+  <targets>
+    <!--
+    Zapis logów (wyłącznie typu ERROR lub wyższych) do dedykowanego pliku.
+    Aktualny log ma nazwę ERROR.{COMPONENT_NAME}.active.log
+    Logi archiwalne mają nazwę ERROR.{COMPONENT_NAME}.archive.{DATA_NUMER_KOLEJNY}.log
+    Logi archiwalne tworzone są codziennie lub po przekroczeniu rozmiaru 100 MB, przechowywane jest ostatnie 100 plików logów.
+    W przypadku awarii zapisu do pliku lądują w EventLog (dziennik="Aplikacja") z parametrami: źródło= "Application Error", identyfikator="1000"
+    -->
+    <target name="bufferedFileErrors" xsi:type="BufferingWrapper"
+            bufferSize="1000"
+            slidingTimeout="true"
+            flushTimeout="50">
+      <target name="bufferedFileErrorsFallback" xsi:type="FallbackGroup" returnToFirstOnSuccess="true">
+        <target name="logFile" xsi:type="File"
+            fileName="${LOGS_FOLDER}/ERROR.${COMPONENT_NAME}.active.log"
+            keepFileOpen="false"
+            layout="${MESSAGE_LAYOUT_FILE}"
+            archiveFileName="${LOGS_FOLDER}/ERROR.${COMPONENT_NAME}.archive.{#####}.log"
+            archiveAboveSize="100000000"
+            archiveEvery="Day"
+            archiveNumbering = "DateAndSequence"
+            maxArchiveFiles="100"
+            cleanupFileName="true"
+            encoding="UTF-8"
+            autoFlush="false" />
+        <!--ALTERNATYWNIE '.NET Runtime' EventId=(1026)-->
+        <target name="bufferedFileErrorsEventLog" xsi:type="EventLog"
+                  layout="${MESSAGE_LAYOUT_EVENT_LOG}"
+                  source="Application Error"
+                  eventId="1000"
+                  onOverflow="Split" />
+      </target>
+    </target>
+
+    <!--
+    Zapis logów do pliku.
+    Aktualny log ma nazwę {COMPONENT_NAME}.active.log
+    Logi archiwalne mają nazwę {COMPONENT_NAME}.archive.{DATA_NUMER_KOLEJNY}.log
+    Logi archiwalne tworzone są codziennie lub po przekroczeniu rozmiaru 100 MB, przechowywane jest ostatnie 100 plików logów.
+    W przypadku awarii zapisu do pliku lądują w EventLog (dziennik="Aplikacja") z parametrami: źródło= "Application Error", identyfikator="1000"
+    -->
+    <target name="bufferedFile" xsi:type="BufferingWrapper"
+            bufferSize="1000"
+            slidingTimeout="true"
+            flushTimeout="50">
+      <target name="bufferedFileFallback" xsi:type="FallbackGroup" returnToFirstOnSuccess="true">
+        <target name="logFile" xsi:type="File"
+            fileName="${LOGS_FOLDER}/${COMPONENT_NAME}.active.log"
+            keepFileOpen="false"
+            layout="${MESSAGE_LAYOUT_FILE}"
+            archiveFileName="${LOGS_FOLDER}/${COMPONENT_NAME}.archive.{#####}.log"
+            archiveAboveSize="100000000"
+            archiveEvery="Day"
+            archiveNumbering = "DateAndSequence"
+            maxArchiveFiles="100"
+            cleanupFileName="true"
+            encoding="UTF-8"
+            autoFlush="false" />
+        <!--ALTERNATYWNIE '.NET Runtime' EventId=(1026)-->
+        <target name="bufferedFileErrorsEventLog" xsi:type="EventLog"
+                 layout="${MESSAGE_LAYOUT_EVENT_LOG}"
+                 source="Application Error"
+                 eventId="1000"
+                 onOverflow="Split" />
+      </target>
+    </target>
+
+    <!--
+    Zapis do bazy danych do tabeli "logs" (domyślnie "dbo.logs").
+    Wykorzystywane jest połączenie do bazy danych o nazwie VSFE.CONFIG_DB
+    W przypadku awarii zapisu do bazy danych logi lądują w EventLog (dziennik="Aplikacja") z parametrami: źródło= "Application Error", identyfikator="1000"
+    -->
+    <target name="dboLogsDatabaseAsync" xsi:type="AsyncWrapper" overflowAction="Block">
+      <target name="dboLogsDatabaseAsyncFallback" xsi:type="FallbackGroup" returnToFirstOnSuccess="true">
+        <target name="dboLogsDatabaseAsyncDatabase" xsi:type="Database">
+          <connectionStringName>VSFE.CONFIG_DB</connectionStringName>
+          <commandText>INSERT INTO LOGS(L_LEVEL,L_COMPONENT,L_MESSAGE,L_EXCEPTION,L_NODE, L_CONTEXT, L_CONTEXT_DATA)VALUES(@L_LEVEL,@L_COMPONENT,@L_MESSAGE,@L_EXCEPTION,@L_NODE,@L_CONTEXT,@L_CONTEXT_DATA)</commandText>
+          <parameter name="@L_LEVEL" layout="${level:format=Ordinal}" dbType="Int16" />
+          <parameter name="@L_COMPONENT" layout="${componentAndLogger}" />
+          <parameter name="@L_MESSAGE" layout="${message}" />
+          <parameter name="@L_EXCEPTION" layout="${exception:tostring}" />
+          <parameter name="@L_NODE" layout="${gdc:item=node}" />
+          <parameter name="@L_CONTEXT" layout="${MESSAGE_LOG_CONTEXT}" />
+          <parameter name="@L_CONTEXT_DATA" layout="${MESSAGE_LOG_CONTEXT_DATA}" />
+        </target>
+        <!--ALTERNATYWNIE '.NET Runtime' EventId=(1026)-->
+        <target name="dboLogsDatabaseAsyncEventLog" xsi:type="EventLog"
+                layout="${MESSAGE_LAYOUT_EVENT_LOG}"
+                source="Application Error"
+                eventId="1000"
+                onOverflow="Split" />
+      </target>
+    </target>
+
+    <!-- Kolorowy zapis na konsolę -->
+    <target name="console" xsi:type="ColoredConsole" layout="${MESSAGE_LAYOUT_CONSOLE}" />
+    <target name="errorStreamConsole" xsi:type="ColoredConsole" layout="${MESSAGE_LAYOUT_CONSOLE}" errorStream="true" />
+  </targets>
+
+  <!--
+    Zasady tworzenia wpisów do sekcji <rules> (każdy komponent definiuje tę sekcję w odmienny sposób):
+
+    1. Zapis do pliku wszystkich poziomów błędów
+    <logger minlevel="Debug" writeTo="bufferedFile" name="*" />
+
+    2. Zapis do pliku wyłącznie informacji o błędach (do osobnego, dodatkowego pliku)
+    <logger minlevel="Error" writeTo="bufferedFileErrors" name="*" />
+
+    3. Zapis do bazy danych
+    <logger minlevel="Info" writeTo="dboLogsDatabaseAsync" name="*" />
+
+    3. Zapis na konsolę
+    <logger minlevel="Debug" writeTo="console" name="*" />
+  -->
+</nlog>

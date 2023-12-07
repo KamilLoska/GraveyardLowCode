@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ListDefinition>
+	<DontAttachPrimaryKeyToOrderBy>false</DontAttachPrimaryKeyToOrderBy>
+	<ListActionPanelPosition>UnderForm</ListActionPanelPosition>
+	<Id>bba8488d-7abd-4dda-a493-66cb372686e4</Id>
+	<ParentStructure isNull="true" />
+	<ShowToggleBtn>false</ShowToggleBtn>
+	<ShowBottomPanel>true</ShowBottomPanel>
+	<RefreshList isNull="true" />
+	<ActionPanel>
+		<PanelPosition>BELOW</PanelPosition>
+	</ActionPanel>
+	<Title type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+	<ToolbarTitle type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+	<PageSize>10</PageSize>
+	<Height>0</Height>
+	<AllowPaging>true</AllowPaging>
+	<AllowScrolling>false</AllowScrolling>
+	<IsHorizontalLayout>true</IsHorizontalLayout>
+	<FillOnStart>true</FillOnStart>
+	<JavaScriptOnPage isNull="true" />
+	<FilterColumnNumber>2</FilterColumnNumber>
+	<ResetListVisible>false</ResetListVisible>
+	<RowCss type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+	<AutoFitColumn>false</AutoFitColumn>
+	<VerticalOnMobile>false</VerticalOnMobile>
+	<SelectionType>SingleLine</SelectionType>
+	<DataLoader>
+		<Type type="VSoft.BusinessPlatform.Lists.Sql.SqlDataLoader, VSoft.BusinessPlatform.Lists">
+			<Sql>SELECT * FROM vwBusinessParameterDataTypes</Sql>
+			<DataSourceName />
+			<ReadUncommited>true</ReadUncommited>
+			<PrimaryKey>Code</PrimaryKey>
+		</Type>
+	</DataLoader>
+	<Config>
+		<FilterFields />
+		<Columns>
+			<Column type="VSoft.BusinessPlatform.Lists.Columns.WebColumnDefinition, VSoft.BusinessPlatform.Lists">
+				<Horizontal>NotSet</Horizontal>
+				<HeaderHorizontalAlign>NotSet</HeaderHorizontalAlign>
+				<Hidden>false</Hidden>
+				<Id>0827f810-bb76-4813-8040-43babaa123e0</Id>
+				<IsSorted>true</IsSorted>
+				<HeaderWidth>50</HeaderWidth>
+				<HeaderWidthAuto>true</HeaderWidthAuto>
+				<HeaderText type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				<ColumnName>Code</ColumnName>
+				<DataFormatString />
+			</Column>
+			<Column type="VSoft.BusinessPlatform.Lists.Columns.WebColumnDefinition, VSoft.BusinessPlatform.Lists">
+				<Horizontal>NotSet</Horizontal>
+				<HeaderHorizontalAlign>NotSet</HeaderHorizontalAlign>
+				<Hidden>false</Hidden>
+				<Id>340204ef-fa6f-4c17-a7b9-ac167a70939e</Id>
+				<IsSorted>true</IsSorted>
+				<HeaderWidth>50</HeaderWidth>
+				<HeaderWidthAuto>true</HeaderWidthAuto>
+				<HeaderText type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				<ColumnName>DisplayName</ColumnName>
+				<DataFormatString />
+			</Column>
+		</Columns>
+		<Groups>
+			<Group>
+				<Id>00000000-0000-0000-0000-000000000000</Id>
+				<Title type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+				<Collapsed>false</Collapsed>
+				<FilterColumnNumber>2</FilterColumnNumber>
+				<VisibleAsGroup>false</VisibleAsGroup>
+			</Group>
+		</Groups>
+		<DataColumns>
+			<DataColumn type="VSoft.BusinessPlatform.Lists.Sql.SqlColumn, VSoft.BusinessPlatform.Lists">
+				<DataBindingDataField>Code</DataBindingDataField>
+				<Name>Code</Name>
+				<Description />
+				<DataType>System.String</DataType>
+				<IsSortable>true</IsSortable>
+				<DataFormatString />
+			</DataColumn>
+			<DataColumn type="VSoft.BusinessPlatform.Lists.Sql.SqlColumn, VSoft.BusinessPlatform.Lists">
+				<DataBindingDataField>DisplayName</DataBindingDataField>
+				<Name>DisplayName</Name>
+				<Description />
+				<DataType>System.String</DataType>
+				<IsSortable>true</IsSortable>
+				<DataFormatString />
+			</DataColumn>
+		</DataColumns>
+	</Config>
+	<DefaultAction type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[Guid], VSoft.BusinessPlatform.Common" />
+	<DefaultSort isNull="true" />
+	<MultiSortsMapper>
+		<Mappings />
+	</MultiSortsMapper>
+	<CustomEvents />
+	<RawTitle>BusinessParametersDataTypes</RawTitle>
+	<RefreshInterval>0</RefreshInterval>
+	<RowNotSelectedMessage type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+	<EmptyListMessage type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyValue`1[String], VSoft.BusinessPlatform.Common" />
+	<RowNotSelectedMessageType>Warning</RowNotSelectedMessageType>
+	<ListPreRenderStart type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyDynamicHandler, VSoft.BusinessPlatform.Common" />
+	<ResetStart type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyDynamicHandler, VSoft.BusinessPlatform.Common" />
+	<ResetEnd type="VSoft.BusinessPlatform.Common.DynamicValues.EmptyDynamicHandler, VSoft.BusinessPlatform.Common" />
+	<Right type="VSoft.BusinessPlatform.Rights.DynamicValues.EmptyRightValue, VSoft.BusinessPlatform.Rights" />
+</ListDefinition>

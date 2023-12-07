@@ -1,0 +1,70 @@
+﻿<AddIn name        = "Forms"
+       description = "${res:FormsModuleName}"
+       author      = "VSoft SA"
+       url         = "http://www.vsoft.pl">
+
+  <Manifest>
+    <Identity name="FormsModule" version=":VSoft.BusinessPlatform.Forms.Designer.Addin" />
+    <Dependency addin="DataModule" />
+  </Manifest>
+
+  <Runtime>
+    <Import assembly=":VSoft.BusinessPlatform.Forms.Designer.Addin">
+      <ConditionEvaluator name="ShowFormPreviewCondition" class="VSoft.BusinessPlatform.Forms.Designer.Addin.Conditions.ShowFormPreviewCondition" />
+      <ConditionEvaluator name="ShowFormMenuCondition" class="VSoft.BusinessPlatform.Forms.Designer.Addin.Conditions.ShowFormEditMenuCondition" />
+      <ConditionEvaluator name="AllowEditCondition" class="VSoft.BusinessPlatform.Forms.Designer.Addin.Conditions.AllowEditCondition" />
+      <ConditionEvaluator name="NewFormCondition" class="VSoft.BusinessPlatform.Forms.Designer.Addin.Conditions.NewFormCondition" />
+      <ConditionEvaluator name="ActionTreeCondition" class="VSoft.BusinessPlatform.Forms.Designer.Addin.Conditions.ActionTreeCondition" />
+    </Import>
+  </Runtime>
+
+  <Path name="/SharpDevelop/Workbench/MainMenu/File/New/VBP">
+    <Condition name="NewFormCondition" action="Disable">
+      <MenuItem id="Form"
+                icon="Form"
+                label="${res:Formularz}"
+                class="VSoft.BusinessPlatform.Forms.Designer.Addin.Commands.NewFormCommand" />
+    </Condition>
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/DesignerToolBar/Standard">
+    <Condition name = "ShowFormMenuCondition" action="Exclude">
+      <Condition name = "AllowEditCondition" action="Exclude">
+        <ToolbarItem id = "ShowAssociatedDataSource"
+                        label = ""
+                        tooltip = "${res:PokazPowiazaneZrodloDanych}"
+                        icon = "ShowDataSource"
+                        class = "VSoft.BusinessPlatform.Forms.Designer.Addin.Commands.ShowAssociatedDataSource" />
+        <ToolbarItem id  = "RefreshAssociatedDataSource"
+                        label = ""
+                        tooltip = "${res:OdswiezPowiazaneZrodloDanych}"
+                        icon = "RefreshDataSource"
+                        class = "VSoft.BusinessPlatform.Forms.Designer.Addin.Commands.RefreshAssociatedDataSource" />
+        <ToolbarItem id  = "AdaptToAssociatedDataSource"
+                 label = ""
+                 tooltip = "${res:UstawPolaFormularzaNaPodstawieZrodlaDanych}"
+                 icon = "AdaptToDataSource"
+                 class = "VSoft.BusinessPlatform.Forms.Designer.Addin.Commands.AdaptToAssociatedDataSource" />
+      </Condition>
+      <Condition name = "ActionTreeCondition" action="Exclude">
+        <ToolbarItem type="Separator" />
+        <!--<ToolbarItem tooltip="${res:SimpleView}" type ="CheckBox" class="VSoft.BusinessPlatform.Forms.Designer.Addin.Commands.SwitchDisplayModeOnActionTree" icon="Options" />-->
+        <ToolbarItem tooltip="${res:AdvancedView}" type ="CheckBox" class="VSoft.BusinessPlatform.Forms.Designer.Addin.Commands.SwitchDisplayModeOnActionTree_OldNew" icon="Options" />
+        <ToolbarItem tooltip="${res:ExpandAll}" class="VSoft.BusinessPlatform.Forms.Designer.Addin.Commands.ExpandAllNodesOnActionTree" icon="ExpandTree" />
+        <ToolbarItem tooltip="${res:CollapseAll}" class="VSoft.BusinessPlatform.Forms.Designer.Addin.Commands.CollapseAllNodesOnActionTree" icon="CollapseTree" />
+      </Condition>
+    </Condition>
+  </Path>
+
+  <Path name = "/SharpDevelop/Workbench/Pads">
+    <Pad id      = "DocumentOutlinePad"
+        category = "Main"
+        title    = "${res:UkladFormularza}"
+        icon     = "PadIcons.Architekt.FormOutline"
+        class    = "VSoft.BusinessPlatform.Forms.Designer.Addin.Pads.DocumentOutlinePad" />
+  </Path>
+
+  <Path name = "/SharpDevelop/Autostart">
+    <Class id = "VSoft.BusinessPlatform.Forms.Designer.Addin.Commands.StartCommand" class = "VSoft.BusinessPlatform.Forms.Designer.Addin.Commands.StartCommand" />
+  </Path>
+</AddIn>
