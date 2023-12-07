@@ -1,0 +1,7 @@
+/*
+!/_RUNTIME
+/_RUNTIME/*
+!/_RUNTIME/VersionServer
+!/Files
+!/SQL
+!.gitignore
